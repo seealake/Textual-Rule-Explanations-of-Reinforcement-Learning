@@ -1,6 +1,4 @@
-# Textual Rule Explanations of Reinforcement Learning Policies
-
-Article: [Textual Rule Explanations of Reinforcement Learning Policies](https://drive.google.com/file/d/16vTKRqLzp4pDMtUG_kBP3fhTTi8TI6mL/view)
+# [Textual Rule Explanations of Reinforcement Learning Policies](https://drive.google.com/file/d/16vTKRqLzp4pDMtUG_kBP3fhTTi8TI6mL/view)
 
 Code and results for a study of **how much textual if-then rule explanations of a
 fixed RL policy change when you re-run the extraction**.
