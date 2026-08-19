@@ -1,0 +1,151 @@
+{
+  "schema_version": "cbs_reproduction_v1",
+  "purpose": "CBS core reproduction, environment deployment, and MaxF1 refinement",
+  "date": "2026-03-24",
+  "script": "reproduction/test_cbs.py",
+  "cbs_config": {
+    "n_categories": 5,
+    "inclusion_threshold": 0.70,
+    "level_labels": ["Very Low", "Low", "Medium", "High", "Very High"],
+    "level_values": [-1.0, -0.5, 0.0, 0.5, 1.0],
+    "kmeans_seed": 42
+  },
+  "maxf1_config": {
+    "alpha": 0.5,
+    "max_iterations": 10
+  },
+  "environments": {
+    "MountainCar-v0": {
+      "base_cbs": {
+        "predicate_thresholds": {
+          "car_position": [-0.9428, -0.8946, -0.4112, -0.0339],
+          "car_velocity": [-0.0389, -0.0109, 0.0014, 0.0183]
+        },
+        "rules": [
+          {"action": 0, "action_label": "push_left", "condition": "position=Medium AND velocity=Low", "weight": 0.975, "n_instances": 1810},
+          {"action": 0, "action_label": "push_left", "condition": "position=High AND velocity=Low", "weight": 0.946, "n_instances": 280},
+          {"action": 0, "action_label": "push_left", "condition": "position=Medium AND velocity=Medium", "weight": 0.946, "n_instances": 1615},
+          {"action": 0, "action_label": "push_left", "condition": "position=Very Low AND velocity=Low", "weight": 0.885, "n_instances": 338},
+          {"action": 0, "action_label": "push_left", "condition": "velocity=High", "weight": 0.212, "n_instances": 331},
+          {"action": 1, "action_label": "no_push", "condition": "position=Very High AND velocity=Medium", "weight": 0.214, "n_instances": 3},
+          {"action": 1, "action_label": "no_push", "condition": "position=Very High AND velocity=High", "weight": 0.167, "n_instances": 3},
+          {"action": 1, "action_label": "no_push", "condition": "position=Medium AND velocity=Very High", "weight": 0.035, "n_instances": 44},
+          {"action": 1, "action_label": "no_push", "condition": "position=High AND velocity=Medium", "weight": 0.030, "n_instances": 7},
+          {"action": 1, "action_label": "no_push", "condition": "position=High AND velocity=Very High", "weight": 0.030, "n_instances": 31},
+          {"action": 2, "action_label": "push_right", "condition": "position=Very High AND velocity=Very High", "weight": 0.998, "n_instances": 1523},
+          {"action": 2, "action_label": "push_right", "condition": "position=Low AND velocity=Medium", "weight": 0.939, "n_instances": 274},
+          {"action": 2, "action_label": "push_right", "condition": "position=Medium AND velocity=Very High", "weight": 0.937, "n_instances": 1235},
+          {"action": 2, "action_label": "push_right", "condition": "position=High AND velocity=Very High", "weight": 0.925, "n_instances": 959},
+          {"action": 2, "action_label": "push_right", "condition": "position=Medium AND velocity=High", "weight": 0.873, "n_instances": 756},
+          {"action": 2, "action_label": "push_right", "condition": "position=Very Low", "weight": 0.546, "n_instances": 331}
+        ],
+        "metrics": {
+          "n_rules": 16,
+          "E_len": 16,
+          "E_duplicate": 2,
+          "E_approx": 0.023,
+          "E_acc": 0.900,
+          "E_rec": 0.646,
+          "E_F1": 0.752
+        },
+        "fit_time_seconds": 8.59,
+        "deployment": {
+          "E_CR_mean": -154.7,
+          "E_CR_std": 24.8,
+          "E_TS_mean": 154.7,
+          "E_TS_std": 24.8,
+          "E_AR": -1.0,
+          "n_episodes": 10,
+          "episode_rewards": [-161, -157, -153, -152, -88, -177, -157, -161, -153, -188],
+          "dqn_baseline": {
+            "E_CR_mean": -120.25,
+            "E_CR_std": 32.23,
+            "ratio": 0.780
+          }
+        }
+      },
+      "maxf1_refinement": {
+        "threshold_changes": [
+          {"feature": "car_position", "index": 2, "before": -0.4112, "after": -0.1961, "shift": 0.2151}
+        ],
+        "metrics": {
+          "n_rules_after": null,
+          "E_acc": 0.844,
+          "E_rec": 0.586,
+          "E_F1": 0.692
+        },
+        "metric_deltas_vs_base": {
+          "E_acc": -0.056,
+          "E_rec": -0.060,
+          "E_F1": -0.060
+        },
+        "deployment": {
+          "E_CR_mean": -163.3,
+          "E_CR_std": 2.1,
+          "delta_vs_base": -8.6
+        }
+      }
+    },
+    "CartPole-v1": {
+      "base_cbs": {
+        "predicate_thresholds": {
+          "cart_position": [-0.0432, 0.0032, 0.0047, 0.0119],
+          "cart_velocity": [-0.0470, 0.0250, 0.2669, 0.7681],
+          "pole_angle": [-0.0158, -0.0063, 0.0002, 0.0064],
+          "pole_angular_velocity": [-0.0955, -0.0474, 0.0058, 0.0735]
+        },
+        "metrics": {
+          "n_rules": 13,
+          "E_len": 13,
+          "E_duplicate": 1,
+          "E_approx": 0.001,
+          "E_acc": 0.781,
+          "E_rec": 0.781,
+          "E_F1": 0.781
+        },
+        "fit_time_seconds": 6.82,
+        "deployment": {
+          "E_CR_mean": 126.1,
+          "E_CR_std": 38.8,
+          "E_TS_mean": 126.1,
+          "E_TS_std": 38.8,
+          "E_AR": 1.0,
+          "n_episodes": 10,
+          "episode_rewards": [134, 151, 129, 171, 131, 60, 128, 109, 186, 62],
+          "dqn_baseline": {
+            "E_CR_mean": 500.0,
+            "E_CR_std": 0.0,
+            "ratio": 0.252
+          }
+        }
+      },
+      "maxf1_refinement": {
+        "threshold_changes": [
+          {"feature": "cart_position", "index": 3, "before": 0.0119, "after": 0.5552, "shift": 0.5433},
+          {"feature": "pole_angle", "index": 2, "before": 0.0002, "after": -0.0061, "shift": -0.0063}
+        ],
+        "metrics": {
+          "n_rules_after": null,
+          "E_acc": 0.832,
+          "E_rec": 0.832,
+          "E_F1": 0.832
+        },
+        "metric_deltas_vs_base": {
+          "E_acc": 0.051,
+          "E_rec": 0.051,
+          "E_F1": 0.052
+        },
+        "deployment": {
+          "E_CR_mean": 111.7,
+          "E_CR_std": 47.8,
+          "delta_vs_base": -14.4
+        }
+      }
+    }
+  },
+  "key_findings": {
+    "fidelity_deployment_gap": "78.1% replay F1 translates to only 25.2% deployment return on CartPole — sequential errors compound",
+    "maxf1_paradox": "CartPole F1 improved +5.2pp but deployment worsened -14.4 reward; MountainCar F1 decreased -6.0pp. Supports H4.",
+    "mountaincar_action_imbalance": "Action 1 (no_push) has only 88 samples (0.9%), producing weak rules (max weight 0.214)"
+  }
+}

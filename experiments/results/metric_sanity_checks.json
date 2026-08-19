@@ -1,0 +1,68 @@
+{
+  "schema_version": "sanity_checks_v1",
+  "purpose": "Phase 2.4: Verify stability metrics (GRS, TD, BRA) on controlled toy examples before use in experiments",
+  "date": "2026-03-24",
+  "script": "experiments/sanity_check_metrics.py",
+  "implementation": "experiments/rule_matching.py (sections 5-7)",
+  "total_checks": 30,
+  "all_passed": true,
+  "checks": {
+    "GRS": {
+      "n_checks": 10,
+      "results": [
+        {"id": "1a_identical_plain", "description": "Identical rule sets — plain Jaccard", "value": 1.0, "expected": 1.0, "passed": true},
+        {"id": "1a_identical_weighted", "description": "Identical rule sets — weighted Jaccard", "value": 1.0, "expected": 1.0, "passed": true},
+        {"id": "1a_mean_pairwise", "description": "Mean pairwise GRS (2 identical sets)", "value": 1.0, "expected": 1.0, "passed": true},
+        {"id": "1b_disjoint_plain", "description": "Completely disjoint — plain Jaccard", "value": 0.0, "expected": 0.0, "passed": true},
+        {"id": "1b_disjoint_weighted", "description": "Completely disjoint — weighted Jaccard", "value": 0.0, "expected": 0.0, "passed": true},
+        {"id": "1b_mean_pairwise", "description": "Mean pairwise GRS (2 disjoint sets)", "value": 0.0, "expected": 0.0, "passed": true},
+        {"id": "1c_partial_plain", "description": "Partial overlap (2/4 shared) — plain", "value": 0.5, "expected": 0.5, "passed": true},
+        {"id": "1c_partial_weighted", "description": "Partial overlap — weighted", "value": 0.5517, "expected": "in (0, 1)", "passed": true},
+        {"id": "1d_weight_drift_plain", "description": "Same structure, different weights — plain", "value": 1.0, "expected": 1.0, "passed": true},
+        {"id": "1d_weight_drift_weighted", "description": "Same structure, different weights — weighted", "value": 0.4167, "expected": 0.4167, "note": "Σmin(w)/Σmax(w) = 1.0/2.4", "passed": true}
+      ]
+    },
+    "TD": {
+      "n_checks": 6,
+      "results": [
+        {"id": "2a_identical", "description": "Identical thresholds", "value": 0.0, "expected": 0.0, "passed": true},
+        {"id": "2b_single_shift", "description": "Single threshold shift (−0.41→−0.20, Δ_f=1.8)", "value": 0.0167, "expected": 0.0167, "note": "0.21/1.8/7 = one of 7 positions drifted", "passed": true},
+        {"id": "2c_uniform_shift", "description": "Uniform shift 0.1 (range=2.0)", "value": 0.05, "expected": 0.05, "note": "0.1/2.0", "passed": true},
+        {"id": "2d_mismatched_count", "description": "Different threshold counts (2 vs 3)", "value": 0.3333, "expected": 0.3333, "note": "unmatched threshold gets max penalty 1.0", "passed": true},
+        {"id": "2e_mean_pairwise", "description": "Mean pairwise TD (3 identical sets)", "value": 0.0, "expected": 0.0, "passed": true},
+        {"id": "2f_max_drift", "description": "Max drift (−1.0 vs +1.0, range=2.0)", "value": 1.0, "expected": 1.0, "passed": true}
+      ]
+    },
+    "BRA": {
+      "n_checks": 8,
+      "results": [
+        {"id": "3a_identical", "description": "Identical rule sets", "value": 1.0, "expected": 1.0, "passed": true},
+        {"id": "3b_swapped_actions", "description": "Same conditions, swapped actions", "value": 0.6, "expected": 0.6, "note": "3/5 agree (3 unmatched states where both return -1)", "passed": true},
+        {"id": "3c_one_empty", "description": "One empty rule set", "value": 0.6, "expected": 0.6, "note": "3/5 agree (3 unmatched for both)", "passed": true},
+        {"id": "3d_both_empty", "description": "Both empty rule sets", "value": 1.0, "expected": 1.0, "note": "all predict -1, count as agreement", "passed": true},
+        {"id": "3e_full_disagree", "description": "Perfect disagreement", "value": 0.0, "expected": 0.0, "passed": true},
+        {"id": "3f_weight_sum", "description": "Weight summation tie-break", "value": "action=0", "expected": "action=0", "note": "0.3+0.4=0.7 > 0.6", "passed": true},
+        {"id": "3g_mean_pairwise", "description": "Mean pairwise BRA (3 identical)", "value": 1.0, "expected": 1.0, "passed": true}
+      ]
+    },
+    "cross_metric_consistency": {
+      "n_checks": 6,
+      "results": [
+        {"id": "4a_stable_grs", "description": "Fully stable — GRS", "value": 1.0, "expected": 1.0, "passed": true},
+        {"id": "4a_stable_td", "description": "Fully stable — TD", "value": 0.0, "expected": 0.0, "passed": true},
+        {"id": "4a_stable_bra", "description": "Fully stable — BRA", "value": 1.0, "expected": 1.0, "passed": true},
+        {"id": "4b_unstable_grs", "description": "Fully unstable — GRS", "value": 0.0, "expected": 0.0, "passed": true},
+        {"id": "4b_unstable_td", "description": "Fully unstable — TD", "value": 0.3364, "expected": "< 1.0 (shared features)", "passed": true},
+        {"id": "4b_unstable_bra", "description": "Fully unstable — BRA", "value": 0.3333, "expected": "low", "passed": true}
+      ],
+      "monotonicity_verified": true,
+      "monotonicity_detail": "GRS decreases: identical (1.0) > slight (0.97) > severe (0.0)"
+    }
+  },
+  "design_decisions": {
+    "td_mismatched_penalty": "Extra thresholds receive max drift (1.0)",
+    "td_default_range": "2.0 (level values in [-1, 1])",
+    "bra_no_match_agreement": "Both returning -1 counts as agreement",
+    "bra_weight_summation": "Multiple matching rules for same action sum weights (matches CBS Eq. 2)"
+  }
+}

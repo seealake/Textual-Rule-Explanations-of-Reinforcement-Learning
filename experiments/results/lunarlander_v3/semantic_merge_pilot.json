@@ -1,0 +1,267 @@
+{
+  "schema_version": "semantic_merge_pilot_v1",
+  "env": "LunarLander-v3",
+  "timestamp": "2026-03-28 20:57:20",
+  "config": {
+    "replay_seed": 0,
+    "n_bootstrap": 5,
+    "consensus_threshold": 0.7,
+    "similarity_cutoff": 0.8,
+    "llm_model": "mock",
+    "max_groups": 20
+  },
+  "matching_stats": {
+    "total_input_rules": 151,
+    "total_matched_groups": 21,
+    "kept_groups": 15,
+    "filtered_groups": 6,
+    "selected_for_llm": 20,
+    "selection_categories": {
+      "borderline_filtered": 2,
+      "marginal_kept": 1,
+      "filtered": 4,
+      "kept": 13
+    }
+  },
+  "llm_judgments": {
+    "n_same_pattern": 14,
+    "n_different_pattern": 6,
+    "n_merged_produced": 14,
+    "per_group": [
+      {
+        "group_id": 0,
+        "category": "borderline_filtered",
+        "same_pattern": true,
+        "has_merged_rule": true,
+        "reasoning": "Rules share same action and majority of conditions with similar thresholds."
+      },
+      {
+        "group_id": 1,
+        "category": "borderline_filtered",
+        "same_pattern": true,
+        "has_merged_rule": true,
+        "reasoning": "Rules share same action and majority of conditions with similar thresholds."
+      },
+      {
+        "group_id": 2,
+        "category": "marginal_kept",
+        "same_pattern": true,
+        "has_merged_rule": true,
+        "reasoning": "Rules share same action and majority of conditions with similar thresholds."
+      },
+      {
+        "group_id": 3,
+        "category": "filtered",
+        "same_pattern": false,
+        "has_merged_rule": false,
+        "reasoning": "Rules cover different feature subsets despite same action."
+      },
+      {
+        "group_id": 4,
+        "category": "filtered",
+        "same_pattern": false,
+        "has_merged_rule": false,
+        "reasoning": "Rules cover different feature subsets despite same action."
+      },
+      {
+        "group_id": 5,
+        "category": "filtered",
+        "same_pattern": false,
+        "has_merged_rule": false,
+        "reasoning": "Rules cover different feature subsets despite same action."
+      },
+      {
+        "group_id": 6,
+        "category": "filtered",
+        "same_pattern": false,
+        "has_merged_rule": false,
+        "reasoning": "Rules cover different feature subsets despite same action."
+      },
+      {
+        "group_id": 7,
+        "category": "kept",
+        "same_pattern": true,
+        "has_merged_rule": true,
+        "reasoning": "Rules share same action and majority of conditions with similar thresholds."
+      },
+      {
+        "group_id": 8,
+        "category": "kept",
+        "same_pattern": true,
+        "has_merged_rule": true,
+        "reasoning": "Rules share same action and majority of conditions with similar thresholds."
+      },
+      {
+        "group_id": 9,
+        "category": "kept",
+        "same_pattern": false,
+        "has_merged_rule": false,
+        "reasoning": "Rules cover different feature subsets despite same action."
+      },
+      {
+        "group_id": 10,
+        "category": "kept",
+        "same_pattern": true,
+        "has_merged_rule": true,
+        "reasoning": "Rules share same action and majority of conditions with similar thresholds."
+      },
+      {
+        "group_id": 11,
+        "category": "kept",
+        "same_pattern": true,
+        "has_merged_rule": true,
+        "reasoning": "Rules share same action and majority of conditions with similar thresholds."
+      },
+      {
+        "group_id": 12,
+        "category": "kept",
+        "same_pattern": true,
+        "has_merged_rule": true,
+        "reasoning": "Rules share same action and majority of conditions with similar thresholds."
+      },
+      {
+        "group_id": 13,
+        "category": "kept",
+        "same_pattern": true,
+        "has_merged_rule": true,
+        "reasoning": "Rules share same action and majority of conditions with similar thresholds."
+      },
+      {
+        "group_id": 14,
+        "category": "kept",
+        "same_pattern": true,
+        "has_merged_rule": true,
+        "reasoning": "Rules share same action and majority of conditions with similar thresholds."
+      },
+      {
+        "group_id": 15,
+        "category": "kept",
+        "same_pattern": false,
+        "has_merged_rule": false,
+        "reasoning": "Rules cover different feature subsets despite same action."
+      },
+      {
+        "group_id": 16,
+        "category": "kept",
+        "same_pattern": true,
+        "has_merged_rule": true,
+        "reasoning": "Rules share same action and majority of conditions with similar thresholds."
+      },
+      {
+        "group_id": 17,
+        "category": "kept",
+        "same_pattern": true,
+        "has_merged_rule": true,
+        "reasoning": "Rules share same action and majority of conditions with similar thresholds."
+      },
+      {
+        "group_id": 18,
+        "category": "kept",
+        "same_pattern": true,
+        "has_merged_rule": true,
+        "reasoning": "Rules share same action and majority of conditions with similar thresholds."
+      },
+      {
+        "group_id": 19,
+        "category": "kept",
+        "same_pattern": true,
+        "has_merged_rule": true,
+        "reasoning": "Rules share same action and majority of conditions with similar thresholds."
+      }
+    ]
+  },
+  "comparison": {
+    "numeric_merge": {
+      "label": "numeric_merge",
+      "n_rules": 15,
+      "f1": 0.3124942168959151,
+      "accuracy": 0.2926,
+      "worst_action_recall": 0.08417508417508418,
+      "fidelity_per_action": {
+        "per_action": {
+          "0": {
+            "precision": 0.6716115981119353,
+            "recall": 0.5747259088286208,
+            "f1": 0.6194029850746269,
+            "support": 1733,
+            "rule_count": 5
+          },
+          "1": {
+            "precision": 0.07705597788527989,
+            "recall": 0.5978552278820375,
+            "f1": 0.13651668197122743,
+            "support": 373,
+            "rule_count": 4
+          },
+          "2": {
+            "precision": 0.7092198581560284,
+            "recall": 0.08417508417508418,
+            "f1": 0.1504890895410083,
+            "support": 1188,
+            "rule_count": 1
+          },
+          "3": {
+            "precision": 0.2987551867219917,
+            "recall": 0.08440797186400938,
+            "f1": 0.1316270566727605,
+            "support": 1706,
+            "rule_count": 5
+          }
+        },
+        "macro_precision": 0.4391606552188088,
+        "macro_recall": 0.335291048187438,
+        "macro_f1": 0.38026034616068677
+      },
+      "E_CR": -375.4609864073081,
+      "E_CR_std": 226.57781297032344,
+      "success_rate": 0.0
+    },
+    "semantic_merge": {
+      "label": "semantic_merge",
+      "n_rules": 17,
+      "f1": 0.31743838238702565,
+      "accuracy": 0.2982,
+      "worst_action_recall": 0.08417508417508418,
+      "fidelity_per_action": {
+        "per_action": {
+          "0": {
+            "precision": 0.6776968894771674,
+            "recall": 0.5908828620888632,
+            "f1": 0.6313193588162762,
+            "support": 1733,
+            "rule_count": 6
+          },
+          "1": {
+            "precision": 0.07780879274249826,
+            "recall": 0.5978552278820375,
+            "f1": 0.13769682000617475,
+            "support": 373,
+            "rule_count": 4
+          },
+          "2": {
+            "precision": 0.7092198581560284,
+            "recall": 0.08417508417508418,
+            "f1": 0.1504890895410083,
+            "support": 1188,
+            "rule_count": 1
+          },
+          "3": {
+            "precision": 0.2987551867219917,
+            "recall": 0.08440797186400938,
+            "f1": 0.1316270566727605,
+            "support": 1706,
+            "rule_count": 6
+          }
+        },
+        "macro_precision": 0.44087018177442144,
+        "macro_recall": 0.3393302865024986,
+        "macro_f1": 0.3834927334056012
+      },
+      "E_CR": -375.4609864073081,
+      "E_CR_std": 226.57781297032344,
+      "success_rate": 0.0
+    },
+    "recovered_rules": 2,
+    "prediction_agreement": 0.9944
+  }
+}

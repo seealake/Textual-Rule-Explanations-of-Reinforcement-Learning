@@ -1,0 +1,146 @@
+{
+  "schema_version": "highway_traceability_v1",
+  "generated_at_utc": "2026-03-31T14:24:00.557857+00:00",
+  "study": {
+    "name": "Highway Reduced Scope Study",
+    "envs": [
+      "merge-v0",
+      "intersection-v0"
+    ],
+    "algos": [
+      "dqn",
+      "ppo"
+    ],
+    "policy_seeds": [
+      0,
+      1,
+      2
+    ],
+    "explainer_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "methods": [
+      "cbs",
+      "b3_vote",
+      "dt",
+      "b5_bdr"
+    ],
+    "feature_modes": [
+      "raw",
+      "raw_derived"
+    ],
+    "vehicles_count": {
+      "default": 6,
+      "ablation": [
+        4,
+        6,
+        8
+      ]
+    },
+    "noise_levels": [
+      0.0,
+      0.01,
+      0.05,
+      0.1
+    ]
+  },
+  "canonical_outputs": {
+    "training": [
+      "artifacts/training_results.json",
+      "artifacts/training_results_intersection_v0_dqn.json",
+      "artifacts/training_results_intersection_v0_ppo.json",
+      "artifacts/training_results_merge_v0_dqn.json",
+      "artifacts/training_results_merge_v0_ppo.json"
+    ],
+    "replay": [
+      "artifacts/replay_collection_results.json"
+    ],
+    "explanations": [
+      "artifacts/explanation_results_raw_derived.json"
+    ],
+    "supplementary_results": [
+      "artifacts/behavioral_evaluation_results.json",
+      "artifacts/feature_ablation_results.json",
+      "artifacts/noise_severity_results.json",
+      "artifacts/statistical_analysis.json",
+      "artifacts/supplementary_analysis.json",
+      "artifacts/vehicles_count_ablation_results.json"
+    ],
+    "tables": [
+      "artifacts/tables/main_table.csv"
+    ],
+    "figures": [
+      "artifacts/figures/fig_hw1_f1_vs_grs.pdf",
+      "artifacts/figures/fig_hw1_f1_vs_grs.png",
+      "artifacts/figures/fig_hw2_grs_vs_bra.pdf",
+      "artifacts/figures/fig_hw2_grs_vs_bra.png",
+      "artifacts/figures/fig_hw3_complexity_extrapolation.pdf",
+      "artifacts/figures/fig_hw3_complexity_extrapolation.png",
+      "artifacts/figures/fig_hw4_noise_severity.pdf",
+      "artifacts/figures/fig_hw4_noise_severity.png",
+      "artifacts/figures/fig_hw5_vehicles_ablation.pdf",
+      "artifacts/figures/fig_hw5_vehicles_ablation.png"
+    ],
+    "logs": [
+      "artifacts/logs/b5_feature_ablation.log",
+      "artifacts/logs/b5_vehicles_ablation.log",
+      "artifacts/logs/highway_post_training_pipeline_3seeds.log",
+      "artifacts/logs/highway_train_dqn.log",
+      "artifacts/logs/highway_train_ppo.log"
+    ],
+    "bootstrap_assets": [
+      "artifacts/highway_*/dqn/policies/policy_seed[0-2].zip",
+      "artifacts/highway_*/ppo/policies/policy_seed[0-2].zip",
+      "artifacts/highway_*/dqn/replay/*policy_seed[0-2]_replay.npz",
+      "artifacts/highway_*/ppo/replay/*policy_seed[0-2]_replay.npz",
+      "artifacts/highway_*/dqn/replay/*policy_seed[0-2]_metadata.json",
+      "artifacts/highway_*/ppo/replay/*policy_seed[0-2]_metadata.json"
+    ]
+  },
+  "per_combo_dirs": {
+    "merge-v0_dqn": {
+      "policies": "artifacts/highway_merge_v0/dqn/policies",
+      "replay": "artifacts/highway_merge_v0/dqn/replay",
+      "explanations": "artifacts/highway_merge_v0/dqn/explanations",
+      "metrics": "artifacts/highway_merge_v0/dqn/metrics"
+    },
+    "merge-v0_ppo": {
+      "policies": "artifacts/highway_merge_v0/ppo/policies",
+      "replay": "artifacts/highway_merge_v0/ppo/replay",
+      "explanations": "artifacts/highway_merge_v0/ppo/explanations",
+      "metrics": "artifacts/highway_merge_v0/ppo/metrics"
+    },
+    "intersection-v0_dqn": {
+      "policies": "artifacts/highway_intersection_v0/dqn/policies",
+      "replay": "artifacts/highway_intersection_v0/dqn/replay",
+      "explanations": "artifacts/highway_intersection_v0/dqn/explanations",
+      "metrics": "artifacts/highway_intersection_v0/dqn/metrics"
+    },
+    "intersection-v0_ppo": {
+      "policies": "artifacts/highway_intersection_v0/ppo/policies",
+      "replay": "artifacts/highway_intersection_v0/ppo/replay",
+      "explanations": "artifacts/highway_intersection_v0/ppo/explanations",
+      "metrics": "artifacts/highway_intersection_v0/ppo/metrics"
+    }
+  },
+  "notes": [
+    "CSV at artifacts/tables/main_table.csv is the canonical main table output.",
+    "Markdown main table export is skipped when tabulate is unavailable.",
+    "The highway pipeline now merges partial method reruns into existing aggregate JSON outputs.",
+    "The training phase now regenerates missing per-seed summaries when a policy zip already exists.",
+    "Fresh clones must run git lfs install && git lfs pull before auditing the full highway result bundle.",
+    "Fresh clones can skip reduced-scope training and main replay recollection because policy_seed0-2 checkpoints and replay bundles are versioned in the repository.",
+    "Per-explainer explanation cache directories under artifacts/highway_*/{dqn,ppo}/explanations are intentionally not tracked on the remote repository because their long filenames break Windows sync paths; use the canonical aggregates in artifacts/ instead.",
+    "The reduced-scope analysis uses policy seeds 0, 1, and 2; some training summary files still retain historical merge-v0 seed entries beyond that scope.",
+    "Feature ablation is traceability-split: artifacts/feature_ablation_results.json stores the raw-mode reruns for all methods plus repaired B5 raw_derived entries, while artifacts/explanation_results_raw_derived.json remains the canonical raw_derived baseline for CBS, B3-vote, and DT."
+  ]
+}

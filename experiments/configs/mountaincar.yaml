@@ -1,0 +1,17 @@
+# ============================================================
+# MountainCar-v0 — Environment-Specific Overrides
+# Inherits from default.yaml; only differences listed here.
+# ============================================================
+
+env:
+  name: "MountainCar-v0"
+  # Obs: [position, velocity], 2-dim, Act: {push_left, no_push, push_right}
+
+policy:
+  train:
+    total_timesteps: 100000
+
+cbs:
+  n_categories: 5
+  # MountainCar has a sharp velocity threshold; CBS should capture it well.
+  # Feature ranges (approximate): position [-1.2, 0.6], velocity [-0.07, 0.07]

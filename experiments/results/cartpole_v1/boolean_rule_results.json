@@ -1,0 +1,4226 @@
+{
+  "schema_version": "b5_bdr_v1",
+  "env": "CartPole-v1",
+  "timestamp": "2026-03-29 22:10:20",
+  "elapsed_seconds": 36.2,
+  "protocol": {
+    "extraction_transitions": 10000,
+    "heldout_transitions": 5000,
+    "deployment_episodes": 50,
+    "eval_seeds": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004
+    ],
+    "anchor": {
+      "seed": 99,
+      "size": 5000,
+      "shape": [
+        5000,
+        4
+      ],
+      "sha256": "5daa80adf0db8b90848e18c87327764becb82aa4846607bd49e462b39ccd5d1b"
+    }
+  },
+  "b5_bdr": {
+    "method_params": {
+      "type": "boolean_rule_summarizer",
+      "n_quantile_thresholds": 4,
+      "max_literals": 2,
+      "max_rules_per_action": 4,
+      "min_support_frac": 0.01,
+      "best_cv_f1": 0.6524008760345662
+    },
+    "per_run": {
+      "seed_shift_s0": {
+        "fidelity_heldout": {
+          "accuracy": 0.6988,
+          "recall": 0.6988,
+          "f1": 0.6988
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.6263987792472024,
+              "recall": 0.9852,
+              "f1": 0.7658582089552238,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.9653558052434457,
+              "recall": 0.4124,
+              "f1": 0.577914798206278,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.7958772922453241,
+          "macro_recall": 0.6988,
+          "macro_f1": 0.744186125937008
+        },
+        "deployment": {
+          "E_CR": 46.82,
+          "E_CR_std": 9.58893111874311,
+          "E_TS": 46.82,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            1.0217875957489013,
+            1.9872702598571776,
+            2.0745537281036377,
+            2.103356122970581
+          ],
+          "1": [
+            -0.030625109747052192,
+            0.041077110916376114,
+            0.2132236629724503,
+            0.5347898244857789
+          ],
+          "2": [
+            -0.018245525285601617,
+            -0.006982978247106073,
+            0.00012925282353535309,
+            0.005899868160486223
+          ],
+          "3": [
+            -0.18564015328884123,
+            -0.0535584032535553,
+            0.0329593263566494,
+            0.20554696619510684
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_seed_shift_s0",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.6524008760345662
+        },
+        "perturbation_family": "seed_shift",
+        "perturbation_id": "seed_shift_s0",
+        "perturbation_params": {
+          "replay_seed": 0
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6854,
+                "level_label": "Very Low",
+                "lower_bound": -0.49310389161109924,
+                "upper_bound": 0.0329593263566494
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5822,
+                "level_label": "Low",
+                "lower_bound": -0.49310389161109924,
+                "upper_bound": 0.20554696619510684
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0311,
+                "level_label": "Medium",
+                "lower_bound": -0.10782574117183685,
+                "upper_bound": 2.103356122970581
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2499,
+                "level_label": "Low",
+                "lower_bound": -0.8010454773902893,
+                "upper_bound": 0.5347898244857789
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 4000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0819,
+                "level_label": "Medium",
+                "lower_bound": -0.10782574117183685,
+                "upper_bound": 1.9872702598571776
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.991095652173913,
+          "TD": 0.003033692085509061
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 1.0,
+          "BRA": 0.9951,
+          "TD": 0.001078088804834084
+        }
+      },
+      "seed_shift_s1": {
+        "fidelity_heldout": {
+          "accuracy": 0.6966,
+          "recall": 0.6966,
+          "f1": 0.6966
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.6246512807506974,
+              "recall": 0.9852,
+              "f1": 0.7645506751513271,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.9649952696310312,
+              "recall": 0.408,
+              "f1": 0.5735170087152094,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.7948232751908644,
+          "macro_recall": 0.6966,
+          "macro_f1": 0.7424772064484509
+        },
+        "deployment": {
+          "E_CR": 46.62,
+          "E_CR_std": 9.651714873534132,
+          "E_TS": 46.62,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            1.0263642787933354,
+            1.9883654832839965,
+            2.075814723968506,
+            2.1035561084747316
+          ],
+          "1": [
+            -0.030468574538826926,
+            0.03999263271689417,
+            0.21247742474079134,
+            0.5363983273506164
+          ],
+          "2": [
+            -0.01820300780236721,
+            -0.007055604830384253,
+            0.00013015825534239513,
+            0.005919479485601191
+          ],
+          "3": [
+            -0.18341727852821346,
+            -0.05386240407824516,
+            0.030922681838274006,
+            0.20714863240718848
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_seed_shift_s1",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.6524008760345662
+        },
+        "perturbation_family": "seed_shift",
+        "perturbation_id": "seed_shift_s1",
+        "perturbation_params": {
+          "replay_seed": 1
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6866,
+                "level_label": "Very Low",
+                "lower_bound": -0.49310389161109924,
+                "upper_bound": 0.030922681838274006
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5812,
+                "level_label": "Low",
+                "lower_bound": -0.49310389161109924,
+                "upper_bound": 0.20714863240718848
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0309,
+                "level_label": "Medium",
+                "lower_bound": -0.11662250757217407,
+                "upper_bound": 2.1035561084747316
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2498,
+                "level_label": "Low",
+                "lower_bound": -0.7957140207290649,
+                "upper_bound": 0.5363983273506164
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 4000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0812,
+                "level_label": "Medium",
+                "lower_bound": -0.11662250757217407,
+                "upper_bound": 1.9883654832839965
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.9928173913043479,
+          "TD": 0.0029275379049689874
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 1.0,
+          "BRA": 0.99675,
+          "TD": 0.0008638088741816927
+        }
+      },
+      "seed_shift_s2": {
+        "fidelity_heldout": {
+          "accuracy": 0.6934,
+          "recall": 0.6934,
+          "f1": 0.6934
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.6221267996968931,
+              "recall": 0.9852,
+              "f1": 0.7626567580120761,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.9644572526416907,
+              "recall": 0.4016,
+              "f1": 0.5670714487432928,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.793292026169292,
+          "macro_recall": 0.6934,
+          "macro_f1": 0.7399901005228771
+        },
+        "deployment": {
+          "E_CR": 46.34,
+          "E_CR_std": 9.595019541407929,
+          "E_TS": 46.34,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            1.02725670337677,
+            1.9886499643325806,
+            2.077120637893677,
+            2.103400993347168
+          ],
+          "1": [
+            -0.029268947243690488,
+            0.03706507906317711,
+            0.2064791977405549,
+            0.5368312954902649
+          ],
+          "2": [
+            -0.018139326199889182,
+            -0.006826490163803092,
+            0.00013015825534239513,
+            0.005799323599785567
+          ],
+          "3": [
+            -0.18439097106456756,
+            -0.05301617681980131,
+            0.02923953570425511,
+            0.20927207767963416
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_seed_shift_s2",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.6524008760345662
+        },
+        "perturbation_family": "seed_shift",
+        "perturbation_id": "seed_shift_s2",
+        "perturbation_params": {
+          "replay_seed": 2
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6818,
+                "level_label": "Very Low",
+                "lower_bound": -0.49310389161109924,
+                "upper_bound": 0.02923953570425511
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5721,
+                "level_label": "Low",
+                "lower_bound": -0.49310389161109924,
+                "upper_bound": 0.20927207767963416
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0288,
+                "level_label": "Medium",
+                "lower_bound": -0.11662250757217407,
+                "upper_bound": 2.103400993347168
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2495,
+                "level_label": "Low",
+                "lower_bound": -0.7957140207290649,
+                "upper_bound": 0.5368312954902649
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 4000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.079,
+                "level_label": "Medium",
+                "lower_bound": -0.11662250757217407,
+                "upper_bound": 1.9886499643325806
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.002717391304347826,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.9950608695652173,
+          "TD": 0.0027074032229873176
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 1.0,
+          "BRA": 0.99755,
+          "TD": 0.0008142875338060522
+        }
+      },
+      "seed_shift_s3": {
+        "fidelity_heldout": {
+          "accuracy": 0.6934,
+          "recall": 0.6934,
+          "f1": 0.6934
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.6221267996968931,
+              "recall": 0.9852,
+              "f1": 0.7626567580120761,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.9644572526416907,
+              "recall": 0.4016,
+              "f1": 0.5670714487432928,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.793292026169292,
+          "macro_recall": 0.6934,
+          "macro_f1": 0.7399901005228771
+        },
+        "deployment": {
+          "E_CR": 46.34,
+          "E_CR_std": 9.595019541407929,
+          "E_TS": 46.34,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            1.0228700160980226,
+            1.9887067794799804,
+            2.077156162261963,
+            2.103545665740967
+          ],
+          "1": [
+            -0.03145481124520302,
+            0.037071982771158224,
+            0.20621803402900707,
+            0.5374593019485474
+          ],
+          "2": [
+            -0.018239732831716537,
+            -0.006765802390873431,
+            0.00017812463338487075,
+            0.0058335083536803735
+          ],
+          "3": [
+            -0.18422996699810024,
+            -0.05349086821079252,
+            0.030153838172554986,
+            0.20904369056224828
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_seed_shift_s3",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.6524008760345662
+        },
+        "perturbation_family": "seed_shift",
+        "perturbation_id": "seed_shift_s3",
+        "perturbation_params": {
+          "replay_seed": 3
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6812,
+                "level_label": "Very Low",
+                "lower_bound": -0.49310389161109924,
+                "upper_bound": 0.030153838172554986
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5723,
+                "level_label": "Low",
+                "lower_bound": -0.49310389161109924,
+                "upper_bound": 0.20904369056224828
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0315,
+                "level_label": "Medium",
+                "lower_bound": -0.11662250757217407,
+                "upper_bound": 2.103545665740967
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2881,
+                "level_label": "Low",
+                "lower_bound": -0.8085052967071533,
+                "upper_bound": 0.5374593019485474
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 4000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0816,
+                "level_label": "Medium",
+                "lower_bound": -0.11662250757217407,
+                "upper_bound": 1.9887067794799804
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.011594202898550725,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.9950608695652173,
+          "TD": 0.0026102232823315883
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 1.0,
+          "BRA": 0.99755,
+          "TD": 0.0007150798325323271
+        }
+      },
+      "seed_shift_s4": {
+        "fidelity_heldout": {
+          "accuracy": 0.6922,
+          "recall": 0.6921999999999999,
+          "f1": 0.6922
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.6211853720050441,
+              "recall": 0.9852,
+              "f1": 0.7619489559164733,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.9642512077294686,
+              "recall": 0.3992,
+              "f1": 0.5646393210749645,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.7927182898672563,
+          "macro_recall": 0.6921999999999999,
+          "macro_f1": 0.7390569622456025
+        },
+        "deployment": {
+          "E_CR": 46.28,
+          "E_CR_std": 9.620893929360202,
+          "E_TS": 46.28,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            1.0210165977478027,
+            1.9891200065612795,
+            2.0794254779815673,
+            2.103751802444458
+          ],
+          "1": [
+            -0.031559699773788454,
+            0.036766866594553,
+            0.2077909111976624,
+            0.5414876699447633
+          ],
+          "2": [
+            -0.018244688212871552,
+            -0.00674410127103328,
+            0.00016340710863005375,
+            0.0058335083536803735
+          ],
+          "3": [
+            -0.18106137216091156,
+            -0.05372048541903493,
+            0.028278850018978126,
+            0.2102208733558656
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_seed_shift_s4",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.6524008760345662
+        },
+        "perturbation_family": "seed_shift",
+        "perturbation_id": "seed_shift_s4",
+        "perturbation_params": {
+          "replay_seed": 4
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6824,
+                "level_label": "Very Low",
+                "lower_bound": -0.49310389161109924,
+                "upper_bound": 0.028278850018978126
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5715,
+                "level_label": "Low",
+                "lower_bound": -0.49310389161109924,
+                "upper_bound": 0.2102208733558656
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0314,
+                "level_label": "Medium",
+                "lower_bound": -0.11662250757217407,
+                "upper_bound": 2.103751802444458
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.286,
+                "level_label": "Low",
+                "lower_bound": -0.8085052967071533,
+                "upper_bound": 0.5414876699447633
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 4000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0814,
+                "level_label": "Medium",
+                "lower_bound": -0.11662250757217407,
+                "upper_bound": 1.9891200065612795
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.9956869565217393,
+          "TD": 0.0027067728915362754
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 1.0,
+          "BRA": 0.99665,
+          "TD": 0.0010317231884958604
+        }
+      },
+      "subsample_0": {
+        "fidelity_heldout": {
+          "accuracy": 0.6922,
+          "recall": 0.6921999999999999,
+          "f1": 0.6922
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.6211853720050441,
+              "recall": 0.9852,
+              "f1": 0.7619489559164733,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.9642512077294686,
+              "recall": 0.3992,
+              "f1": 0.5646393210749645,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.7927182898672563,
+          "macro_recall": 0.6921999999999999,
+          "macro_f1": 0.7390569622456025
+        },
+        "deployment": {
+          "E_CR": 46.28,
+          "E_CR_std": 9.620893929360202,
+          "E_TS": 46.28,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            1.024541759490967,
+            1.9742434978485108,
+            2.08089280128479,
+            2.104297065734863
+          ],
+          "1": [
+            -0.04444515183568,
+            0.03192974701523782,
+            0.20689334571361542,
+            0.5464070081710817
+          ],
+          "2": [
+            -0.018360538035631178,
+            -0.007408926635980605,
+            -3.164704176014908e-05,
+            0.005683443881571299
+          ],
+          "3": [
+            -0.18990198969841,
+            -0.05276409313082694,
+            0.030665673688054087,
+            0.2102383524179459
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_subsample_0",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.6524008760345662
+        },
+        "perturbation_family": "subsample",
+        "perturbation_id": "subsample_0",
+        "perturbation_params": {
+          "subsample_idx": 0,
+          "fraction": 0.8
+        },
+        "n_replay": 8000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6877,
+                "level_label": "Very Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.030665673688054087
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5794,
+                "level_label": "Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.2102383524179459
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0319,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 2.104297065734863
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2744,
+                "level_label": "Low",
+                "lower_bound": -0.8255783915519714,
+                "upper_bound": 0.5464070081710817
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 3200,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0884,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 1.9742434978485108
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.005797101449275362,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.9956869565217393,
+          "TD": 0.002153924148822513
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 1.0,
+          "BRA": 0.9936,
+          "TD": 0.0012345405376050123
+        }
+      },
+      "subsample_1": {
+        "fidelity_heldout": {
+          "accuracy": 0.68,
+          "recall": 0.6799999999999999,
+          "f1": 0.68
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.6117734724292101,
+              "recall": 0.9852,
+              "f1": 0.7548268464603124,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.9620123203285421,
+              "recall": 0.3748,
+              "f1": 0.5394358088658607,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.7868928963788762,
+          "macro_recall": 0.6799999999999999,
+          "macro_f1": 0.7295517905343115
+        },
+        "deployment": {
+          "E_CR": 45.24,
+          "E_CR_std": 9.490121179415993,
+          "E_TS": 45.24,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            1.0267816305160526,
+            1.9959381580352784,
+            2.081099271774292,
+            2.1037070751190186
+          ],
+          "1": [
+            -0.04601802974939346,
+            0.03152305781841278,
+            0.20581430196762085,
+            0.545367419719696
+          ],
+          "2": [
+            -0.01787433698773384,
+            -0.006382834259420627,
+            0.00010611080069793604,
+            0.005633328016847372
+          ],
+          "3": [
+            -0.19233768582344052,
+            -0.053793944418430314,
+            0.030890505388379133,
+            0.21539090573787692
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_subsample_1",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.6524008760345662
+        },
+        "perturbation_family": "subsample",
+        "perturbation_id": "subsample_1",
+        "perturbation_params": {
+          "subsample_idx": 1,
+          "fraction": 0.8
+        },
+        "n_replay": 8000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6857,
+                "level_label": "Very Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.030890505388379133
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5738,
+                "level_label": "Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.21539090573787692
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0322,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 2.1037070751190186
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2752,
+                "level_label": "Low",
+                "lower_bound": -0.8236753940582275,
+                "upper_bound": 0.545367419719696
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 3200,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.079,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 1.9959381580352784
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.04329710144927536,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.9878086956521738,
+          "TD": 0.0025649667976850154
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.06666666666666667,
+          "GRS_ta": 1.0,
+          "BRA": 0.99115,
+          "TD": 0.0015263167318063714
+        }
+      },
+      "subsample_2": {
+        "fidelity_heldout": {
+          "accuracy": 0.6826,
+          "recall": 0.6826,
+          "f1": 0.6826
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.6137552952903065,
+              "recall": 0.9852,
+              "f1": 0.7563334868724089,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.9625126646403243,
+              "recall": 0.38,
+              "f1": 0.5448809865213651,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.7881339799653153,
+          "macro_recall": 0.6826,
+          "macro_f1": 0.7315806421185856
+        },
+        "deployment": {
+          "E_CR": 45.38,
+          "E_CR_std": 9.543353708209708,
+          "E_TS": 45.38,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            1.017610788345337,
+            1.9814563512802128,
+            2.080870580673218,
+            2.1036391258239746
+          ],
+          "1": [
+            -0.04489411115646362,
+            0.03186981603503228,
+            0.20613012909889222,
+            0.545597517490387
+          ],
+          "2": [
+            -0.018219371885061265,
+            -0.007230725884437555,
+            -9.255656332243217e-05,
+            0.0056089649908244625
+          ],
+          "3": [
+            -0.1920495331287384,
+            -0.05303552150726318,
+            0.031685490161180545,
+            0.2144125223159791
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_subsample_2",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.6524008760345662
+        },
+        "perturbation_family": "subsample",
+        "perturbation_id": "subsample_2",
+        "perturbation_params": {
+          "subsample_idx": 2,
+          "fraction": 0.8
+        },
+        "n_replay": 8000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.687,
+                "level_label": "Very Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.031685490161180545
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5769,
+                "level_label": "Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.2144125223159791
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0322,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 2.1036391258239746
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2748,
+                "level_label": "Low",
+                "lower_bound": -0.8255783915519714,
+                "upper_bound": 0.545597517490387
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 3200,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0853,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 1.9814563512802128
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.034782608695652174,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.990278260869565,
+          "TD": 0.00209264801944662
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.03333333333333333,
+          "GRS_ta": 1.0,
+          "BRA": 0.9931,
+          "TD": 0.0010974108236058142
+        }
+      },
+      "subsample_3": {
+        "fidelity_heldout": {
+          "accuracy": 0.6894,
+          "recall": 0.6894,
+          "f1": 0.6894
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.6189997486805731,
+              "recall": 0.9852,
+              "f1": 0.7603025158203427,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.9637610186092067,
+              "recall": 0.3936,
+              "f1": 0.5589321215563761,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.7913803836448898,
+          "macro_recall": 0.6894,
+          "macro_f1": 0.7368785304163289
+        },
+        "deployment": {
+          "E_CR": 45.88,
+          "E_CR_std": 9.768602766004973,
+          "E_TS": 45.88,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            1.0490927696228027,
+            1.9842061758041383,
+            2.0808245658874513,
+            2.103156566619873
+          ],
+          "1": [
+            -0.04476790577173233,
+            0.031793977320194254,
+            0.20634083151817323,
+            0.545449435710907
+          ],
+          "2": [
+            -0.018152371048927307,
+            -0.006955605931580063,
+            9.769270109245732e-05,
+            0.005635991692543037
+          ],
+          "3": [
+            -0.18940343260765055,
+            -0.052869660407304744,
+            0.03163615763187409,
+            0.21233418881893162
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_subsample_3",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.6524008760345662
+        },
+        "perturbation_family": "subsample",
+        "perturbation_id": "subsample_3",
+        "perturbation_params": {
+          "subsample_idx": 3,
+          "fraction": 0.8
+        },
+        "n_replay": 8000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6852,
+                "level_label": "Very Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.03163615763187409
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5756,
+                "level_label": "Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.21233418881893162
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0324,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 2.103156566619873
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2752,
+                "level_label": "Low",
+                "lower_bound": -0.8236753940582275,
+                "upper_bound": 0.545449435710907
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 3200,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0841,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 1.9842061758041383
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.005797101449275362,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.9958782608695654,
+          "TD": 0.0024541672820585026
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.03333333333333333,
+          "GRS_ta": 1.0,
+          "BRA": 0.9947999999999999,
+          "TD": 0.0013953887637608614
+        }
+      },
+      "subsample_4": {
+        "fidelity_heldout": {
+          "accuracy": 0.6912,
+          "recall": 0.6912,
+          "f1": 0.6912
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.6204030226700252,
+              "recall": 0.9852,
+              "f1": 0.7613601236476043,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.9640776699029127,
+              "recall": 0.3972,
+              "f1": 0.5626062322946176,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.7922403462864689,
+          "macro_recall": 0.6912,
+          "macro_f1": 0.7382791343433777
+        },
+        "deployment": {
+          "E_CR": 46.22,
+          "E_CR_std": 9.588096787162716,
+          "E_TS": 46.22,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            1.0281491041183473,
+            1.9823588848114015,
+            2.081140232086182,
+            2.104214096069336
+          ],
+          "1": [
+            -0.04468853995203972,
+            0.032156229019165046,
+            0.20672939121723177,
+            0.5454201221466065
+          ],
+          "2": [
+            -0.018219200894236565,
+            -0.007184952590614553,
+            1.1507328053995473e-05,
+            0.005603935942053796
+          ],
+          "3": [
+            -0.19105643928050992,
+            -0.05368989035487175,
+            0.02969071939587594,
+            0.2106613010168077
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_subsample_4",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.6524008760345662
+        },
+        "perturbation_family": "subsample",
+        "perturbation_id": "subsample_4",
+        "perturbation_params": {
+          "subsample_idx": 4,
+          "fraction": 0.8
+        },
+        "n_replay": 8000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6882,
+                "level_label": "Very Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.02969071939587594
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5792,
+                "level_label": "Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.2106613010168077
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.032,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 2.104214096069336
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2749,
+                "level_label": "Low",
+                "lower_bound": -0.8255783915519714,
+                "upper_bound": 0.5454201221466065
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.042,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 2.081140232086182
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.04417789984935847,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.9960521739130435,
+          "TD": 0.0019829026951474274
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 1.0,
+          "BRA": 0.9943500000000001,
+          "TD": 0.0009447896713989508
+        }
+      },
+      "stratified_0": {
+        "fidelity_heldout": {
+          "accuracy": 0.6906,
+          "recall": 0.6906,
+          "f1": 0.6906
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.6199345582683111,
+              "recall": 0.9852,
+              "f1": 0.761007260930017,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.9639727361246349,
+              "recall": 0.396,
+              "f1": 0.5613836121349589,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.791953647196473,
+          "macro_recall": 0.6906,
+          "macro_f1": 0.7378123412776632
+        },
+        "deployment": {
+          "E_CR": 46.08,
+          "E_CR_std": 9.690902950705885,
+          "E_TS": 46.08,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            1.0267591714859008,
+            1.9829759359359742,
+            2.080879497528076,
+            2.103848600387573
+          ],
+          "1": [
+            -0.044662526994943615,
+            0.03190236687660218,
+            0.2060469478368759,
+            0.5470062494277955
+          ],
+          "2": [
+            -0.01816546469926834,
+            -0.007272926159203052,
+            8.27172880235792e-06,
+            0.005580622795969252
+          ],
+          "3": [
+            -0.19017300009727475,
+            -0.05313923805952072,
+            0.029709360748529468,
+            0.21132360696792604
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_stratified_0",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.6524008760345662
+        },
+        "perturbation_family": "stratified",
+        "perturbation_id": "stratified_0",
+        "perturbation_params": {
+          "subsample_idx": 0,
+          "fraction": 0.8,
+          "stratified": true
+        },
+        "n_replay": 8000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6882,
+                "level_label": "Very Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.029709360748529468
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5788,
+                "level_label": "Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.21132360696792604
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0321,
+                "level_label": "Medium",
+                "lower_bound": -0.12340307980775833,
+                "upper_bound": 2.103848600387573
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.274,
+                "level_label": "Low",
+                "lower_bound": -0.8255783915519714,
+                "upper_bound": 0.5470062494277955
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 3200,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0847,
+                "level_label": "Medium",
+                "lower_bound": -0.12340307980775833,
+                "upper_bound": 1.9829759359359742
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.0098731884057971,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.9961739130434786,
+          "TD": 0.00197295410406414
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.03333333333333333,
+          "GRS_ta": 1.0,
+          "BRA": 0.9982500000000001,
+          "TD": 0.001598419153122919
+        }
+      },
+      "stratified_1": {
+        "fidelity_heldout": {
+          "accuracy": 0.6892,
+          "recall": 0.6892,
+          "f1": 0.6892
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.6188442211055276,
+              "recall": 0.9852,
+              "f1": 0.7601851851851851,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.9637254901960784,
+              "recall": 0.3932,
+              "f1": 0.5585227272727273,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.791284855650803,
+          "macro_recall": 0.6892,
+          "macro_f1": 0.7367228653950704
+        },
+        "deployment": {
+          "E_CR": 45.88,
+          "E_CR_std": 9.768602766004973,
+          "E_TS": 45.88,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            1.0017537832260133,
+            1.9854576826095585,
+            2.081090784072876,
+            2.1037927627563477
+          ],
+          "1": [
+            -0.04484672918915748,
+            0.03108516521751881,
+            0.205648472905159,
+            0.5450227975845339
+          ],
+          "2": [
+            -0.01803363114595413,
+            -0.006729481928050513,
+            0.000139602288254537,
+            0.005735219456255438
+          ],
+          "3": [
+            -0.18876928985118863,
+            -0.053107591718435286,
+            0.03113124072551734,
+            0.21239351332187661
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_stratified_1",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.6524008760345662
+        },
+        "perturbation_family": "stratified",
+        "perturbation_id": "stratified_1",
+        "perturbation_params": {
+          "subsample_idx": 1,
+          "fraction": 0.8,
+          "stratified": true
+        },
+        "n_replay": 8000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6874,
+                "level_label": "Very Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.03113124072551734
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5781,
+                "level_label": "Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.21239351332187661
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0321,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 2.1037927627563477
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2751,
+                "level_label": "Low",
+                "lower_bound": -0.8255783915519714,
+                "upper_bound": 0.5450227975845339
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 3200,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0835,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 1.9854576826095585
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.03166588748636435,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.9957391304347823,
+          "TD": 0.002378132404194442
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.03333333333333333,
+          "GRS_ta": 1.0,
+          "BRA": 0.9986,
+          "TD": 0.0012027372589973142
+        }
+      },
+      "stratified_2": {
+        "fidelity_heldout": {
+          "accuracy": 0.6864,
+          "recall": 0.6864,
+          "f1": 0.6864
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.6166750125187782,
+              "recall": 0.9852,
+              "f1": 0.7585463504773637,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.963220675944334,
+              "recall": 0.3876,
+              "f1": 0.5527666856816885,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.7899478442315562,
+          "macro_recall": 0.6864,
+          "macro_f1": 0.7345426112133723
+        },
+        "deployment": {
+          "E_CR": 45.66,
+          "E_CR_std": 9.686299603047596,
+          "E_TS": 45.66,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            0.9765543580055238,
+            1.9737196683883669,
+            2.080828094482422,
+            2.103037691116333
+          ],
+          "1": [
+            -0.044879139959812166,
+            0.03181041330099106,
+            0.20665993094444274,
+            0.5469780445098877
+          ],
+          "2": [
+            -0.018069454655051227,
+            -0.006683383882045739,
+            0.00016911978600546836,
+            0.005808406509459028
+          ],
+          "3": [
+            -0.18799457550048823,
+            -0.052869660407304744,
+            0.032358302921056806,
+            0.21339177489280703
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_stratified_2",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.6524008760345662
+        },
+        "perturbation_family": "stratified",
+        "perturbation_id": "stratified_2",
+        "perturbation_params": {
+          "subsample_idx": 2,
+          "fraction": 0.8,
+          "stratified": true
+        },
+        "n_replay": 8000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6828,
+                "level_label": "Very Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.032358302921056806
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5723,
+                "level_label": "Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.21339177489280703
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0325,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 2.103037691116333
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2744,
+                "level_label": "Low",
+                "lower_bound": -0.8236753940582275,
+                "upper_bound": 0.5469780445098877
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 3200,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0886,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 1.9737196683883669
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.011594202898550725,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.9935478260869566,
+          "TD": 0.0032693593171753315
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 1.0,
+          "BRA": 0.9964999999999999,
+          "TD": 0.0018807483076105263
+        }
+      },
+      "stratified_3": {
+        "fidelity_heldout": {
+          "accuracy": 0.6896,
+          "recall": 0.6896,
+          "f1": 0.6896
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.6191553544494721,
+              "recall": 0.9852,
+              "f1": 0.7604198826798395,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.9637964774951077,
+              "recall": 0.394,
+              "f1": 0.5593412833617263,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.79147591597229,
+          "macro_recall": 0.6896,
+          "macro_f1": 0.7370341867941127
+        },
+        "deployment": {
+          "E_CR": 45.92,
+          "E_CR_std": 9.756720760583445,
+          "E_TS": 45.92,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            1.0342117547988896,
+            1.995001482963562,
+            2.08113431930542,
+            2.104129457473755
+          ],
+          "1": [
+            -0.04490716308355331,
+            0.03101747669279576,
+            0.20538854897022252,
+            0.5433968663215638
+          ],
+          "2": [
+            -0.017969148233532906,
+            -0.006656403001397842,
+            0.00010630218457663673,
+            0.005603935942053796
+          ],
+          "3": [
+            -0.19129095077514646,
+            -0.0528439924120903,
+            0.030679500475525857,
+            0.21220684945583354
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_stratified_3",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.6524008760345662
+        },
+        "perturbation_family": "stratified",
+        "perturbation_id": "stratified_3",
+        "perturbation_params": {
+          "subsample_idx": 3,
+          "fraction": 0.8,
+          "stratified": true
+        },
+        "n_replay": 8000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6875,
+                "level_label": "Very Low",
+                "lower_bound": -0.483477383852005,
+                "upper_bound": 0.030679500475525857
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5771,
+                "level_label": "Low",
+                "lower_bound": -0.483477383852005,
+                "upper_bound": 0.21220684945583354
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.042,
+                "level_label": "Medium",
+                "lower_bound": -0.12475715577602386,
+                "upper_bound": 2.08113431930542
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2763,
+                "level_label": "Low",
+                "lower_bound": -0.8236753940582275,
+                "upper_bound": 0.5433968663215638
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.032,
+                "level_label": "Medium",
+                "lower_bound": -0.12475715577602386,
+                "upper_bound": 2.104129457473755
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.9960000000000002,
+          "TD": 0.002464063918780139
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 1.0,
+          "BRA": 0.9987,
+          "TD": 0.0018292013527642032
+        }
+      },
+      "stratified_4": {
+        "fidelity_heldout": {
+          "accuracy": 0.6902,
+          "recall": 0.6901999999999999,
+          "f1": 0.6902
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.6196226415094339,
+              "recall": 0.9852,
+              "f1": 0.7607722007722006,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.9639024390243902,
+              "recall": 0.3952,
+              "f1": 0.5605673758865248,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.7917625402669121,
+          "macro_recall": 0.6901999999999999,
+          "macro_f1": 0.7375011047091632
+        },
+        "deployment": {
+          "E_CR": 46.04,
+          "E_CR_std": 9.64564150277212,
+          "E_TS": 46.04,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            0.9995767831802369,
+            1.9775315761566163,
+            2.08056755065918,
+            2.103455829620361
+          ],
+          "1": [
+            -0.04468311369419098,
+            0.03203604817390442,
+            0.2062331795692444,
+            0.5461042046546937
+          ],
+          "2": [
+            -0.018081510066986085,
+            -0.006802976131439195,
+            0.00016346257471014028,
+            0.005759621877223255
+          ],
+          "3": [
+            -0.19105643928050992,
+            -0.05314670205116271,
+            0.032343602925539054,
+            0.2117585510015489
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_stratified_4",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.6524008760345662
+        },
+        "perturbation_family": "stratified",
+        "perturbation_id": "stratified_4",
+        "perturbation_params": {
+          "subsample_idx": 4,
+          "fraction": 0.8,
+          "stratified": true
+        },
+        "n_replay": 8000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6848,
+                "level_label": "Very Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.032343602925539054
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.576,
+                "level_label": "Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.2117585510015489
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0323,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 2.103455829620361
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2749,
+                "level_label": "Low",
+                "lower_bound": -0.8236753940582275,
+                "upper_bound": 0.5461042046546937
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 3200,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.087,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 1.9775315761566163
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.04128456863379724,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.9962086956521737,
+          "TD": 0.0024693429906671167
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 1.0,
+          "BRA": 0.99855,
+          "TD": 0.0012518921831688103
+        }
+      },
+      "algo_max_literals_minus1": {
+        "fidelity_heldout": {
+          "accuracy": 0.69,
+          "recall": 0.69,
+          "f1": 0.69
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.619466800804829,
+              "recall": 0.9852,
+              "f1": 0.7606547251389746,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.9638671875,
+              "recall": 0.3948,
+              "f1": 0.5601589103291714,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.7916669941524145,
+          "macro_recall": 0.69,
+          "macro_f1": 0.7373454738763991
+        },
+        "deployment": {
+          "E_CR": 45.92,
+          "E_CR_std": 9.756720760583445,
+          "E_TS": 45.92,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            1.0237648963928223,
+            1.9831645250320435,
+            2.0810463428497314,
+            2.1036750793457033
+          ],
+          "1": [
+            -0.044788699597120285,
+            0.03181041330099106,
+            0.20612518787384032,
+            0.5455032587051393
+          ],
+          "2": [
+            -0.01816546469926834,
+            -0.007104164734482759,
+            1.0705870408855971e-05,
+            0.005634812731295827
+          ],
+          "3": [
+            -0.18990198969841,
+            -0.0528439924120903,
+            0.031019587069749888,
+            0.21202022433280954
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_algo_max_literals_minus1",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 1,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01
+        },
+        "perturbation_family": "algo_variation",
+        "perturbation_id": "algo_max_literals_minus1",
+        "perturbation_params": {
+          "variation": "max_literals_minus1",
+          "max_literals": 1,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6874,
+                "level_label": "Very Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.031019587069749888
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5783,
+                "level_label": "Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.21202022433280954
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0322,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 2.1036750793457033
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2749,
+                "level_label": "Low",
+                "lower_bound": -0.8255783915519714,
+                "upper_bound": 0.5455032587051393
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 4000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0845,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 1.9831645250320435
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.23437010147677584,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.9962086956521737,
+          "TD": 0.0018102706328287908
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.9529411764705882,
+          "GRS_ta": 0.96,
+          "BRA": 1.0,
+          "TD": 0.0
+        }
+      },
+      "algo_max_literals_plus1": {
+        "fidelity_heldout": {
+          "accuracy": 0.69,
+          "recall": 0.69,
+          "f1": 0.69
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.619466800804829,
+              "recall": 0.9852,
+              "f1": 0.7606547251389746,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.9638671875,
+              "recall": 0.3948,
+              "f1": 0.5601589103291714,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.7916669941524145,
+          "macro_recall": 0.69,
+          "macro_f1": 0.7373454738763991
+        },
+        "deployment": {
+          "E_CR": 45.92,
+          "E_CR_std": 9.756720760583445,
+          "E_TS": 45.92,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            1.0237648963928223,
+            1.9831645250320435,
+            2.0810463428497314,
+            2.1036750793457033
+          ],
+          "1": [
+            -0.044788699597120285,
+            0.03181041330099106,
+            0.20612518787384032,
+            0.5455032587051393
+          ],
+          "2": [
+            -0.01816546469926834,
+            -0.007104164734482759,
+            1.0705870408855971e-05,
+            0.005634812731295827
+          ],
+          "3": [
+            -0.18990198969841,
+            -0.0528439924120903,
+            0.031019587069749888,
+            0.21202022433280954
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_algo_max_literals_plus1",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 3,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01
+        },
+        "perturbation_family": "algo_variation",
+        "perturbation_id": "algo_max_literals_plus1",
+        "perturbation_params": {
+          "variation": "max_literals_plus1",
+          "max_literals": 3,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6874,
+                "level_label": "Very Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.031019587069749888
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5783,
+                "level_label": "Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.21202022433280954
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0322,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 2.1036750793457033
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2749,
+                "level_label": "Low",
+                "lower_bound": -0.8255783915519714,
+                "upper_bound": 0.5455032587051393
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 4000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0845,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 1.9831645250320435
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.23437010147677584,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.9962086956521737,
+          "TD": 0.0018102706328287908
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.9529411764705882,
+          "GRS_ta": 0.96,
+          "BRA": 1.0,
+          "TD": 0.0
+        }
+      },
+      "algo_max_rules_minus2": {
+        "fidelity_heldout": {
+          "accuracy": 0.69,
+          "recall": 0.69,
+          "f1": 0.69
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.619466800804829,
+              "recall": 0.9852,
+              "f1": 0.7606547251389746,
+              "support": 2500,
+              "rule_count": 2
+            },
+            "1": {
+              "precision": 0.9638671875,
+              "recall": 0.3948,
+              "f1": 0.5601589103291714,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.7916669941524145,
+          "macro_recall": 0.69,
+          "macro_f1": 0.7373454738763991
+        },
+        "deployment": {
+          "E_CR": 45.92,
+          "E_CR_std": 9.756720760583445,
+          "E_TS": 45.92,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 4,
+          "n_duplicated": 0,
+          "n_unique_signatures": 4
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 4,
+        "thresholds": {
+          "0": [
+            1.0237648963928223,
+            1.9831645250320435,
+            2.0810463428497314,
+            2.1036750793457033
+          ],
+          "1": [
+            -0.044788699597120285,
+            0.03181041330099106,
+            0.20612518787384032,
+            0.5455032587051393
+          ],
+          "2": [
+            -0.01816546469926834,
+            -0.007104164734482759,
+            1.0705870408855971e-05,
+            0.005634812731295827
+          ],
+          "3": [
+            -0.18990198969841,
+            -0.0528439924120903,
+            0.031019587069749888,
+            0.21202022433280954
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_algo_max_rules_minus2",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 2,
+          "min_support_frac": 0.01
+        },
+        "perturbation_family": "algo_variation",
+        "perturbation_id": "algo_max_rules_minus2",
+        "perturbation_params": {
+          "variation": "max_rules_minus2",
+          "max_literals": 2,
+          "max_rules_per_action": 2,
+          "min_support_frac": 0.01
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6874,
+                "level_label": "Very Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.031019587069749888
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5783,
+                "level_label": "Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.21202022433280954
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2749,
+                "level_label": "Low",
+                "lower_bound": -0.8255783915519714,
+                "upper_bound": 0.5455032587051393
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 4000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0845,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 1.9831645250320435
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.18420151412478775,
+          "GRS_ta": 0.7942028985507249,
+          "BRA": 0.9962086956521737,
+          "TD": 0.0018102706328287908
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.7647058823529411,
+          "GRS_ta": 0.8,
+          "BRA": 1.0,
+          "TD": 0.0
+        }
+      },
+      "algo_max_rules_plus2": {
+        "fidelity_heldout": {
+          "accuracy": 0.69,
+          "recall": 0.69,
+          "f1": 0.69
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.619466800804829,
+              "recall": 0.9852,
+              "f1": 0.7606547251389746,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.9638671875,
+              "recall": 0.3948,
+              "f1": 0.5601589103291714,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.7916669941524145,
+          "macro_recall": 0.69,
+          "macro_f1": 0.7373454738763991
+        },
+        "deployment": {
+          "E_CR": 45.92,
+          "E_CR_std": 9.756720760583445,
+          "E_TS": 45.92,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            1.0237648963928223,
+            1.9831645250320435,
+            2.0810463428497314,
+            2.1036750793457033
+          ],
+          "1": [
+            -0.044788699597120285,
+            0.03181041330099106,
+            0.20612518787384032,
+            0.5455032587051393
+          ],
+          "2": [
+            -0.01816546469926834,
+            -0.007104164734482759,
+            1.0705870408855971e-05,
+            0.005634812731295827
+          ],
+          "3": [
+            -0.18990198969841,
+            -0.0528439924120903,
+            0.031019587069749888,
+            0.21202022433280954
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_algo_max_rules_plus2",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 6,
+          "min_support_frac": 0.01
+        },
+        "perturbation_family": "algo_variation",
+        "perturbation_id": "algo_max_rules_plus2",
+        "perturbation_params": {
+          "variation": "max_rules_plus2",
+          "max_literals": 2,
+          "max_rules_per_action": 6,
+          "min_support_frac": 0.01
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6874,
+                "level_label": "Very Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.031019587069749888
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5783,
+                "level_label": "Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.21202022433280954
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0322,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 2.1036750793457033
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2749,
+                "level_label": "Low",
+                "lower_bound": -0.8255783915519714,
+                "upper_bound": 0.5455032587051393
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 4000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0845,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 1.9831645250320435
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.23437010147677584,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.9962086956521737,
+          "TD": 0.0018102706328287908
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.9529411764705882,
+          "GRS_ta": 0.96,
+          "BRA": 1.0,
+          "TD": 0.0
+        }
+      },
+      "algo_min_support_half": {
+        "fidelity_heldout": {
+          "accuracy": 0.69,
+          "recall": 0.69,
+          "f1": 0.69
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.619466800804829,
+              "recall": 0.9852,
+              "f1": 0.7606547251389746,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.9638671875,
+              "recall": 0.3948,
+              "f1": 0.5601589103291714,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.7916669941524145,
+          "macro_recall": 0.69,
+          "macro_f1": 0.7373454738763991
+        },
+        "deployment": {
+          "E_CR": 45.92,
+          "E_CR_std": 9.756720760583445,
+          "E_TS": 45.92,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            1.0237648963928223,
+            1.9831645250320435,
+            2.0810463428497314,
+            2.1036750793457033
+          ],
+          "1": [
+            -0.044788699597120285,
+            0.03181041330099106,
+            0.20612518787384032,
+            0.5455032587051393
+          ],
+          "2": [
+            -0.01816546469926834,
+            -0.007104164734482759,
+            1.0705870408855971e-05,
+            0.005634812731295827
+          ],
+          "3": [
+            -0.18990198969841,
+            -0.0528439924120903,
+            0.031019587069749888,
+            0.21202022433280954
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_algo_min_support_half",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.005
+        },
+        "perturbation_family": "algo_variation",
+        "perturbation_id": "algo_min_support_half",
+        "perturbation_params": {
+          "variation": "min_support_half",
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.005
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6874,
+                "level_label": "Very Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.031019587069749888
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5783,
+                "level_label": "Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.21202022433280954
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0322,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 2.1036750793457033
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2749,
+                "level_label": "Low",
+                "lower_bound": -0.8255783915519714,
+                "upper_bound": 0.5455032587051393
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 4000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0845,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 1.9831645250320435
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.23437010147677584,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.9962086956521737,
+          "TD": 0.0018102706328287908
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.9529411764705882,
+          "GRS_ta": 0.96,
+          "BRA": 1.0,
+          "TD": 0.0
+        }
+      },
+      "algo_min_support_double": {
+        "fidelity_heldout": {
+          "accuracy": 0.69,
+          "recall": 0.69,
+          "f1": 0.69
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.619466800804829,
+              "recall": 0.9852,
+              "f1": 0.7606547251389746,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.9638671875,
+              "recall": 0.3948,
+              "f1": 0.5601589103291714,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.7916669941524145,
+          "macro_recall": 0.69,
+          "macro_f1": 0.7373454738763991
+        },
+        "deployment": {
+          "E_CR": 45.92,
+          "E_CR_std": 9.756720760583445,
+          "E_TS": 45.92,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            1.0237648963928223,
+            1.9831645250320435,
+            2.0810463428497314,
+            2.1036750793457033
+          ],
+          "1": [
+            -0.044788699597120285,
+            0.03181041330099106,
+            0.20612518787384032,
+            0.5455032587051393
+          ],
+          "2": [
+            -0.01816546469926834,
+            -0.007104164734482759,
+            1.0705870408855971e-05,
+            0.005634812731295827
+          ],
+          "3": [
+            -0.18990198969841,
+            -0.0528439924120903,
+            0.031019587069749888,
+            0.21202022433280954
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_algo_min_support_double",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.02
+        },
+        "perturbation_family": "algo_variation",
+        "perturbation_id": "algo_min_support_double",
+        "perturbation_params": {
+          "variation": "min_support_double",
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.02
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6874,
+                "level_label": "Very Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.031019587069749888
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5783,
+                "level_label": "Low",
+                "lower_bound": -0.48753735423088074,
+                "upper_bound": 0.21202022433280954
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0322,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 2.1036750793457033
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2749,
+                "level_label": "Low",
+                "lower_bound": -0.8255783915519714,
+                "upper_bound": 0.5455032587051393
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 4000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0845,
+                "level_label": "Medium",
+                "lower_bound": -0.12484216690063477,
+                "upper_bound": 1.9831645250320435
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.23437010147677584,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.9962086956521737,
+          "TD": 0.0018102706328287908
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.9529411764705882,
+          "GRS_ta": 0.96,
+          "BRA": 1.0,
+          "TD": 0.0
+        }
+      },
+      "noise_0.010": {
+        "fidelity_heldout": {
+          "accuracy": 0.691,
+          "recall": 0.691,
+          "f1": 0.691
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.6202467892218585,
+              "recall": 0.9852,
+              "f1": 0.7612424663885025,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.9640427599611273,
+              "recall": 0.3968,
+              "f1": 0.5621989232077076,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.7921447745914929,
+          "macro_recall": 0.691,
+          "macro_f1": 0.7381235448083427
+        },
+        "deployment": {
+          "E_CR": 46.18,
+          "E_CR_std": 9.559686187318075,
+          "E_TS": 46.18,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            1.0218631267547609,
+            1.9831612586975098,
+            2.077114486694336,
+            2.110758972167969
+          ],
+          "1": [
+            -0.04066919237375258,
+            0.035261915624141695,
+            0.21032447814941407,
+            0.5440366983413697
+          ],
+          "2": [
+            -0.018271805718541145,
+            -0.00722862221300602,
+            -6.715317576890593e-05,
+            0.005859739705920222
+          ],
+          "3": [
+            -0.1913018554449081,
+            -0.052577805519104,
+            0.032112842798233045,
+            0.21078771948814395
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_noise_0.010",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.6524008760345662
+        },
+        "perturbation_family": "feature_noise",
+        "perturbation_id": "noise_0.010",
+        "perturbation_params": {
+          "noise_level": 0.01
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6817,
+                "level_label": "Very Low",
+                "lower_bound": -0.4962891936302185,
+                "upper_bound": 0.032112842798233045
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.574,
+                "level_label": "Low",
+                "lower_bound": -0.4962891936302185,
+                "upper_bound": 0.21078771948814395
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0595,
+                "level_label": "Medium",
+                "lower_bound": -0.15960979461669922,
+                "upper_bound": 2.077114486694336
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2786,
+                "level_label": "Low",
+                "lower_bound": -0.8554927706718445,
+                "upper_bound": 0.5440366983413697
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0453,
+                "level_label": "Medium",
+                "lower_bound": -0.15960979461669922,
+                "upper_bound": 2.110758972167969
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.9961043478260866,
+          "TD": 0.0023288196845860126
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.9166666666666667,
+          "BRA": 0.9836,
+          "TD": 0.00941208795163937
+        }
+      },
+      "noise_0.030": {
+        "fidelity_heldout": {
+          "accuracy": 0.704,
+          "recall": 0.704,
+          "f1": 0.704
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.630568356374808,
+              "recall": 0.9852,
+              "f1": 0.7689665938182954,
+              "support": 2500,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.9661791590493601,
+              "recall": 0.4228,
+              "f1": 0.5882025598219255,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.7983737577120841,
+          "macro_recall": 0.704,
+          "macro_f1": 0.7482227675292232
+        },
+        "deployment": {
+          "E_CR": 47.26,
+          "E_CR_std": 9.543186050790375,
+          "E_TS": 47.26,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 5,
+          "n_duplicated": 0,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 5,
+        "thresholds": {
+          "0": [
+            1.0145549297332765,
+            1.949023461341858,
+            2.060496520996094,
+            2.1260170936584473
+          ],
+          "1": [
+            -0.06234207749366756,
+            0.056782122701406486,
+            0.22390869259834295,
+            0.53590544462204
+          ],
+          "2": [
+            -0.0186156053096056,
+            -0.008028723672032353,
+            -0.00030810442403890166,
+            0.008131746947765351
+          ],
+          "3": [
+            -0.19011928141117096,
+            -0.05528784170746802,
+            0.0424735322594643,
+            0.20118345618247988
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_noise_0.030",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.6524008760345662
+        },
+        "perturbation_family": "feature_noise",
+        "perturbation_id": "noise_0.030",
+        "perturbation_params": {
+          "noise_level": 0.03
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6659,
+                "level_label": "Very Low",
+                "lower_bound": -0.5256474018096924,
+                "upper_bound": 0.0424735322594643
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5726,
+                "level_label": "Low",
+                "lower_bound": -0.5256474018096924,
+                "upper_bound": 0.20118345618247988
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.0814,
+                "level_label": "Medium",
+                "lower_bound": -0.3103548288345337,
+                "upper_bound": 2.1260170936584473
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2881,
+                "level_label": "Low",
+                "lower_bound": -0.9153214693069458,
+                "upper_bound": 0.53590544462204
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 4000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.1481,
+                "level_label": "Medium",
+                "lower_bound": -0.3103548288345337,
+                "upper_bound": 1.949023461341858
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.005797101449275362,
+          "GRS_ta": 0.9840579710144928,
+          "BRA": 0.9864695652173914,
+          "TD": 0.0073130009426517215
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.9166666666666667,
+          "BRA": 0.9884999999999999,
+          "TD": 0.0063579139648388214
+        }
+      },
+      "noise_0.050": {
+        "fidelity_heldout": {
+          "accuracy": 0.6948,
+          "recall": 0.6948,
+          "f1": 0.6948
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.6232287449392713,
+              "recall": 0.9852,
+              "f1": 0.7634841909485431,
+              "support": 2500,
+              "rule_count": 4
+            },
+            "1": {
+              "precision": 0.9646946564885496,
+              "recall": 0.4044,
+              "f1": 0.5698985343855694,
+              "support": 2500,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.7939617007139104,
+          "macro_recall": 0.6948,
+          "macro_f1": 0.7410784269792717
+        },
+        "deployment": {
+          "E_CR": 47.22,
+          "E_CR_std": 9.55047642790662,
+          "E_TS": 47.22,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 6,
+          "n_duplicated": 0,
+          "n_unique_signatures": 6
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 0,
+          "approx_rate": 0.0
+        },
+        "n_rules": 6,
+        "thresholds": {
+          "0": [
+            1.015905570983887,
+            1.905030632019043,
+            2.0445204734802247,
+            2.1448113918304443
+          ],
+          "1": [
+            -0.07720208317041395,
+            0.06570394486188892,
+            0.2373667091131213,
+            0.5324467301368715
+          ],
+          "2": [
+            -0.0195153322070837,
+            -0.008891490660607813,
+            -9.12442392291237e-06,
+            0.010778323374688627
+          ],
+          "3": [
+            -0.19644883275032043,
+            -0.061618797481060014,
+            0.05330106541514409,
+            0.20066830217838288
+          ]
+        },
+        "run_id": "cartpole_v1_b5_bdr_noise_0.050",
+        "group_id": "cartpole_v1_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.6524008760345662
+        },
+        "perturbation_family": "feature_noise",
+        "perturbation_id": "noise_0.050",
+        "perturbation_params": {
+          "noise_level": 0.05
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.6344,
+                "level_label": "Very Low",
+                "lower_bound": -0.6023268103599548,
+                "upper_bound": 0.05330106541514409
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 3,
+                "level": -0.5522,
+                "level_label": "Low",
+                "lower_bound": -0.6023268103599548,
+                "upper_bound": 0.20066830217838288
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.1133,
+                "level_label": "Medium",
+                "lower_bound": -0.4729394316673279,
+                "upper_bound": 2.1448113918304443
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 2,
+                "level": -0.5917,
+                "level_label": "Low",
+                "lower_bound": -0.06280756741762161,
+                "upper_bound": 0.010778323374688627
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.3008,
+                "level_label": "Low",
+                "lower_bound": -0.9751502275466919,
+                "upper_bound": 0.5324467301368715
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.1472,
+                "level_label": "Medium",
+                "lower_bound": -0.4729394316673279,
+                "upper_bound": 2.0445204734802247
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.826086956521739,
+          "BRA": 0.9799130434782606,
+          "TD": 0.01298976228744218
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.8333333333333334,
+          "BRA": 0.9851,
+          "TD": 0.009311571596042382
+        }
+      }
+    },
+    "stability": {
+      "GRS_weighted_jaccard": 0.06685126572825781,
+      "GRS_plain_jaccard": 0.06577093397745573,
+      "GRS_threshold_aware": 0.9695652173913049,
+      "TD": 0.0029700540740427977,
+      "BRA": 0.9938681159420291,
+      "n_perturbation_runs": 24
+    }
+  }
+}

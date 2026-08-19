@@ -1,0 +1,16 @@
+# ============================================================
+# LunarLander-v2 — Environment-Specific Overrides (Stretch)
+# Inherits from default.yaml; only differences listed here.
+# ============================================================
+
+env:
+  name: "LunarLander-v3"
+  # Obs: 8-dim (x, y, vx, vy, angle, angular_vel, left_leg, right_leg)
+  # Act: {do_nothing, fire_left, fire_main, fire_right}
+
+policy:
+  train:
+    total_timesteps: 200000          # needs more training than simpler envs
+
+cbs:
+  n_categories: 6                    # slightly more categories for 8-dim obs

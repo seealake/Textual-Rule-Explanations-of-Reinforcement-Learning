@@ -1,0 +1,19 @@
+# ============================================================
+# CartPole-v1 — Environment-Specific Overrides
+# Inherits from default.yaml; only differences listed here.
+# ============================================================
+
+env:
+  name: "CartPole-v1"
+  # Obs: [cart_pos, cart_vel, pole_angle, pole_angular_vel], 4-dim
+  # Act: {push_left, push_right}
+
+policy:
+  train:
+    total_timesteps: 50000           # CartPole is easier to solve
+
+cbs:
+  n_categories: 5
+  # Feature ranges (approximate):
+  #   cart_position [-4.8, 4.8], cart_velocity [-inf, inf] (clipped in practice)
+  #   pole_angle [-0.418, 0.418], pole_angular_velocity [-inf, inf]

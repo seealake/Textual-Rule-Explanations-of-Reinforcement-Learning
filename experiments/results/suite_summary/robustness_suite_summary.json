@@ -1,0 +1,71 @@
+{
+  "generated_at": "2026-04-01T09:35:20.372304+00:00",
+  "purpose": "Compact reviewer-facing summary of the robustness evaluation suite.",
+  "rows": [
+    {
+      "module": "Noise severity",
+      "question": "How quickly do fidelity and agreement degrade under replay noise?",
+      "coverage": "MC / CP / LL; CBS, RV, DT",
+      "what_varies": "Replay noise level (eps = 0.005-0.08)",
+      "headline": "LunarLander mean BRA drop ranges 0.323-0.590; in MountainCar, RV and DT stay above 90% BRA through eps=0.08.",
+      "source_paths": [
+        "experiments/results/mountaincar_v0/noise_severity_results.json",
+        "experiments/results/cartpole_v1/noise_severity_results.json",
+        "experiments/results/lunarlander_v3/noise_severity_results.json"
+      ]
+    },
+    {
+      "module": "Rare-action support",
+      "question": "Are aggregate scores hiding minority-action failure?",
+      "coverage": "MC / LL quota resampling",
+      "what_varies": "Rare-action support and replay size",
+      "headline": "MountainCar worst-R passes 0.70 at 5% support; LunarLander tops out at 0.341 even at 12%.",
+      "source_paths": [
+        "experiments/results/mountaincar_v0/rare_action_sweep_results.json",
+        "experiments/results/lunarlander_v3/rare_action_sweep_results.json"
+      ]
+    },
+    {
+      "module": "Cross-policy",
+      "question": "Do the stability patterns depend on the RL algorithm family?",
+      "coverage": "CartPole + LunarLander; DQN vs PPO",
+      "what_varies": "Policy family with matched environments",
+      "headline": "CBS BRA changes only +0.006 on CartPole and +0.096 on LunarLander under PPO vs DQN.",
+      "source_paths": [
+        "experiments/results/cross_algo_comparison/ppo_vs_dqn_comparison.json",
+        "experiments/results/cross_algo_comparison/ppo_vs_dqn_comparison_lunarlander.json"
+      ]
+    },
+    {
+      "module": "Matching robustness",
+      "question": "Are the conclusions stable to rho/lambda matching choices?",
+      "coverage": "CartPole + LunarLander",
+      "what_varies": "rho and lambda matching hyperparameters",
+      "headline": "Matching choices matter: CartPole BRA spans 0.448-0.808; LunarLander mean F1 spans 0.412-0.523.",
+      "source_paths": [
+        "experiments/results/cartpole_v1/matching_robustness_results.json",
+        "experiments/results/lunarlander_v3/matching_robustness_results.json"
+      ]
+    },
+    {
+      "module": "Bootstrap significance",
+      "question": "Do the paper-level claims survive formal uncertainty checks?",
+      "coverage": "3 environments x 6 core claims",
+      "what_varies": "Paired bootstrap confidence intervals and p-values",
+      "headline": "All 6/6 core claims are supported and significant in all 3 environments.",
+      "source_paths": [
+        "experiments/results/statistical_tests.json"
+      ]
+    },
+    {
+      "module": "Repair-chain significance",
+      "question": "Do the Experiment B repairs hold up statistically?",
+      "coverage": "Experiment B paired bootstrap (MC/CP/LL)",
+      "what_varies": "DCM, MTC, and SSC repair stages",
+      "headline": "DCM->MTC is significant in 3/3 envs; DCM->SSC is significant in 3/3 envs; MTC->SSC is significant in 2/3.",
+      "source_paths": [
+        "experiments/results/merge_statistics/paired_bootstrap.json"
+      ]
+    }
+  ]
+}

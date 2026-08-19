@@ -1,0 +1,11 @@
+# Auto detect text files and perform LF normalization
+* text=auto
+*.pdf binary
+artifacts/highway_*/*/policies/*.zip filter=lfs diff=lfs merge=lfs -text
+artifacts/highway_*/*/replay/*.npz filter=lfs diff=lfs merge=lfs -text
+artifacts/highway_*/*/explanations/*_explanation_results_*.json filter=lfs diff=lfs merge=lfs -text
+artifacts/explanation_results_raw_derived.json filter=lfs diff=lfs merge=lfs -text
+artifacts/feature_ablation_results.json filter=lfs diff=lfs merge=lfs -text
+artifacts/noise_severity_results.json filter=lfs diff=lfs merge=lfs -text
+artifacts/vehicles_count_ablation_results.json filter=lfs diff=lfs merge=lfs -text
+artifacts/highway_*/*/metrics/*noise_severity_results.json filter=lfs diff=lfs merge=lfs -text

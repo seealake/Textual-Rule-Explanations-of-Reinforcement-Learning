@@ -1,0 +1,31 @@
+# ============================================================
+# MiniGrid-Dynamic-Obstacles-8x8-v0 — Environment-Specific Overrides
+# Inherits from default.yaml; only differences listed here.
+# ============================================================
+
+env:
+  name: "MiniGrid-Dynamic-Obstacles-8x8-v0"
+  # Obs: 14-dim feature vector (via MiniGridFeatureWrapper)
+  #   agent_x, agent_y, agent_dir, goal_dx, goal_dy, dist_to_goal,
+  #   front_is_free, front_is_obstacle, left_free, right_free,
+  #   nearest_obs_dist, nearest_obs_dx, nearest_obs_dy, num_obstacles_visible
+  # Act: {0: turn_left, 1: turn_right, 2: forward}
+  wrapper: "minigrid_feature"     # signals that MiniGridFeatureWrapper is needed
+  max_episode_steps: 200          # dynamic obstacles env default
+
+policy:
+  algorithm: "PPO"
+  train:
+    total_timesteps: 1000000
+
+cbs:
+  n_categories: 5
+  # Feature types:
+  #   Continuous: agent_x, agent_y, agent_dir, goal_dx, goal_dy, dist_to_goal,
+  #               nearest_obs_dist, nearest_obs_dx, nearest_obs_dy
+  #   Binary: front_is_free, front_is_obstacle, left_free, right_free
+  #   Count: num_obstacles_visible
+  #
+  # noise_mask: indices of continuous features safe for Gaussian noise
+  # (binary flags should NOT get Gaussian noise)
+  noise_mask_indices: [0, 1, 2, 3, 4, 5, 10, 11, 12]   # skip 6,7,8,9,13

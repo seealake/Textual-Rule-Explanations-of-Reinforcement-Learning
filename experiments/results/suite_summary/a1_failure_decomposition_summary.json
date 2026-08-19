@@ -1,0 +1,309 @@
+{
+  "generated_at": "2026-04-01T09:35:20.372304+00:00",
+  "schema_version": "paper_a1_summary_v1",
+  "claim_block": "mechanism_diagnosis",
+  "paper_placement": "main_text",
+  "purpose": "Paper-facing summary of the A1 failure-decomposition evidence using Macro-F1, Worst-Action Recall, Return, and Rule Count.",
+  "environments": {
+    "MountainCar-v0": {
+      "source_path": "experiments/results/mountaincar_v0/failure_decomposition.json",
+      "primary_failure_stage": "aggregation",
+      "support_drop": -0.02055047867488713,
+      "aggregation_drop": 0.010860269100420705,
+      "default_drop": 0.04669116537936269,
+      "ssc_recovery": 0.04227012793357188,
+      "stages": {
+        "Match Only": {
+          "Macro-F1": {
+            "mean": 0.5995812620412748,
+            "std": 0.04184606120657109
+          },
+          "Worst-Action Recall": {
+            "mean": 0.14857142857142855,
+            "std": 0.203158729538642
+          },
+          "Return": {
+            "mean": -174.92000000000002,
+            "std": 33.44148561293293
+          },
+          "Rule Count": {
+            "mean": 13.6,
+            "std": 0.48989794855663565
+          }
+        },
+        "Match + Hard Support": {
+          "Macro-F1": {
+            "mean": 0.620131740716162,
+            "std": 0.05374683046559006
+          },
+          "Worst-Action Recall": {
+            "mean": 0.4736777936019518,
+            "std": 0.08700558344437755
+          },
+          "Return": {
+            "mean": -193.06799999999998,
+            "std": 11.126081790100228
+          },
+          "Rule Count": {
+            "mean": 7.2,
+            "std": 0.7483314773547882
+          }
+        },
+        "Match + Aggregation": {
+          "Macro-F1": {
+            "mean": 0.5887209929408541,
+            "std": 0.041038893119756586
+          },
+          "Worst-Action Recall": {
+            "mean": 0.18884607501537198,
+            "std": 0.18079261367761537
+          },
+          "Return": {
+            "mean": -158.064,
+            "std": 23.98837184971085
+          },
+          "Rule Count": {
+            "mean": 13.6,
+            "std": 0.48989794855663565
+          }
+        },
+        "DCM": {
+          "Macro-F1": {
+            "mean": 0.5528900966619121,
+            "std": 0.05386284584792876
+          },
+          "Worst-Action Recall": {
+            "mean": 0.4355041522530116,
+            "std": 0.06201248747790981
+          },
+          "Return": {
+            "mean": -186.168,
+            "std": 14.606763364962134
+          },
+          "Rule Count": {
+            "mean": 7.2,
+            "std": 0.7483314773547882
+          }
+        },
+        "SSC": {
+          "Macro-F1": {
+            "mean": 0.595160224595484,
+            "std": 0.04376491106942803
+          },
+          "Worst-Action Recall": {
+            "mean": 0.18884607501537198,
+            "std": 0.18079261367761537
+          },
+          "Return": {
+            "mean": -161.048,
+            "std": 20.70211815249831
+          },
+          "Rule Count": {
+            "mean": 12.0,
+            "std": 1.4142135623730951
+          }
+        }
+      }
+    },
+    "CartPole-v1": {
+      "source_path": "experiments/results/cartpole_v1/failure_decomposition.json",
+      "primary_failure_stage": "support_pruning",
+      "support_drop": 0.19708000000000003,
+      "aggregation_drop": -0.022359999999999935,
+      "default_drop": 0.19240000000000013,
+      "ssc_recovery": 0.17548000000000008,
+      "stages": {
+        "Match Only": {
+          "Macro-F1": {
+            "mean": 0.8030800000000001,
+            "std": 0.04278889575579164
+          },
+          "Worst-Action Recall": {
+            "mean": 0.70472,
+            "std": 0.06980998209425354
+          },
+          "Return": {
+            "mean": 82.296,
+            "std": 48.24544314233211
+          },
+          "Rule Count": {
+            "mean": 25.0,
+            "std": 0.8944271909999159
+          }
+        },
+        "Match + Hard Support": {
+          "Macro-F1": {
+            "mean": 0.6060000000000001,
+            "std": 0.1051646328382313
+          },
+          "Worst-Action Recall": {
+            "mean": 0.22208,
+            "std": 0.2191625369446156
+          },
+          "Return": {
+            "mean": 40.104,
+            "std": 27.099344346312147
+          },
+          "Rule Count": {
+            "mean": 3.8,
+            "std": 0.9797958971132712
+          }
+        },
+        "Match + Aggregation": {
+          "Macro-F1": {
+            "mean": 0.8254400000000001,
+            "std": 0.055894672375817744
+          },
+          "Worst-Action Recall": {
+            "mean": 0.7716799999999999,
+            "std": 0.09540696829896653
+          },
+          "Return": {
+            "mean": 187.04,
+            "std": 108.68918842276817
+          },
+          "Rule Count": {
+            "mean": 25.0,
+            "std": 0.8944271909999159
+          }
+        },
+        "DCM": {
+          "Macro-F1": {
+            "mean": 0.61068,
+            "std": 0.09587630364172367
+          },
+          "Worst-Action Recall": {
+            "mean": 0.2392,
+            "std": 0.19279618253482098
+          },
+          "Return": {
+            "mean": 50.156,
+            "std": 57.7707724026605
+          },
+          "Rule Count": {
+            "mean": 3.8,
+            "std": 0.9797958971132712
+          }
+        },
+        "SSC": {
+          "Macro-F1": {
+            "mean": 0.7861600000000001,
+            "std": 0.051074909691550104
+          },
+          "Worst-Action Recall": {
+            "mean": 0.6727200000000001,
+            "std": 0.11212575796845255
+          },
+          "Return": {
+            "mean": 110.78799999999998,
+            "std": 41.19226840075696
+          },
+          "Rule Count": {
+            "mean": 20.4,
+            "std": 1.019803902718557
+          }
+        }
+      }
+    },
+    "LunarLander-v3": {
+      "source_path": "experiments/results/lunarlander_v3/failure_decomposition.json",
+      "primary_failure_stage": "aggregation",
+      "support_drop": -0.01138365977774275,
+      "aggregation_drop": 0.15427844611291736,
+      "default_drop": 0.13360853583387095,
+      "ssc_recovery": -0.03718602873506183,
+      "stages": {
+        "Match Only": {
+          "Macro-F1": {
+            "mean": 0.44598149261497416,
+            "std": 0.03435743856483918
+          },
+          "Worst-Action Recall": {
+            "mean": 0.1323710744622273,
+            "std": 0.0353851478539887
+          },
+          "Return": {
+            "mean": -486.3983533880367,
+            "std": 263.6924810092024
+          },
+          "Rule Count": {
+            "mean": 22.8,
+            "std": 3.1240998703626617
+          }
+        },
+        "Match + Hard Support": {
+          "Macro-F1": {
+            "mean": 0.4573651523927169,
+            "std": 0.060613141766368124
+          },
+          "Worst-Action Recall": {
+            "mean": 0.11902356902356903,
+            "std": 0.03023092806303023
+          },
+          "Return": {
+            "mean": -349.58519278334126,
+            "std": 233.84045050889583
+          },
+          "Rule Count": {
+            "mean": 14.8,
+            "std": 2.1354156504062622
+          }
+        },
+        "Match + Aggregation": {
+          "Macro-F1": {
+            "mean": 0.2917030465020568,
+            "std": 0.04091642078863315
+          },
+          "Worst-Action Recall": {
+            "mean": 0.07861873916973565,
+            "std": 0.0325434467748428
+          },
+          "Return": {
+            "mean": -535.2070789790039,
+            "std": 210.83853934428325
+          },
+          "Rule Count": {
+            "mean": 22.8,
+            "std": 3.1240998703626617
+          }
+        },
+        "DCM": {
+          "Macro-F1": {
+            "mean": 0.3123729567811032,
+            "std": 0.0335125332546555
+          },
+          "Worst-Action Recall": {
+            "mean": 0.07092416940013657,
+            "std": 0.028348552932957623
+          },
+          "Return": {
+            "mean": -280.8423666888695,
+            "std": 116.23501576748035
+          },
+          "Rule Count": {
+            "mean": 14.8,
+            "std": 2.1354156504062622
+          }
+        },
+        "SSC": {
+          "Macro-F1": {
+            "mean": 0.2751869280460414,
+            "std": 0.02408986321726694
+          },
+          "Worst-Action Recall": {
+            "mean": 0.06381241094019523,
+            "std": 0.01580980107026248
+          },
+          "Return": {
+            "mean": -427.54205617803626,
+            "std": 40.16837659405812
+          },
+          "Rule Count": {
+            "mean": 22.0,
+            "std": 3.7416573867739413
+          }
+        }
+      }
+    }
+  }
+}

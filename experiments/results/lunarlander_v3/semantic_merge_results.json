@@ -1,0 +1,156 @@
+{
+  "schema_version": "semantic_merge_results_v1",
+  "env": "LunarLander-v3",
+  "timestamp": "2026-03-29 02:24:02",
+  "backend": "mock",
+  "llm_model": "mock",
+  "config": {
+    "n_outer_seeds": 3,
+    "n_bootstrap": 5,
+    "tau": 0.7,
+    "rho": 0.8
+  },
+  "per_seed": {
+    "0": {
+      "matching_stats": {
+        "total_input_rules": 151,
+        "total_groups": 21,
+        "kept_groups": 15,
+        "filtered_groups": 6,
+        "selected_for_llm": 21
+      },
+      "llm_judgments": {
+        "n_same_pattern": 14,
+        "n_different_pattern": 7,
+        "n_recovered": 2
+      },
+      "numeric_merge": {
+        "label": "numeric_merge",
+        "n_rules": 15,
+        "f1": 0.3125,
+        "accuracy": 0.2926,
+        "worst_action_recall": 0.0842,
+        "E_CR": -375.46,
+        "success_rate": 0.0
+      },
+      "semantic_merge": {
+        "label": "semantic_merge",
+        "n_rules": 17,
+        "f1": 0.3174,
+        "accuracy": 0.2982,
+        "worst_action_recall": 0.0842,
+        "E_CR": -375.46,
+        "success_rate": 0.0
+      },
+      "prediction_agreement": 0.9944
+    },
+    "1": {
+      "matching_stats": {
+        "total_input_rules": 150,
+        "total_groups": 27,
+        "kept_groups": 16,
+        "filtered_groups": 11,
+        "selected_for_llm": 27
+      },
+      "llm_judgments": {
+        "n_same_pattern": 17,
+        "n_different_pattern": 10,
+        "n_recovered": 3
+      },
+      "numeric_merge": {
+        "label": "numeric_merge",
+        "n_rules": 16,
+        "f1": 0.3159,
+        "accuracy": 0.276,
+        "worst_action_recall": 0.0246,
+        "E_CR": -310.07,
+        "success_rate": 0.0
+      },
+      "semantic_merge": {
+        "label": "semantic_merge",
+        "n_rules": 19,
+        "f1": 0.3099,
+        "accuracy": 0.2722,
+        "worst_action_recall": 0.0334,
+        "E_CR": -274.18,
+        "success_rate": 0.0
+      },
+      "prediction_agreement": 0.975
+    },
+    "2": {
+      "matching_stats": {
+        "total_input_rules": 156,
+        "total_groups": 26,
+        "kept_groups": 18,
+        "filtered_groups": 8,
+        "selected_for_llm": 26
+      },
+      "llm_judgments": {
+        "n_same_pattern": 22,
+        "n_different_pattern": 4,
+        "n_recovered": 5
+      },
+      "numeric_merge": {
+        "label": "numeric_merge",
+        "n_rules": 18,
+        "f1": 0.2642,
+        "accuracy": 0.2804,
+        "worst_action_recall": 0.0547,
+        "E_CR": -228.5,
+        "success_rate": 0.0
+      },
+      "semantic_merge": {
+        "label": "semantic_merge",
+        "n_rules": 23,
+        "f1": 0.2598,
+        "accuracy": 0.278,
+        "worst_action_recall": 0.0547,
+        "E_CR": -228.51,
+        "success_rate": 0.0
+      },
+      "prediction_agreement": 0.9788
+    }
+  },
+  "summary": {
+    "numeric_merge": {
+      "f1": {
+        "mean": 0.2975,
+        "std": 0.0236
+      },
+      "worst_action_recall": {
+        "mean": 0.0545,
+        "std": 0.0243
+      },
+      "n_rules": {
+        "mean": 16.3333,
+        "std": 1.2472
+      },
+      "E_CR": {
+        "mean": -304.6767,
+        "std": 60.1173
+      }
+    },
+    "semantic_merge": {
+      "f1": {
+        "mean": 0.2957,
+        "std": 0.0256
+      },
+      "worst_action_recall": {
+        "mean": 0.0574,
+        "std": 0.0208
+      },
+      "n_rules": {
+        "mean": 19.6667,
+        "std": 2.4944
+      },
+      "E_CR": {
+        "mean": -292.7167,
+        "std": 61.4073
+      }
+    },
+    "prediction_agreement": {
+      "mean": 0.9827,
+      "std": 0.0084
+    }
+  }
+}

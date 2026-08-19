@@ -1,0 +1,204 @@
+# ============================================================
+# Default Experiment Configuration
+# Stress Testing and Stabilizing Textual Rule Explanations
+# for Reinforcement Learning Policies
+# ============================================================
+# Usage: python run_experiment.py --config experiments/configs/default.yaml
+# Override any field via CLI: --env.name CartPole-v1
+# ============================================================
+
+# --- Global Reproducibility ---
+global:
+  seed_list_replay: [0, 1, 2, 3, 4]           # K=5 env seeds for replay collection
+  seed_list_bootstrap: [0, 1, 2, 3, 4]        # B=5 bootstrap resamples      
+  seed_list_kmeans: [0, 1, 2, 3, 4]           # M=5 algorithmic seeds for CBS
+  log_dir: "experiments/results"
+  figure_dir: "figures"
+  random_seed: 42                               # fallback global seed
+
+# --- Environment ---
+env:
+  name: "MountainCar-v0"           # options: MountainCar-v0, CartPole-v1, LunarLander-v3
+  max_episode_steps: null          # null = use environment default
+
+# --- Pretrained Policy ---
+policy:
+  algorithm: "DQN"
+  model_dir: "reproduction/models"
+  # If model file does not exist, train a new one with these settings:
+  train:
+    total_timesteps: 100000
+    learning_rate: 0.001
+    buffer_size: 50000
+    batch_size: 64
+    gamma: 0.99
+    exploration_fraction: 0.1
+    exploration_final_eps: 0.02
+
+# --- Replay Data ---
+replay:
+  n_transitions: 10000              # transitions per extraction replay dataset
+  n_heldout_transitions: 5000       # independent held-out replay for fidelity eval
+  data_dir: "reproduction/data"
+  format: "npz"                     # numpy compressed format
+
+# --- CBS Pipeline ---
+cbs:
+  # Predicate generation
+  predicate_method: "gini"           # gini-based discretization
+  n_categories: 5                    # number of predicate categories (ncat)
+  inclusion_threshold: 0.70          # minimum inclusion ratio for a condition
+
+  # Clustering
+  n_clusters: "auto"                 # "auto" or integer; auto uses heuristic
+  kmeans_init: "k-means++"
+  kmeans_n_init: 10
+  kmeans_max_iter: 300
+
+  # Rule construction
+  min_support: 0.05                  # minimum fraction of states supporting a rule
+
+# --- CBS + MaxF1 Refinement ---
+cbs_maxf1:
+  enabled: true
+  # Inherits all cbs settings above, then applies threshold tuning
+  f1_optimization_metric: "macro"    # macro or weighted F1
+
+# --- Consensus CBS ---
+consensus:
+  enabled: true
+  n_bootstrap: 5                     # B: number of perturbed replay datasets
+  consensus_threshold: 0.7           # τ: minimum support fraction across runs
+  threshold_aggregation: "median"    # median or mean
+
+  # Rule matching
+  matching:
+    threshold_tolerance: 0.05        # γ: normalized threshold difference tolerance
+    similarity_cutoff: 0.8           # ρ: minimum Sim score to merge
+    lambda_predicate_overlap: 0.6    # λ₁: weight for predicate overlap
+    lambda_threshold_distance: 0.4   # λ₂: weight for threshold similarity
+    max_predicate_diff: 1            # max difference in predicate count for match candidates
+
+# --- Decision Tree Baseline ---
+decision_tree:
+  enabled: true
+  max_depth: 6                       # limit tree depth for interpretability
+  min_samples_leaf: 50
+  criterion: "gini"
+
+# --- Consensus CBS v2 (appendix variant) ---
+soft_support:
+  enabled: false                       # off by default → identical to v1
+  n_bootstrap: 5
+  consensus_threshold: 0.7
+  similarity_cutoff: 0.9
+  lambda_P: 0.35                       # predicate overlap weight
+  lambda_I: 0.45                       # interval similarity weight
+  lambda_B: 0.0                        # behavior similarity weight (0 → v1)
+  subsample_fraction: 0.8
+  use_maxf1: false
+  support_mode: "hard"                 # "hard" or "soft"
+  safeguard:
+    enabled: false
+    floor: 0.10                        # min per-action recall before rescue
+    topk: 2
+    threshold_relax: 0.5
+    epsilon: 0.001
+  calibration:
+    n: 2000
+    seed: 123
+
+# --- Perturbation Families ---
+perturbations:
+  # (A) Replay perturbation
+  replay:
+    seed_shift:
+      enabled: true
+      n_seeds: 10                     # K
+    bootstrap:
+      enabled: true
+      n_resamples: 10                 # B
+      sample_fraction: 0.8           # fraction of data per resample (without replacement)
+    feature_noise:
+      enabled: true
+      noise_levels: [0.01, 0.03, 0.05]   # as fraction of feature range      
+
+  # (B) Algorithmic randomness
+  algorithmic:
+    kmeans_seeds:
+      enabled: true
+      n_seeds: 10                     # M
+    cluster_count_variation:
+      enabled: true
+      delta: 1                       # test K ± delta
+
+  # (C) Local input perturbation
+  local_input:
+    enabled: true
+    epsilon_levels: [0.01, 0.03, 0.05]   # normalized ‖δ‖∞ bounds
+    n_perturbations_per_state: 50         # how many perturbed neighbors to sample per state
+    n_eval_states: 200                    # size of held-out evaluation state set
+
+# --- Stability Metrics ---
+metrics:
+  # Primary (must implement)
+  grs:
+    enabled: true
+    use_weighted_jaccard: true       # weighted Jaccard is default per proposal
+    also_report_plain_jaccard: true  # report plain Jaccard alongside for comparison
+  bra:
+    enabled: true
+    n_eval_states: 500               # common held-out state set for BRA
+
+  # Secondary / Diagnostic
+  td:
+    enabled: true
+  lec:
+    enabled: true
+    # uses same epsilon_levels as local_input perturbation
+
+  # Fidelity-stability correlation
+  correlation:
+    method: "spearman"               # spearman or pearson
+    generate_scatter: true
+    generate_pareto: true
+
+# --- Ablation Studies ---
+ablations:
+  # Core ablations
+  consensus_threshold_sweep: [0.5, 0.7, 0.9]
+  bootstrap_count_sweep: [3, 5, 10]
+
+  # Secondary ablations
+  noise_strength_sweep: [0.01, 0.03, 0.05]
+  n_categories_sweep: [3, 5, 7]      # Terra default ± 2
+  kmeans_seeds_sweep: [10, 20]
+  matching_gamma_sweep: [0.03, 0.05, 0.10]
+  matching_rho_sweep: [0.7, 0.8, 0.9]
+  matching_lambda_sweep:              # (λ₁, λ₂) pairs
+    - [0.5, 0.5]
+    - [0.6, 0.4]
+    - [0.7, 0.3]
+
+# --- Deployment Evaluation ---
+deployment:
+  n_episodes: 50                     # fixed number of evaluation episodes
+  eval_seed_start: 1000              # eval seeds = [1000, 1001, ..., 1049]
+  success_thresholds:
+    "MountainCar-v0": -150.0         # reached the goal
+    "CartPole-v1": 475.0             # near-perfect
+
+# --- Evaluation & Reporting ---
+evaluation:
+  confidence_level: 0.95             # for bootstrap confidence intervals
+  n_bootstrap_ci: 1000              # bootstrap samples for CI estimation
+  significance_test: "paired_bootstrap"  # current paper-facing significance protocol
+  report_format: "mean_std_ci"       # mean ± std + 95% CI
+  correlation_method: "spearman"     # unified to Spearman
+
+# --- Output ---
+output:
+  save_raw_rules: true               # save extracted rules as JSON per run
+  save_metrics_csv: true             # save all metrics to CSV for analysis
+  figure_format: ["pdf", "png"]
+  figure_dpi: 300

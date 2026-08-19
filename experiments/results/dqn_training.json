@@ -1,0 +1,150 @@
+{
+  "schema_version": "dqn_training_v1",
+  "purpose": "Phase 1.1: Pretrained DQN agents for CBS explanation extraction",
+  "date": "2026-03-22",
+  "environments": {
+    "MountainCar-v0": {
+      "env_details": {
+        "observation_space": "Box(2,) — [position ∈ [-1.2, 0.6], velocity ∈ [-0.07, 0.07]]",
+        "action_space": "Discrete(3) — {0: push_left, 1: no_push, 2: push_right}",
+        "reward": "-1 per timestep",
+        "solved_threshold": -150.0
+      },
+      "attempt_1": {
+        "status": "FAILED",
+        "total_timesteps": 120000,
+        "hyperparameters": {
+          "learning_rate": 0.004,
+          "buffer_size": 10000,
+          "batch_size": 128,
+          "gamma": 0.98,
+          "exploration_fraction": 0.2,
+          "exploration_final_eps": 0.07,
+          "train_freq": 16,
+          "gradient_steps": 8,
+          "target_update_interval": 600,
+          "learning_starts": 1000,
+          "net_arch": [256, 256]
+        },
+        "evaluation": {
+          "mean_reward": -200.0,
+          "std_reward": 0.0,
+          "n_episodes": 20,
+          "deterministic": true
+        },
+        "failure_reason": "120k timesteps insufficient; training reward improvement from exploration noise only"
+      },
+      "attempt_2": {
+        "status": "SOLVED",
+        "total_timesteps": 300000,
+        "training_time_minutes": 27,
+        "random_seed": 42,
+        "hyperparameters": {
+          "learning_rate": 0.001,
+          "buffer_size": 50000,
+          "batch_size": 128,
+          "gamma": 0.99,
+          "exploration_fraction": 0.3,
+          "exploration_final_eps": 0.05,
+          "train_freq": 4,
+          "gradient_steps": 8,
+          "target_update_interval": 500,
+          "learning_starts": 2000,
+          "net_arch": [256, 256]
+        },
+        "training_progress": [
+          {"timesteps": 4800, "ep_rew_mean": -200, "exploration_rate": 0.949},
+          {"timesteps": 20000, "ep_rew_mean": -200, "exploration_rate": 0.835},
+          {"timesteps": 60000, "ep_rew_mean": -200, "exploration_rate": 0.553},
+          {"timesteps": 90000, "ep_rew_mean": -170, "exploration_rate": 0.35, "note": "first breakthrough"},
+          {"timesteps": 150000, "ep_rew_mean": -152, "exploration_rate": 0.05},
+          {"timesteps": 200000, "ep_rew_mean": -126, "exploration_rate": 0.05},
+          {"timesteps": 250000, "ep_rew_mean": -111, "exploration_rate": 0.05},
+          {"timesteps": 300000, "ep_rew_mean": -115, "exploration_rate": 0.05}
+        ],
+        "eval_callback_final": {
+          "mean_reward": -104.40,
+          "std_reward": 24.73
+        },
+        "evaluation": {
+          "mean_reward": -120.25,
+          "std_reward": 32.23,
+          "min_reward": -161,
+          "max_reward": -84,
+          "mean_ep_length": 121.2,
+          "n_episodes": 20,
+          "deterministic": true
+        },
+        "evaluation_run2": {
+          "mean_reward": -126.60,
+          "std_reward": 32.84,
+          "min_reward": -161,
+          "max_reward": -84,
+          "mean_ep_length": 121.2,
+          "n_episodes": 20,
+          "deterministic": true
+        }
+      },
+      "saved_model": "reproduction/models/dqn_mountaincar_v0.zip"
+    },
+    "CartPole-v1": {
+      "env_details": {
+        "observation_space": "Box(4,) — [cart_position, cart_velocity, pole_angle, pole_angular_velocity]",
+        "action_space": "Discrete(2) — {0: push_left, 1: push_right}",
+        "reward": "+1 per timestep",
+        "solved_threshold": 475.0
+      },
+      "attempt_1": {
+        "status": "SOLVED",
+        "total_timesteps": 100000,
+        "training_time_minutes": 2.5,
+        "random_seed": 42,
+        "hyperparameters": {
+          "learning_rate": 0.0023,
+          "buffer_size": 100000,
+          "batch_size": 64,
+          "gamma": 0.99,
+          "exploration_fraction": 0.16,
+          "exploration_final_eps": 0.04,
+          "train_freq": 256,
+          "gradient_steps": 128,
+          "target_update_interval": 10,
+          "learning_starts": 1000,
+          "net_arch": [256, 256]
+        },
+        "training_progress": [
+          {"timesteps": 500, "ep_rew_mean": 25, "exploration_rate": 0.97},
+          {"timesteps": 5000, "ep_rew_mean": 28, "exploration_rate": 0.83},
+          {"timesteps": 10000, "ep_rew_mean": 48, "exploration_rate": 0.66},
+          {"timesteps": 20000, "ep_rew_mean": 64, "exploration_rate": 0.43},
+          {"timesteps": 40000, "ep_rew_mean": 69, "exploration_rate": 0.12},
+          {"timesteps": 60000, "ep_rew_mean": 96, "exploration_rate": 0.04},
+          {"timesteps": 80000, "ep_rew_mean": 129, "exploration_rate": 0.04},
+          {"timesteps": 100000, "ep_rew_mean": 142, "exploration_rate": 0.04}
+        ],
+        "eval_callback_final": {
+          "mean_reward": 500.0,
+          "std_reward": 0.0,
+          "mean_ep_length": 500.0
+        },
+        "evaluation": {
+          "mean_reward": 500.0,
+          "std_reward": 0.0,
+          "min_reward": 500,
+          "max_reward": 500,
+          "mean_ep_length": 500.0,
+          "n_episodes": 20,
+          "deterministic": true
+        }
+      },
+      "saved_model": "reproduction/models/dqn_cartpole_v1.zip"
+    }
+  },
+  "software_versions": {
+    "python": "3.12",
+    "gymnasium": "1.2.3",
+    "stable_baselines3": "2.7.1",
+    "torch": "2.10.0+cpu",
+    "numpy": "2.4.3"
+  }
+}

@@ -1,0 +1,4903 @@
+{
+  "env": "merge-v0",
+  "algo": "ppo",
+  "policy_seed": 2,
+  "explainer_seed": 8,
+  "method": "b3_vote",
+  "feature_mode": "raw_derived",
+  "vehicles_count": 6,
+  "n_train": 1187,
+  "n_val": 170,
+  "n_test": 337,
+  "rules": [
+    {
+      "action": 1,
+      "weight": 1.0,
+      "n_instances": 2,
+      "predicates": [
+        {
+          "feature_idx": 0,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 1,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 345.04054260253906,
+          "upper_bound": 374.4940490722656
+        },
+        {
+          "feature_idx": 2,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 3,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 19.6524715423584,
+          "upper_bound": 20.283085823059082
+        },
+        {
+          "feature_idx": 6,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -8.596311573683124e-08,
+          "upper_bound": -1.4788284374844807e-08
+        },
+        {
+          "feature_idx": 7,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 8,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 40.35354423522949,
+          "upper_bound": 49.906816482543945
+        },
+        {
+          "feature_idx": 11,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -4.4133501052856445,
+          "upper_bound": -0.032396288588643074
+        },
+        {
+          "feature_idx": 13,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.255998820066452,
+          "upper_bound": 0.0017611932125873864
+        },
+        {
+          "feature_idx": 14,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 15,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 58.35164260864258,
+          "upper_bound": 65.99088668823242
+        },
+        {
+          "feature_idx": 17,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.8446085751056671,
+          "upper_bound": 0.534285843372345
+        },
+        {
+          "feature_idx": 18,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.016785891726613045,
+          "upper_bound": 0.03403500095009804
+        },
+        {
+          "feature_idx": 19,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.96959388256073,
+          "upper_bound": 0.9999769926071167
+        },
+        {
+          "feature_idx": 20,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.24518485367298126,
+          "upper_bound": 0.0007995260821189731
+        },
+        {
+          "feature_idx": 21,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 22,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -1.7855355739593506,
+          "upper_bound": 5.1744225025177
+        },
+        {
+          "feature_idx": 23,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.4140649884939194,
+          "upper_bound": 0.6725570559501648
+        },
+        {
+          "feature_idx": 25,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.015579905360937119,
+          "upper_bound": 0.1772027611732483
+        },
+        {
+          "feature_idx": 26,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.03287903591990471,
+          "upper_bound": 0.23747135698795319
+        },
+        {
+          "feature_idx": 27,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.005008983891457319,
+          "upper_bound": 0.003043326665647328
+        },
+        {
+          "feature_idx": 28,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 29,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -1.9603888392448425,
+          "upper_bound": 10.465980529785156
+        },
+        {
+          "feature_idx": 30,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -4.224215984344482,
+          "upper_bound": 0.05933375842869282
+        },
+        {
+          "feature_idx": 32,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -6.6679538122116355e-06,
+          "upper_bound": 5.727966936319717e-06
+        },
+        {
+          "feature_idx": 33,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.0036963769234716892,
+          "upper_bound": 0.0644217524677515
+        },
+        {
+          "feature_idx": 34,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -1.457634340340519e-06,
+          "upper_bound": 6.222022079782619e-07
+        },
+        {
+          "feature_idx": 35,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.0
+        },
+        {
+          "feature_idx": 37,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -3.0878524626132275e-08,
+          "upper_bound": 3.493073563731741e-08
+        },
+        {
+          "feature_idx": 39,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -3.0070424372752314e-08,
+          "upper_bound": 3.6455716667660454e-08
+        },
+        {
+          "feature_idx": 40,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -3.354750788275851e-08,
+          "upper_bound": 2.8114584438299062e-08
+        },
+        {
+          "feature_idx": 42,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 19.61953353881836,
+          "upper_bound": 19.84594440460205
+        },
+        {
+          "feature_idx": 43,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 44,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -323.2320251464844,
+          "upper_bound": -310.20423889160156
+        },
+        {
+          "feature_idx": 46,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": -19.906030654907227,
+          "upper_bound": -19.611510276794434
+        },
+        {
+          "feature_idx": 47,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.05713248625397682,
+          "upper_bound": 0.009290591347962618
+        },
+        {
+          "feature_idx": 48,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 305.6482849121094,
+          "upper_bound": 344.3459167480469
+        },
+        {
+          "feature_idx": 49,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -322.57427978515625,
+          "upper_bound": -296.3065490722656
+        },
+        {
+          "feature_idx": 53,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 275.98468017578125,
+          "upper_bound": 298.89178466796875
+        },
+        {
+          "feature_idx": 55,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -1.4056075811386108,
+          "upper_bound": 0.07440083846449852
+        },
+        {
+          "feature_idx": 56,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -9.58990478515625,
+          "upper_bound": 1.0363304615020752
+        },
+        {
+          "feature_idx": 57,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.06272111088037491,
+          "upper_bound": 0.1433875560760498
+        },
+        {
+          "feature_idx": 58,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 774.56640625,
+          "upper_bound": 1037.2415771484375
+        },
+        {
+          "feature_idx": 59,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -7.937892913818359,
+          "upper_bound": 5.6867969036102295
+        },
+        {
+          "feature_idx": 60,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.1759507954120636,
+          "upper_bound": 0.19100399315357208
+        },
+        {
+          "feature_idx": 61,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": -1.4176011085510254,
+          "upper_bound": 0.07048936560750008
+        },
+        {
+          "feature_idx": 62,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -8.68977076606825e-06,
+          "upper_bound": 1.3143817341187969e-05
+        },
+        {
+          "feature_idx": 64,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -9.10638675577502e-09,
+          "upper_bound": 5.418189630290726e-08
+        },
+        {
+          "feature_idx": 66,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -2.9042389826372528e-08,
+          "upper_bound": 2.764419093637116e-08
+        },
+        {
+          "feature_idx": 67,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -9.895411778870766e-08,
+          "upper_bound": -3.908624535142735e-08
+        },
+        {
+          "feature_idx": 68,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 999.0,
+          "upper_bound": 999.0
+        },
+        {
+          "feature_idx": 69,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 70,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -2.677427291870117,
+          "upper_bound": 0.5762206614017487
+        },
+        {
+          "feature_idx": 71,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.9298897385597229,
+          "upper_bound": 1.8042333126068115
+        },
+        {
+          "feature_idx": 72,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 75,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -20.318971633911133,
+          "upper_bound": -19.813549995422363
+        },
+        {
+          "feature_idx": 76,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 77,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -2.7271004915237427,
+          "upper_bound": 2.9665766954421997
+        },
+        {
+          "feature_idx": 78,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.18670783936977386,
+          "upper_bound": 0.19953641295433044
+        },
+        {
+          "feature_idx": 79,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.0520040113478899,
+          "upper_bound": 2.1138558387756348
+        },
+        {
+          "feature_idx": 80,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 291.6296844482422,
+          "upper_bound": 297.34950256347656
+        },
+        {
+          "feature_idx": 81,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 2.0,
+          "upper_bound": 2.5
+        }
+      ]
+    },
+    {
+      "action": 1,
+      "weight": 1.0,
+      "n_instances": 11,
+      "predicates": [
+        {
+          "feature_idx": 0,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 1,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": 312.8350524902344,
+          "upper_bound": 341.09283447265625
+        },
+        {
+          "feature_idx": 2,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 3,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 19.6524715423584,
+          "upper_bound": 20.283085823059082
+        },
+        {
+          "feature_idx": 7,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 9,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -4.2139809131622314,
+          "upper_bound": -3.7201520204544067
+        },
+        {
+          "feature_idx": 11,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.032227957621216774,
+          "upper_bound": 0.03953210264444351
+        },
+        {
+          "feature_idx": 13,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.255998820066452,
+          "upper_bound": 0.0017611932125873864
+        },
+        {
+          "feature_idx": 14,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 17,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.8446085751056671,
+          "upper_bound": 0.534285843372345
+        },
+        {
+          "feature_idx": 20,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.24518485367298126,
+          "upper_bound": 0.0007995260821189731
+        },
+        {
+          "feature_idx": 21,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 22,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -1.7855355739593506,
+          "upper_bound": 5.1744225025177
+        },
+        {
+          "feature_idx": 26,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.03287903591990471,
+          "upper_bound": 0.23747135698795319
+        },
+        {
+          "feature_idx": 28,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 34,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -1.457634340340519e-06,
+          "upper_bound": 6.222022079782619e-07
+        },
+        {
+          "feature_idx": 35,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.0
+        },
+        {
+          "feature_idx": 43,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 49,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -284.4567565917969,
+          "upper_bound": -250.66431427001953
+        },
+        {
+          "feature_idx": 56,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -9.58990478515625,
+          "upper_bound": 1.0363304615020752
+        },
+        {
+          "feature_idx": 57,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.06272111088037491,
+          "upper_bound": 0.1433875560760498
+        },
+        {
+          "feature_idx": 58,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 774.56640625,
+          "upper_bound": 1037.2415771484375
+        },
+        {
+          "feature_idx": 62,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -8.68977076606825e-06,
+          "upper_bound": 1.3143817341187969e-05
+        },
+        {
+          "feature_idx": 68,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 999.0,
+          "upper_bound": 999.0
+        },
+        {
+          "feature_idx": 69,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 72,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 76,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 78,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.18670783936977386,
+          "upper_bound": 0.19953641295433044
+        },
+        {
+          "feature_idx": 80,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": 250.05873107910156,
+          "upper_bound": 282.9967498779297
+        },
+        {
+          "feature_idx": 81,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 2.0,
+          "upper_bound": 2.5
+        }
+      ]
+    },
+    {
+      "action": 1,
+      "weight": 1.0,
+      "n_instances": 9,
+      "predicates": [
+        {
+          "feature_idx": 0,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 1,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 345.04054260253906,
+          "upper_bound": 374.4940490722656
+        },
+        {
+          "feature_idx": 2,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 3,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 19.6524715423584,
+          "upper_bound": 20.283085823059082
+        },
+        {
+          "feature_idx": 7,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 9,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -4.2139809131622314,
+          "upper_bound": -3.7201520204544067
+        },
+        {
+          "feature_idx": 10,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": -0.3292970657348633,
+          "upper_bound": 0.22937917709350586
+        },
+        {
+          "feature_idx": 13,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.255998820066452,
+          "upper_bound": 0.0017611932125873864
+        },
+        {
+          "feature_idx": 14,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 16,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -0.21501193940639496,
+          "upper_bound": 0.13376865535974503
+        },
+        {
+          "feature_idx": 17,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.8446085751056671,
+          "upper_bound": 0.534285843372345
+        },
+        {
+          "feature_idx": 18,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.016785891726613045,
+          "upper_bound": 0.03403500095009804
+        },
+        {
+          "feature_idx": 21,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 22,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -1.7855355739593506,
+          "upper_bound": 5.1744225025177
+        },
+        {
+          "feature_idx": 26,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.03287903591990471,
+          "upper_bound": 0.23747135698795319
+        },
+        {
+          "feature_idx": 27,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.005008983891457319,
+          "upper_bound": 0.003043326665647328
+        },
+        {
+          "feature_idx": 28,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 34,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -1.457634340340519e-06,
+          "upper_bound": 6.222022079782619e-07
+        },
+        {
+          "feature_idx": 35,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.0
+        },
+        {
+          "feature_idx": 43,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 48,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 305.6482849121094,
+          "upper_bound": 344.3459167480469
+        },
+        {
+          "feature_idx": 50,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -4.36726188659668,
+          "upper_bound": -3.8648115396499634
+        },
+        {
+          "feature_idx": 56,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -9.58990478515625,
+          "upper_bound": 1.0363304615020752
+        },
+        {
+          "feature_idx": 57,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.06272111088037491,
+          "upper_bound": 0.1433875560760498
+        },
+        {
+          "feature_idx": 58,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 774.56640625,
+          "upper_bound": 1037.2415771484375
+        },
+        {
+          "feature_idx": 60,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.1759507954120636,
+          "upper_bound": 0.19100399315357208
+        },
+        {
+          "feature_idx": 68,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 999.0,
+          "upper_bound": 999.0
+        },
+        {
+          "feature_idx": 69,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 72,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 74,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -4.139926433563232,
+          "upper_bound": -3.8820533752441406
+        },
+        {
+          "feature_idx": 76,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 81,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 2.0,
+          "upper_bound": 2.5
+        }
+      ]
+    },
+    {
+      "action": 1,
+      "weight": 1.0,
+      "n_instances": 2,
+      "predicates": [
+        {
+          "feature_idx": 0,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 2,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 3,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 19.6524715423584,
+          "upper_bound": 20.283085823059082
+        },
+        {
+          "feature_idx": 6,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 5.638653988171427e-08,
+          "upper_bound": 1.2756137834912806e-07
+        },
+        {
+          "feature_idx": 7,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 8,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 40.35354423522949,
+          "upper_bound": 49.906816482543945
+        },
+        {
+          "feature_idx": 9,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -4.2139809131622314,
+          "upper_bound": -3.7201520204544067
+        },
+        {
+          "feature_idx": 11,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.032227957621216774,
+          "upper_bound": 0.03953210264444351
+        },
+        {
+          "feature_idx": 12,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 0.9997686147689819,
+          "upper_bound": 1.0004515051841736
+        },
+        {
+          "feature_idx": 13,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.255998820066452,
+          "upper_bound": 0.0017611932125873864
+        },
+        {
+          "feature_idx": 14,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 15,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 58.35164260864258,
+          "upper_bound": 65.99088668823242
+        },
+        {
+          "feature_idx": 16,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -0.21501193940639496,
+          "upper_bound": 0.13376865535974503
+        },
+        {
+          "feature_idx": 17,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.8446085751056671,
+          "upper_bound": 0.534285843372345
+        },
+        {
+          "feature_idx": 18,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.016785891726613045,
+          "upper_bound": 0.03403500095009804
+        },
+        {
+          "feature_idx": 19,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.96959388256073,
+          "upper_bound": 0.9999769926071167
+        },
+        {
+          "feature_idx": 20,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.24518485367298126,
+          "upper_bound": 0.0007995260821189731
+        },
+        {
+          "feature_idx": 21,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 22,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -1.7855355739593506,
+          "upper_bound": 5.1744225025177
+        },
+        {
+          "feature_idx": 23,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.4140649884939194,
+          "upper_bound": 0.6725570559501648
+        },
+        {
+          "feature_idx": 25,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.015579905360937119,
+          "upper_bound": 0.1772027611732483
+        },
+        {
+          "feature_idx": 26,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.03287903591990471,
+          "upper_bound": 0.23747135698795319
+        },
+        {
+          "feature_idx": 27,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.005008983891457319,
+          "upper_bound": 0.003043326665647328
+        },
+        {
+          "feature_idx": 28,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 32,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -6.6679538122116355e-06,
+          "upper_bound": 5.727966936319717e-06
+        },
+        {
+          "feature_idx": 33,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.0036963769234716892,
+          "upper_bound": 0.0644217524677515
+        },
+        {
+          "feature_idx": 34,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -1.457634340340519e-06,
+          "upper_bound": 6.222022079782619e-07
+        },
+        {
+          "feature_idx": 35,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.0
+        },
+        {
+          "feature_idx": 36,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -6.783380968045094e-08,
+          "upper_bound": -2.0861961047557998e-09
+        },
+        {
+          "feature_idx": 37,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 3.493073563731741e-08,
+          "upper_bound": 1.007399959007671e-07
+        },
+        {
+          "feature_idx": 41,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -9.210240392576452e-08,
+          "upper_bound": -3.687785010697553e-08
+        },
+        {
+          "feature_idx": 42,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 20.187414169311523,
+          "upper_bound": 30.32777976989746
+        },
+        {
+          "feature_idx": 43,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 45,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -8.483770370483398,
+          "upper_bound": -7.912498235702515
+        },
+        {
+          "feature_idx": 46,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -20.665419578552246,
+          "upper_bound": -19.9367094039917
+        },
+        {
+          "feature_idx": 47,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.00992261292412877,
+          "upper_bound": 3.9413559436798096
+        },
+        {
+          "feature_idx": 48,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 266.2892608642578,
+          "upper_bound": 305.6482849121094
+        },
+        {
+          "feature_idx": 49,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -284.4567565917969,
+          "upper_bound": -250.66431427001953
+        },
+        {
+          "feature_idx": 50,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -4.36726188659668,
+          "upper_bound": -3.8648115396499634
+        },
+        {
+          "feature_idx": 52,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.003710093558765948,
+          "upper_bound": 0.031722959131002426
+        },
+        {
+          "feature_idx": 54,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": -5.198528289794922,
+          "upper_bound": 7.960224151611328
+        },
+        {
+          "feature_idx": 56,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -9.58990478515625,
+          "upper_bound": 1.0363304615020752
+        },
+        {
+          "feature_idx": 57,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.06272111088037491,
+          "upper_bound": 0.1433875560760498
+        },
+        {
+          "feature_idx": 58,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 774.56640625,
+          "upper_bound": 1037.2415771484375
+        },
+        {
+          "feature_idx": 59,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -7.937892913818359,
+          "upper_bound": 5.6867969036102295
+        },
+        {
+          "feature_idx": 60,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.1759507954120636,
+          "upper_bound": 0.19100399315357208
+        },
+        {
+          "feature_idx": 61,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.07048936560750008,
+          "upper_bound": 2.7547032833099365
+        },
+        {
+          "feature_idx": 62,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -8.68977076606825e-06,
+          "upper_bound": 1.3143817341187969e-05
+        },
+        {
+          "feature_idx": 63,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 969.423095703125,
+          "upper_bound": 997.2713317871094
+        },
+        {
+          "feature_idx": 65,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 3.59528371518536e-08,
+          "upper_bound": 9.820270463478664e-08
+        },
+        {
+          "feature_idx": 66,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 2.764419093637116e-08,
+          "upper_bound": 8.433076459368749e-08
+        },
+        {
+          "feature_idx": 68,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 999.0,
+          "upper_bound": 999.0
+        },
+        {
+          "feature_idx": 69,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 71,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.9298897385597229,
+          "upper_bound": 1.8042333126068115
+        },
+        {
+          "feature_idx": 72,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 73,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -272.82916259765625,
+          "upper_bound": -260.26263427734375
+        },
+        {
+          "feature_idx": 74,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -4.139926433563232,
+          "upper_bound": -3.8820533752441406
+        },
+        {
+          "feature_idx": 75,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -20.318971633911133,
+          "upper_bound": -19.813549995422363
+        },
+        {
+          "feature_idx": 76,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 77,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -2.7271004915237427,
+          "upper_bound": 2.9665766954421997
+        },
+        {
+          "feature_idx": 78,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.18670783936977386,
+          "upper_bound": 0.19953641295433044
+        },
+        {
+          "feature_idx": 79,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.0520040113478899,
+          "upper_bound": 2.1138558387756348
+        },
+        {
+          "feature_idx": 80,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": 250.05873107910156,
+          "upper_bound": 282.9967498779297
+        },
+        {
+          "feature_idx": 81,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 2.0,
+          "upper_bound": 2.5
+        }
+      ]
+    },
+    {
+      "action": 1,
+      "weight": 1.0,
+      "n_instances": 7,
+      "predicates": [
+        {
+          "feature_idx": 0,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 2,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 7,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 9,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -4.2139809131622314,
+          "upper_bound": -3.7201520204544067
+        },
+        {
+          "feature_idx": 11,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.032227957621216774,
+          "upper_bound": 0.03953210264444351
+        },
+        {
+          "feature_idx": 14,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 18,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.016785891726613045,
+          "upper_bound": 0.03403500095009804
+        },
+        {
+          "feature_idx": 20,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.24518485367298126,
+          "upper_bound": 0.0007995260821189731
+        },
+        {
+          "feature_idx": 21,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 22,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -1.7855355739593506,
+          "upper_bound": 5.1744225025177
+        },
+        {
+          "feature_idx": 26,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.03287903591990471,
+          "upper_bound": 0.23747135698795319
+        },
+        {
+          "feature_idx": 27,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.005008983891457319,
+          "upper_bound": 0.003043326665647328
+        },
+        {
+          "feature_idx": 28,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 31,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.724897027015686,
+          "upper_bound": -0.16437023878097534
+        },
+        {
+          "feature_idx": 32,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -6.6679538122116355e-06,
+          "upper_bound": 5.727966936319717e-06
+        },
+        {
+          "feature_idx": 34,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -1.457634340340519e-06,
+          "upper_bound": 6.222022079782619e-07
+        },
+        {
+          "feature_idx": 35,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.0
+        },
+        {
+          "feature_idx": 43,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 45,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -8.483770370483398,
+          "upper_bound": -7.912498235702515
+        },
+        {
+          "feature_idx": 54,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": -5.198528289794922,
+          "upper_bound": 7.960224151611328
+        },
+        {
+          "feature_idx": 56,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -9.58990478515625,
+          "upper_bound": 1.0363304615020752
+        },
+        {
+          "feature_idx": 57,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.06272111088037491,
+          "upper_bound": 0.1433875560760498
+        },
+        {
+          "feature_idx": 58,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 774.56640625,
+          "upper_bound": 1037.2415771484375
+        },
+        {
+          "feature_idx": 59,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -7.937892913818359,
+          "upper_bound": 5.6867969036102295
+        },
+        {
+          "feature_idx": 62,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -8.68977076606825e-06,
+          "upper_bound": 1.3143817341187969e-05
+        },
+        {
+          "feature_idx": 68,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 999.0,
+          "upper_bound": 999.0
+        },
+        {
+          "feature_idx": 69,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 70,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -2.677427291870117,
+          "upper_bound": 0.5762206614017487
+        },
+        {
+          "feature_idx": 71,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.9298897385597229,
+          "upper_bound": 1.8042333126068115
+        },
+        {
+          "feature_idx": 72,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 74,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -4.139926433563232,
+          "upper_bound": -3.8820533752441406
+        },
+        {
+          "feature_idx": 75,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -20.318971633911133,
+          "upper_bound": -19.813549995422363
+        },
+        {
+          "feature_idx": 76,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 77,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -2.7271004915237427,
+          "upper_bound": 2.9665766954421997
+        },
+        {
+          "feature_idx": 78,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.18670783936977386,
+          "upper_bound": 0.19953641295433044
+        },
+        {
+          "feature_idx": 81,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 2.0,
+          "upper_bound": 2.5
+        }
+      ]
+    },
+    {
+      "action": 1,
+      "weight": 1.0,
+      "n_instances": 10,
+      "predicates": [
+        {
+          "feature_idx": 0,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 2,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 5,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 0.9999999403953552,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 7,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 9,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -4.2139809131622314,
+          "upper_bound": -3.7201520204544067
+        },
+        {
+          "feature_idx": 14,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 16,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -0.21501193940639496,
+          "upper_bound": 0.13376865535974503
+        },
+        {
+          "feature_idx": 18,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.016785891726613045,
+          "upper_bound": 0.03403500095009804
+        },
+        {
+          "feature_idx": 21,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 22,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -1.7855355739593506,
+          "upper_bound": 5.1744225025177
+        },
+        {
+          "feature_idx": 23,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.4140649884939194,
+          "upper_bound": 0.6725570559501648
+        },
+        {
+          "feature_idx": 26,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.03287903591990471,
+          "upper_bound": 0.23747135698795319
+        },
+        {
+          "feature_idx": 28,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 32,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -6.6679538122116355e-06,
+          "upper_bound": 5.727966936319717e-06
+        },
+        {
+          "feature_idx": 34,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -1.457634340340519e-06,
+          "upper_bound": 6.222022079782619e-07
+        },
+        {
+          "feature_idx": 35,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.0
+        },
+        {
+          "feature_idx": 43,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 47,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.05713248625397682,
+          "upper_bound": 0.009290591347962618
+        },
+        {
+          "feature_idx": 56,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -9.58990478515625,
+          "upper_bound": 1.0363304615020752
+        },
+        {
+          "feature_idx": 58,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 774.56640625,
+          "upper_bound": 1037.2415771484375
+        },
+        {
+          "feature_idx": 60,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.1759507954120636,
+          "upper_bound": 0.19100399315357208
+        },
+        {
+          "feature_idx": 62,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -8.68977076606825e-06,
+          "upper_bound": 1.3143817341187969e-05
+        },
+        {
+          "feature_idx": 68,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 999.0,
+          "upper_bound": 999.0
+        },
+        {
+          "feature_idx": 69,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 70,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -2.677427291870117,
+          "upper_bound": 0.5762206614017487
+        },
+        {
+          "feature_idx": 72,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 75,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -20.318971633911133,
+          "upper_bound": -19.813549995422363
+        },
+        {
+          "feature_idx": 76,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 81,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 2.0,
+          "upper_bound": 2.5
+        }
+      ]
+    },
+    {
+      "action": 1,
+      "weight": 1.0,
+      "n_instances": 8,
+      "predicates": [
+        {
+          "feature_idx": 0,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 1,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": 312.8350524902344,
+          "upper_bound": 341.09283447265625
+        },
+        {
+          "feature_idx": 2,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 3,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 19.6524715423584,
+          "upper_bound": 20.283085823059082
+        },
+        {
+          "feature_idx": 7,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 9,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -4.2139809131622314,
+          "upper_bound": -3.7201520204544067
+        },
+        {
+          "feature_idx": 11,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.032227957621216774,
+          "upper_bound": 0.03953210264444351
+        },
+        {
+          "feature_idx": 12,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 0.9997686147689819,
+          "upper_bound": 1.0004515051841736
+        },
+        {
+          "feature_idx": 13,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.255998820066452,
+          "upper_bound": 0.0017611932125873864
+        },
+        {
+          "feature_idx": 14,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 16,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -0.21501193940639496,
+          "upper_bound": 0.13376865535974503
+        },
+        {
+          "feature_idx": 17,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.8446085751056671,
+          "upper_bound": 0.534285843372345
+        },
+        {
+          "feature_idx": 18,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.016785891726613045,
+          "upper_bound": 0.03403500095009804
+        },
+        {
+          "feature_idx": 20,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.24518485367298126,
+          "upper_bound": 0.0007995260821189731
+        },
+        {
+          "feature_idx": 21,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 22,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -1.7855355739593506,
+          "upper_bound": 5.1744225025177
+        },
+        {
+          "feature_idx": 26,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.03287903591990471,
+          "upper_bound": 0.23747135698795319
+        },
+        {
+          "feature_idx": 27,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.005008983891457319,
+          "upper_bound": 0.003043326665647328
+        },
+        {
+          "feature_idx": 28,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 32,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -6.6679538122116355e-06,
+          "upper_bound": 5.727966936319717e-06
+        },
+        {
+          "feature_idx": 34,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -1.457634340340519e-06,
+          "upper_bound": 6.222022079782619e-07
+        },
+        {
+          "feature_idx": 35,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.0
+        },
+        {
+          "feature_idx": 43,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 54,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": -5.198528289794922,
+          "upper_bound": 7.960224151611328
+        },
+        {
+          "feature_idx": 56,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -9.58990478515625,
+          "upper_bound": 1.0363304615020752
+        },
+        {
+          "feature_idx": 58,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 774.56640625,
+          "upper_bound": 1037.2415771484375
+        },
+        {
+          "feature_idx": 62,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -8.68977076606825e-06,
+          "upper_bound": 1.3143817341187969e-05
+        },
+        {
+          "feature_idx": 68,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 999.0,
+          "upper_bound": 999.0
+        },
+        {
+          "feature_idx": 69,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 70,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -2.677427291870117,
+          "upper_bound": 0.5762206614017487
+        },
+        {
+          "feature_idx": 71,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.9298897385597229,
+          "upper_bound": 1.8042333126068115
+        },
+        {
+          "feature_idx": 72,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 76,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 77,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -2.7271004915237427,
+          "upper_bound": 2.9665766954421997
+        },
+        {
+          "feature_idx": 80,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": 250.05873107910156,
+          "upper_bound": 282.9967498779297
+        },
+        {
+          "feature_idx": 81,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 2.0,
+          "upper_bound": 2.5
+        }
+      ]
+    },
+    {
+      "action": 1,
+      "weight": 1.0,
+      "n_instances": 7,
+      "predicates": [
+        {
+          "feature_idx": 0,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 1,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": 312.8350524902344,
+          "upper_bound": 341.09283447265625
+        },
+        {
+          "feature_idx": 2,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 3,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 19.6524715423584,
+          "upper_bound": 20.283085823059082
+        },
+        {
+          "feature_idx": 7,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 9,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -4.2139809131622314,
+          "upper_bound": -3.7201520204544067
+        },
+        {
+          "feature_idx": 10,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": -0.3292970657348633,
+          "upper_bound": 0.22937917709350586
+        },
+        {
+          "feature_idx": 11,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.032227957621216774,
+          "upper_bound": 0.03953210264444351
+        },
+        {
+          "feature_idx": 12,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 0.9997686147689819,
+          "upper_bound": 1.0004515051841736
+        },
+        {
+          "feature_idx": 13,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.255998820066452,
+          "upper_bound": 0.0017611932125873864
+        },
+        {
+          "feature_idx": 14,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 15,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 58.35164260864258,
+          "upper_bound": 65.99088668823242
+        },
+        {
+          "feature_idx": 17,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.8446085751056671,
+          "upper_bound": 0.534285843372345
+        },
+        {
+          "feature_idx": 18,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.016785891726613045,
+          "upper_bound": 0.03403500095009804
+        },
+        {
+          "feature_idx": 19,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.96959388256073,
+          "upper_bound": 0.9999769926071167
+        },
+        {
+          "feature_idx": 21,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 22,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -1.7855355739593506,
+          "upper_bound": 5.1744225025177
+        },
+        {
+          "feature_idx": 23,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.4140649884939194,
+          "upper_bound": 0.6725570559501648
+        },
+        {
+          "feature_idx": 25,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.015579905360937119,
+          "upper_bound": 0.1772027611732483
+        },
+        {
+          "feature_idx": 26,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.03287903591990471,
+          "upper_bound": 0.23747135698795319
+        },
+        {
+          "feature_idx": 27,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.005008983891457319,
+          "upper_bound": 0.003043326665647328
+        },
+        {
+          "feature_idx": 28,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 32,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -6.6679538122116355e-06,
+          "upper_bound": 5.727966936319717e-06
+        },
+        {
+          "feature_idx": 34,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -1.457634340340519e-06,
+          "upper_bound": 6.222022079782619e-07
+        },
+        {
+          "feature_idx": 35,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.0
+        },
+        {
+          "feature_idx": 42,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 19.84648036956787,
+          "upper_bound": 20.184861183166504
+        },
+        {
+          "feature_idx": 43,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 47,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.05713248625397682,
+          "upper_bound": 0.009290591347962618
+        },
+        {
+          "feature_idx": 49,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -284.4567565917969,
+          "upper_bound": -250.66431427001953
+        },
+        {
+          "feature_idx": 54,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": -5.198528289794922,
+          "upper_bound": 7.960224151611328
+        },
+        {
+          "feature_idx": 56,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -9.58990478515625,
+          "upper_bound": 1.0363304615020752
+        },
+        {
+          "feature_idx": 58,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 774.56640625,
+          "upper_bound": 1037.2415771484375
+        },
+        {
+          "feature_idx": 60,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.1759507954120636,
+          "upper_bound": 0.19100399315357208
+        },
+        {
+          "feature_idx": 62,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -8.68977076606825e-06,
+          "upper_bound": 1.3143817341187969e-05
+        },
+        {
+          "feature_idx": 68,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 999.0,
+          "upper_bound": 999.0
+        },
+        {
+          "feature_idx": 69,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 72,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 75,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -20.318971633911133,
+          "upper_bound": -19.813549995422363
+        },
+        {
+          "feature_idx": 76,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 77,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -2.7271004915237427,
+          "upper_bound": 2.9665766954421997
+        },
+        {
+          "feature_idx": 78,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.18670783936977386,
+          "upper_bound": 0.19953641295433044
+        },
+        {
+          "feature_idx": 81,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 2.0,
+          "upper_bound": 2.5
+        }
+      ]
+    },
+    {
+      "action": 1,
+      "weight": 1.0,
+      "n_instances": 11,
+      "predicates": [
+        {
+          "feature_idx": 0,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 2,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 3,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 19.6524715423584,
+          "upper_bound": 20.283085823059082
+        },
+        {
+          "feature_idx": 7,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 12,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 0.9997686147689819,
+          "upper_bound": 1.0004515051841736
+        },
+        {
+          "feature_idx": 14,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 15,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 58.35164260864258,
+          "upper_bound": 65.99088668823242
+        },
+        {
+          "feature_idx": 21,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 22,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -1.7855355739593506,
+          "upper_bound": 5.1744225025177
+        },
+        {
+          "feature_idx": 26,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.03287903591990471,
+          "upper_bound": 0.23747135698795319
+        },
+        {
+          "feature_idx": 27,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.005008983891457319,
+          "upper_bound": 0.003043326665647328
+        },
+        {
+          "feature_idx": 28,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 32,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -6.6679538122116355e-06,
+          "upper_bound": 5.727966936319717e-06
+        },
+        {
+          "feature_idx": 34,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -1.457634340340519e-06,
+          "upper_bound": 6.222022079782619e-07
+        },
+        {
+          "feature_idx": 35,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.0
+        },
+        {
+          "feature_idx": 43,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 45,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -8.483770370483398,
+          "upper_bound": -7.912498235702515
+        },
+        {
+          "feature_idx": 56,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -9.58990478515625,
+          "upper_bound": 1.0363304615020752
+        },
+        {
+          "feature_idx": 58,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 774.56640625,
+          "upper_bound": 1037.2415771484375
+        },
+        {
+          "feature_idx": 68,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 999.0,
+          "upper_bound": 999.0
+        },
+        {
+          "feature_idx": 69,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 70,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -2.677427291870117,
+          "upper_bound": 0.5762206614017487
+        },
+        {
+          "feature_idx": 71,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.9298897385597229,
+          "upper_bound": 1.8042333126068115
+        },
+        {
+          "feature_idx": 72,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 76,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 77,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -2.7271004915237427,
+          "upper_bound": 2.9665766954421997
+        },
+        {
+          "feature_idx": 80,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": 250.05873107910156,
+          "upper_bound": 282.9967498779297
+        },
+        {
+          "feature_idx": 81,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 2.0,
+          "upper_bound": 2.5
+        }
+      ]
+    },
+    {
+      "action": 1,
+      "weight": 1.0,
+      "n_instances": 4,
+      "predicates": [
+        {
+          "feature_idx": 0,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 1,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 345.04054260253906,
+          "upper_bound": 374.4940490722656
+        },
+        {
+          "feature_idx": 2,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 3,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 19.6524715423584,
+          "upper_bound": 20.283085823059082
+        },
+        {
+          "feature_idx": 5,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": 0.9999998807907104,
+          "upper_bound": 0.9999999403953552
+        },
+        {
+          "feature_idx": 6,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -1.4788284374844807e-08,
+          "upper_bound": 5.638653988171427e-08
+        },
+        {
+          "feature_idx": 7,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 9,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -4.2139809131622314,
+          "upper_bound": -3.7201520204544067
+        },
+        {
+          "feature_idx": 11,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.032227957621216774,
+          "upper_bound": 0.03953210264444351
+        },
+        {
+          "feature_idx": 12,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 0.9997686147689819,
+          "upper_bound": 1.0004515051841736
+        },
+        {
+          "feature_idx": 13,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.255998820066452,
+          "upper_bound": 0.0017611932125873864
+        },
+        {
+          "feature_idx": 14,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 15,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 58.35164260864258,
+          "upper_bound": 65.99088668823242
+        },
+        {
+          "feature_idx": 16,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -0.21501193940639496,
+          "upper_bound": 0.13376865535974503
+        },
+        {
+          "feature_idx": 17,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.8446085751056671,
+          "upper_bound": 0.534285843372345
+        },
+        {
+          "feature_idx": 18,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.016785891726613045,
+          "upper_bound": 0.03403500095009804
+        },
+        {
+          "feature_idx": 21,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 22,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -1.7855355739593506,
+          "upper_bound": 5.1744225025177
+        },
+        {
+          "feature_idx": 23,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.4140649884939194,
+          "upper_bound": 0.6725570559501648
+        },
+        {
+          "feature_idx": 26,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.03287903591990471,
+          "upper_bound": 0.23747135698795319
+        },
+        {
+          "feature_idx": 27,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.005008983891457319,
+          "upper_bound": 0.003043326665647328
+        },
+        {
+          "feature_idx": 28,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 29,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -1.9603888392448425,
+          "upper_bound": 10.465980529785156
+        },
+        {
+          "feature_idx": 32,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -6.6679538122116355e-06,
+          "upper_bound": 5.727966936319717e-06
+        },
+        {
+          "feature_idx": 33,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.08556243777275085,
+          "upper_bound": -0.004495011176913977
+        },
+        {
+          "feature_idx": 34,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -1.457634340340519e-06,
+          "upper_bound": 6.222022079782619e-07
+        },
+        {
+          "feature_idx": 35,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.0
+        },
+        {
+          "feature_idx": 43,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 50,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -4.36726188659668,
+          "upper_bound": -3.8648115396499634
+        },
+        {
+          "feature_idx": 53,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 298.89178466796875,
+          "upper_bound": 310.9179992675781
+        },
+        {
+          "feature_idx": 54,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": -5.198528289794922,
+          "upper_bound": 7.960224151611328
+        },
+        {
+          "feature_idx": 55,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -1.4056075811386108,
+          "upper_bound": 0.07440083846449852
+        },
+        {
+          "feature_idx": 56,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -9.58990478515625,
+          "upper_bound": 1.0363304615020752
+        },
+        {
+          "feature_idx": 57,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.06272111088037491,
+          "upper_bound": 0.1433875560760498
+        },
+        {
+          "feature_idx": 58,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 774.56640625,
+          "upper_bound": 1037.2415771484375
+        },
+        {
+          "feature_idx": 59,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -7.937892913818359,
+          "upper_bound": 5.6867969036102295
+        },
+        {
+          "feature_idx": 60,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.1759507954120636,
+          "upper_bound": 0.19100399315357208
+        },
+        {
+          "feature_idx": 62,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -8.68977076606825e-06,
+          "upper_bound": 1.3143817341187969e-05
+        },
+        {
+          "feature_idx": 64,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -9.10638675577502e-09,
+          "upper_bound": 5.418189630290726e-08
+        },
+        {
+          "feature_idx": 68,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 999.0,
+          "upper_bound": 999.0
+        },
+        {
+          "feature_idx": 69,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 70,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -2.677427291870117,
+          "upper_bound": 0.5762206614017487
+        },
+        {
+          "feature_idx": 71,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.9298897385597229,
+          "upper_bound": 1.8042333126068115
+        },
+        {
+          "feature_idx": 72,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 74,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -4.139926433563232,
+          "upper_bound": -3.8820533752441406
+        },
+        {
+          "feature_idx": 76,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 77,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -2.7271004915237427,
+          "upper_bound": 2.9665766954421997
+        },
+        {
+          "feature_idx": 80,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 297.34950256347656,
+          "upper_bound": 314.86541748046875
+        },
+        {
+          "feature_idx": 81,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 2.0,
+          "upper_bound": 2.5
+        }
+      ]
+    },
+    {
+      "action": 1,
+      "weight": 1.0,
+      "n_instances": 2,
+      "predicates": [
+        {
+          "feature_idx": 0,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 1,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 345.04054260253906,
+          "upper_bound": 374.4940490722656
+        },
+        {
+          "feature_idx": 2,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 7,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 9,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -4.2139809131622314,
+          "upper_bound": -3.7201520204544067
+        },
+        {
+          "feature_idx": 12,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 0.9997686147689819,
+          "upper_bound": 1.0004515051841736
+        },
+        {
+          "feature_idx": 13,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.255998820066452,
+          "upper_bound": 0.0017611932125873864
+        },
+        {
+          "feature_idx": 14,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 15,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 58.35164260864258,
+          "upper_bound": 65.99088668823242
+        },
+        {
+          "feature_idx": 16,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -0.21501193940639496,
+          "upper_bound": 0.13376865535974503
+        },
+        {
+          "feature_idx": 17,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.8446085751056671,
+          "upper_bound": 0.534285843372345
+        },
+        {
+          "feature_idx": 18,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.016785891726613045,
+          "upper_bound": 0.03403500095009804
+        },
+        {
+          "feature_idx": 21,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 22,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -1.7855355739593506,
+          "upper_bound": 5.1744225025177
+        },
+        {
+          "feature_idx": 23,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.4140649884939194,
+          "upper_bound": 0.6725570559501648
+        },
+        {
+          "feature_idx": 26,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.03287903591990471,
+          "upper_bound": 0.23747135698795319
+        },
+        {
+          "feature_idx": 27,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.005008983891457319,
+          "upper_bound": 0.003043326665647328
+        },
+        {
+          "feature_idx": 28,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 29,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -1.9603888392448425,
+          "upper_bound": 10.465980529785156
+        },
+        {
+          "feature_idx": 31,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": -0.16437023878097534,
+          "upper_bound": 1.12448650598526
+        },
+        {
+          "feature_idx": 32,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -6.6679538122116355e-06,
+          "upper_bound": 5.727966936319717e-06
+        },
+        {
+          "feature_idx": 34,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -1.457634340340519e-06,
+          "upper_bound": 6.222022079782619e-07
+        },
+        {
+          "feature_idx": 35,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.0
+        },
+        {
+          "feature_idx": 36,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -6.783380968045094e-08,
+          "upper_bound": -2.0861961047557998e-09
+        },
+        {
+          "feature_idx": 38,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -4.580024892675283e-08,
+          "upper_bound": 2.8080890501769318e-08
+        },
+        {
+          "feature_idx": 39,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -9.659657251859244e-08,
+          "upper_bound": -3.0070424372752314e-08
+        },
+        {
+          "feature_idx": 42,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 19.61953353881836,
+          "upper_bound": 19.84594440460205
+        },
+        {
+          "feature_idx": 43,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 46,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -20.665419578552246,
+          "upper_bound": -19.9367094039917
+        },
+        {
+          "feature_idx": 48,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 305.6482849121094,
+          "upper_bound": 344.3459167480469
+        },
+        {
+          "feature_idx": 50,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": -3.8648115396499634,
+          "upper_bound": -1.9747025519609451
+        },
+        {
+          "feature_idx": 52,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.003710093558765948,
+          "upper_bound": 0.031722959131002426
+        },
+        {
+          "feature_idx": 54,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": -5.198528289794922,
+          "upper_bound": 7.960224151611328
+        },
+        {
+          "feature_idx": 55,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 0.1837746724486351,
+          "upper_bound": 0.46680082380771637
+        },
+        {
+          "feature_idx": 56,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -9.58990478515625,
+          "upper_bound": 1.0363304615020752
+        },
+        {
+          "feature_idx": 57,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.06272111088037491,
+          "upper_bound": 0.1433875560760498
+        },
+        {
+          "feature_idx": 58,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 774.56640625,
+          "upper_bound": 1037.2415771484375
+        },
+        {
+          "feature_idx": 59,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -7.937892913818359,
+          "upper_bound": 5.6867969036102295
+        },
+        {
+          "feature_idx": 60,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": -0.1759507954120636,
+          "upper_bound": 0.19100399315357208
+        },
+        {
+          "feature_idx": 61,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": -1.4176011085510254,
+          "upper_bound": 0.07048936560750008
+        },
+        {
+          "feature_idx": 62,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -8.68977076606825e-06,
+          "upper_bound": 1.3143817341187969e-05
+        },
+        {
+          "feature_idx": 63,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 969.423095703125,
+          "upper_bound": 997.2713317871094
+        },
+        {
+          "feature_idx": 68,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 999.0,
+          "upper_bound": 999.0
+        },
+        {
+          "feature_idx": 69,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 70,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -2.677427291870117,
+          "upper_bound": 0.5762206614017487
+        },
+        {
+          "feature_idx": 71,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -0.9298897385597229,
+          "upper_bound": 1.8042333126068115
+        },
+        {
+          "feature_idx": 72,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 73,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": -306.4938507080078,
+          "upper_bound": -272.82916259765625
+        },
+        {
+          "feature_idx": 76,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 81,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 2.0,
+          "upper_bound": 2.5
+        }
+      ]
+    },
+    {
+      "action": 4,
+      "weight": 1.0,
+      "n_instances": 84,
+      "predicates": [
+        {
+          "feature_idx": 0,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 2,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 7,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 10,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -20.370695114135742,
+          "upper_bound": -0.5243836641311646
+        },
+        {
+          "feature_idx": 14,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 21,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 0.75,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 26,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.7781721353530884,
+          "upper_bound": 1.0485225915908813
+        },
+        {
+          "feature_idx": 28,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 34,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -1.457634340340519e-06,
+          "upper_bound": 6.222022079782619e-07
+        },
+        {
+          "feature_idx": 35,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.0
+        },
+        {
+          "feature_idx": 43,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 46,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -40.605525970458984,
+          "upper_bound": -20.665419578552246
+        },
+        {
+          "feature_idx": 54,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -311.9895935058594,
+          "upper_bound": -6.526589393615723
+        },
+        {
+          "feature_idx": 55,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -8.712889671325684,
+          "upper_bound": -1.4056075811386108
+        },
+        {
+          "feature_idx": 62,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -8.68977076606825e-06,
+          "upper_bound": 1.3143817341187969e-05
+        },
+        {
+          "feature_idx": 68,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 999.0,
+          "upper_bound": 999.0
+        },
+        {
+          "feature_idx": 69,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 72,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 76,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 81,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": 2.5,
+          "upper_bound": 3.0
+        }
+      ]
+    },
+    {
+      "action": 4,
+      "weight": 1.0,
+      "n_instances": 110,
+      "predicates": [
+        {
+          "feature_idx": 0,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 1,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 18.378082275390625,
+          "upper_bound": 312.8350524902344
+        },
+        {
+          "feature_idx": 3,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 19.6524715423584,
+          "upper_bound": 20.283085823059082
+        },
+        {
+          "feature_idx": 7,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 14,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 21,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 0.75,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 22,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 61.429019927978516,
+          "upper_bound": 82.50053405761719
+        },
+        {
+          "feature_idx": 23,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.7270310521125793,
+          "upper_bound": 11.268899917602539
+        },
+        {
+          "feature_idx": 25,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -3.19478178024292,
+          "upper_bound": -0.0467942263931036
+        },
+        {
+          "feature_idx": 26,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.7781721353530884,
+          "upper_bound": 1.0485225915908813
+        },
+        {
+          "feature_idx": 27,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -0.18294928967952728,
+          "upper_bound": -0.005156909115612507
+        },
+        {
+          "feature_idx": 28,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 0.75,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 29,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 29.851301670074463,
+          "upper_bound": 199.68344116210938
+        },
+        {
+          "feature_idx": 30,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.25929175317287445,
+          "upper_bound": 4.315971851348877
+        },
+        {
+          "feature_idx": 31,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -21.470989227294922,
+          "upper_bound": -0.7269701361656189
+        },
+        {
+          "feature_idx": 33,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.08091476932168007,
+          "upper_bound": 1.0816588401794434
+        },
+        {
+          "feature_idx": 34,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -1.457634340340519e-06,
+          "upper_bound": 6.222022079782619e-07
+        },
+        {
+          "feature_idx": 35,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.0
+        },
+        {
+          "feature_idx": 43,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 44,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -269.01527404785156,
+          "upper_bound": 18.919422149658203
+        },
+        {
+          "feature_idx": 48,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 2.135274887084961,
+          "upper_bound": 264.6720733642578
+        },
+        {
+          "feature_idx": 49,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -250.49019622802734,
+          "upper_bound": 43.452396392822266
+        },
+        {
+          "feature_idx": 53,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -5.450984954833984,
+          "upper_bound": 254.84280395507812
+        },
+        {
+          "feature_idx": 54,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -311.9895935058594,
+          "upper_bound": -6.526589393615723
+        },
+        {
+          "feature_idx": 57,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -3.191704273223877,
+          "upper_bound": -0.07152708619832993
+        },
+        {
+          "feature_idx": 58,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -13.459207534790039,
+          "upper_bound": 249.2159881591797
+        },
+        {
+          "feature_idx": 59,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 8.027468919754028,
+          "upper_bound": 76.20195007324219
+        },
+        {
+          "feature_idx": 61,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -42.65107727050781,
+          "upper_bound": -1.600020945072174
+        },
+        {
+          "feature_idx": 62,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -8.68977076606825e-06,
+          "upper_bound": 1.3143817341187969e-05
+        },
+        {
+          "feature_idx": 63,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -47.69512176513672,
+          "upper_bound": 953.4942932128906
+        },
+        {
+          "feature_idx": 68,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 999.0,
+          "upper_bound": 999.0
+        },
+        {
+          "feature_idx": 69,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 0.75,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 70,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.6551349759101868,
+          "upper_bound": 70.54828643798828
+        },
+        {
+          "feature_idx": 71,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -41.37080001831055,
+          "upper_bound": -1.2250858545303345
+        },
+        {
+          "feature_idx": 72,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 73,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -246.8098907470703,
+          "upper_bound": 23.73396873474121
+        },
+        {
+          "feature_idx": 76,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 0.75,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 77,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -75.05901336669922,
+          "upper_bound": -2.8851269483566284
+        },
+        {
+          "feature_idx": 78,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.20077690482139587,
+          "upper_bound": 6.880069255828857
+        },
+        {
+          "feature_idx": 79,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -41.344608306884766,
+          "upper_bound": -1.5811312794685364
+        },
+        {
+          "feature_idx": 80,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -4.208661079406738,
+          "upper_bound": 250.05873107910156
+        },
+        {
+          "feature_idx": 81,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 3.5,
+          "upper_bound": 4.0
+        }
+      ]
+    },
+    {
+      "action": 4,
+      "weight": 1.0,
+      "n_instances": 246,
+      "predicates": [
+        {
+          "feature_idx": 0,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 1,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 18.378082275390625,
+          "upper_bound": 312.8350524902344
+        },
+        {
+          "feature_idx": 3,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 19.6524715423584,
+          "upper_bound": 20.283085823059082
+        },
+        {
+          "feature_idx": 7,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 14,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 21,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 0.75,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 26,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.7781721353530884,
+          "upper_bound": 1.0485225915908813
+        },
+        {
+          "feature_idx": 28,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 0.75,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 29,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 29.851301670074463,
+          "upper_bound": 199.68344116210938
+        },
+        {
+          "feature_idx": 33,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.08091476932168007,
+          "upper_bound": 1.0816588401794434
+        },
+        {
+          "feature_idx": 34,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -1.457634340340519e-06,
+          "upper_bound": 6.222022079782619e-07
+        },
+        {
+          "feature_idx": 35,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.0
+        },
+        {
+          "feature_idx": 44,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -269.01527404785156,
+          "upper_bound": 18.919422149658203
+        },
+        {
+          "feature_idx": 48,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 2.135274887084961,
+          "upper_bound": 264.6720733642578
+        },
+        {
+          "feature_idx": 49,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -250.49019622802734,
+          "upper_bound": 43.452396392822266
+        },
+        {
+          "feature_idx": 53,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -5.450984954833984,
+          "upper_bound": 254.84280395507812
+        },
+        {
+          "feature_idx": 54,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -311.9895935058594,
+          "upper_bound": -6.526589393615723
+        },
+        {
+          "feature_idx": 58,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -13.459207534790039,
+          "upper_bound": 249.2159881591797
+        },
+        {
+          "feature_idx": 61,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -42.65107727050781,
+          "upper_bound": -1.600020945072174
+        },
+        {
+          "feature_idx": 62,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -8.68977076606825e-06,
+          "upper_bound": 1.3143817341187969e-05
+        },
+        {
+          "feature_idx": 63,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -47.69512176513672,
+          "upper_bound": 953.4942932128906
+        },
+        {
+          "feature_idx": 68,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 999.0,
+          "upper_bound": 999.0
+        },
+        {
+          "feature_idx": 69,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 72,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 73,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -246.8098907470703,
+          "upper_bound": 23.73396873474121
+        },
+        {
+          "feature_idx": 76,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 80,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -4.208661079406738,
+          "upper_bound": 250.05873107910156
+        },
+        {
+          "feature_idx": 81,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 3.5,
+          "upper_bound": 4.0
+        }
+      ]
+    },
+    {
+      "action": 4,
+      "weight": 1.0,
+      "n_instances": 113,
+      "predicates": [
+        {
+          "feature_idx": 0,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 1,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 18.378082275390625,
+          "upper_bound": 312.8350524902344
+        },
+        {
+          "feature_idx": 7,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 14,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 21,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 0.75,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 22,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 61.429019927978516,
+          "upper_bound": 82.50053405761719
+        },
+        {
+          "feature_idx": 23,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.7270310521125793,
+          "upper_bound": 11.268899917602539
+        },
+        {
+          "feature_idx": 26,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.7781721353530884,
+          "upper_bound": 1.0485225915908813
+        },
+        {
+          "feature_idx": 28,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 34,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -1.457634340340519e-06,
+          "upper_bound": 6.222022079782619e-07
+        },
+        {
+          "feature_idx": 35,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.0
+        },
+        {
+          "feature_idx": 44,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -269.01527404785156,
+          "upper_bound": 18.919422149658203
+        },
+        {
+          "feature_idx": 48,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 2.135274887084961,
+          "upper_bound": 264.6720733642578
+        },
+        {
+          "feature_idx": 49,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -250.49019622802734,
+          "upper_bound": 43.452396392822266
+        },
+        {
+          "feature_idx": 53,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -5.450984954833984,
+          "upper_bound": 254.84280395507812
+        },
+        {
+          "feature_idx": 55,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.46680082380771637,
+          "upper_bound": 7.088198661804199
+        },
+        {
+          "feature_idx": 58,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -13.459207534790039,
+          "upper_bound": 249.2159881591797
+        },
+        {
+          "feature_idx": 62,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -8.68977076606825e-06,
+          "upper_bound": 1.3143817341187969e-05
+        },
+        {
+          "feature_idx": 68,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 999.0,
+          "upper_bound": 999.0
+        },
+        {
+          "feature_idx": 69,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 72,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 73,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -246.8098907470703,
+          "upper_bound": 23.73396873474121
+        },
+        {
+          "feature_idx": 76,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 0.75,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 77,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -75.05901336669922,
+          "upper_bound": -2.8851269483566284
+        },
+        {
+          "feature_idx": 78,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.20077690482139587,
+          "upper_bound": 6.880069255828857
+        },
+        {
+          "feature_idx": 79,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -41.344608306884766,
+          "upper_bound": -1.5811312794685364
+        },
+        {
+          "feature_idx": 80,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -4.208661079406738,
+          "upper_bound": 250.05873107910156
+        },
+        {
+          "feature_idx": 81,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": 2.5,
+          "upper_bound": 3.0
+        }
+      ]
+    },
+    {
+      "action": 4,
+      "weight": 1.0,
+      "n_instances": 211,
+      "predicates": [
+        {
+          "feature_idx": 0,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 1,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 18.378082275390625,
+          "upper_bound": 312.8350524902344
+        },
+        {
+          "feature_idx": 2,
+          "level": 0.0,
+          "level_label": "Medium",
+          "lower_bound": 3.9999998807907104,
+          "upper_bound": 4.0
+        },
+        {
+          "feature_idx": 7,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 14,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 21,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 0.75,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 26,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.7781721353530884,
+          "upper_bound": 1.0485225915908813
+        },
+        {
+          "feature_idx": 28,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 0.75,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 29,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 29.851301670074463,
+          "upper_bound": 199.68344116210938
+        },
+        {
+          "feature_idx": 33,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.08091476932168007,
+          "upper_bound": 1.0816588401794434
+        },
+        {
+          "feature_idx": 35,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.0
+        },
+        {
+          "feature_idx": 54,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -311.9895935058594,
+          "upper_bound": -6.526589393615723
+        },
+        {
+          "feature_idx": 59,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -252.63597106933594,
+          "upper_bound": -7.937892913818359
+        },
+        {
+          "feature_idx": 61,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -42.65107727050781,
+          "upper_bound": -1.600020945072174
+        },
+        {
+          "feature_idx": 63,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -47.69512176513672,
+          "upper_bound": 953.4942932128906
+        },
+        {
+          "feature_idx": 68,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 999.0,
+          "upper_bound": 999.0
+        },
+        {
+          "feature_idx": 69,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 72,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 76,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 80,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -4.208661079406738,
+          "upper_bound": 250.05873107910156
+        },
+        {
+          "feature_idx": 81,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 3.5,
+          "upper_bound": 4.0
+        }
+      ]
+    },
+    {
+      "action": 4,
+      "weight": 1.0,
+      "n_instances": 112,
+      "predicates": [
+        {
+          "feature_idx": 0,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 1,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 18.378082275390625,
+          "upper_bound": 312.8350524902344
+        },
+        {
+          "feature_idx": 3,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 20.28969955444336,
+          "upper_bound": 30.329143524169922
+        },
+        {
+          "feature_idx": 7,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 14,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 21,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 0.75,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 22,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 61.429019927978516,
+          "upper_bound": 82.50053405761719
+        },
+        {
+          "feature_idx": 23,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.7270310521125793,
+          "upper_bound": 11.268899917602539
+        },
+        {
+          "feature_idx": 24,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -20.5789794921875,
+          "upper_bound": -0.16604428738355637
+        },
+        {
+          "feature_idx": 26,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.7781721353530884,
+          "upper_bound": 1.0485225915908813
+        },
+        {
+          "feature_idx": 28,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 34,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -1.457634340340519e-06,
+          "upper_bound": 6.222022079782619e-07
+        },
+        {
+          "feature_idx": 35,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.0
+        },
+        {
+          "feature_idx": 42,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 20.187414169311523,
+          "upper_bound": 30.32777976989746
+        },
+        {
+          "feature_idx": 44,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -269.01527404785156,
+          "upper_bound": 18.919422149658203
+        },
+        {
+          "feature_idx": 46,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -40.605525970458984,
+          "upper_bound": -20.665419578552246
+        },
+        {
+          "feature_idx": 48,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 2.135274887084961,
+          "upper_bound": 264.6720733642578
+        },
+        {
+          "feature_idx": 49,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -250.49019622802734,
+          "upper_bound": 43.452396392822266
+        },
+        {
+          "feature_idx": 51,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -40.74142837524414,
+          "upper_bound": -20.795308113098145
+        },
+        {
+          "feature_idx": 53,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -5.450984954833984,
+          "upper_bound": 254.84280395507812
+        },
+        {
+          "feature_idx": 55,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.46680082380771637,
+          "upper_bound": 7.088198661804199
+        },
+        {
+          "feature_idx": 58,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -13.459207534790039,
+          "upper_bound": 249.2159881591797
+        },
+        {
+          "feature_idx": 68,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 999.0,
+          "upper_bound": 999.0
+        },
+        {
+          "feature_idx": 69,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 0.0,
+          "upper_bound": 0.25
+        },
+        {
+          "feature_idx": 72,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": 1.0,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 73,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": -246.8098907470703,
+          "upper_bound": 23.73396873474121
+        },
+        {
+          "feature_idx": 75,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -30.01850700378418,
+          "upper_bound": -20.3269624710083
+        },
+        {
+          "feature_idx": 76,
+          "level": 0.5,
+          "level_label": "High",
+          "lower_bound": 0.75,
+          "upper_bound": 1.0
+        },
+        {
+          "feature_idx": 77,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 3.2366925477981567,
+          "upper_bound": 53.25992202758789
+        },
+        {
+          "feature_idx": 78,
+          "level": 1.0,
+          "level_label": "Very High",
+          "lower_bound": 0.20077690482139587,
+          "upper_bound": 6.880069255828857
+        },
+        {
+          "feature_idx": 79,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -41.344608306884766,
+          "upper_bound": -1.5811312794685364
+        },
+        {
+          "feature_idx": 80,
+          "level": -1.0,
+          "level_label": "Very Low",
+          "lower_bound": -4.208661079406738,
+          "upper_bound": 250.05873107910156
+        },
+        {
+          "feature_idx": 81,
+          "level": -0.5,
+          "level_label": "Low",
+          "lower_bound": 2.5,
+          "upper_bound": 3.0
+        }
+      ]
+    }
+  ],
+  "n_rules": 81,
+  "preds_test": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    1,
+    1,
+    1,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    1,
+    1,
+    1,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    1,
+    1,
+    1,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    1,
+    1,
+    1,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    1,
+    1,
+    1,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    1,
+    1,
+    1,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    1,
+    1,
+    1
+  ],
+  "macro_f1": 1.0,
+  "weighted_f1": 1.0,
+  "per_action_f1": {
+    "IDLE": 1.0,
+    "SLOWER": 1.0
+  },
+  "mean_rule_length": 37.05882352941177,
+  "n_features_used": 81,
+  "per_action_rule_count": {
+    "1": 11,
+    "4": 6
+  },
+  "action_coverage": 1.0,
+  "rare_action_support": {
+    "IDLE": 0.06231454005934718,
+    "SLOWER": 0.9376854599406528
+  },
+  "status": "success",
+  "evaluation_split": "test_explainer",
+  "result_suffix": "noise_0p05"
+}

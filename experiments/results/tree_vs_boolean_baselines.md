@@ -1,0 +1,10 @@
+# Non-CBS Baselines: DT vs BDR
+
+| Env | Method | Macro-F1 | GRS | BRA | TD | Rule Count |
+|---|---|---|---|---|---|---|
+| MountainCar-v0 | DT | 0.949 | 0.08 | 0.982 | 0.314 | 85.7 |
+| MountainCar-v0 | BDR | 0.479 | 0.054 | 0.954 | 0.003 | 9.9 |
+| CartPole-v1 | DT | 0.921 | 0.008 | 0.914 | 0.464 | 278.9 |
+| CartPole-v1 | BDR | 0.691 | 0.067 | 0.994 | 0.003 | 5.0 |
+| LunarLander-v3 | DT | 0.726 | 0.004 | 0.78 | 0.238 | 263.0 |
+| LunarLander-v3 | BDR | 0.287 | 0.213 | 0.652 | 0.07 | 13.5 |

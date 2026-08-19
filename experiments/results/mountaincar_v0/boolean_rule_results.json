@@ -1,0 +1,5884 @@
+{
+  "schema_version": "b5_bdr_v1",
+  "env": "MountainCar-v0",
+  "timestamp": "2026-03-29 22:09:23",
+  "elapsed_seconds": 56.0,
+  "protocol": {
+    "extraction_transitions": 10000,
+    "heldout_transitions": 5000,
+    "deployment_episodes": 50,
+    "eval_seeds": [
+      1000,
+      1001,
+      1002,
+      1003,
+      1004
+    ],
+    "anchor": {
+      "seed": 99,
+      "size": 5000,
+      "shape": [
+        5000,
+        2
+      ],
+      "sha256": "e1b713577b8e1dc3b8d4bf40237b7c2c0b723235a284fd0463c587b6225de662"
+    }
+  },
+  "b5_bdr": {
+    "method_params": {
+      "type": "boolean_rule_summarizer",
+      "n_quantile_thresholds": 4,
+      "max_literals": 2,
+      "max_rules_per_action": 4,
+      "min_support_frac": 0.01,
+      "best_cv_f1": 0.34705338908094646
+    },
+    "per_run": {
+      "seed_shift_s0": {
+        "fidelity_heldout": {
+          "accuracy": 0.564,
+          "recall": 0.4102104256336681,
+          "f1": 0.4749665451525079
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.4996557264172596,
+              "recall": 1.0,
+              "f1": 0.6663605754514845,
+              "support": 2177,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.2306312769010043,
+              "f1": 0.37481783736519964,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.4998852421390865,
+          "macro_recall": 0.4102104256336681,
+          "macro_f1": 0.45062985179941695
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 9,
+          "n_duplicated": 2,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 321,
+          "approx_rate": 0.0642
+        },
+        "n_rules": 9,
+        "thresholds": {
+          "0": [
+            -0.8097930192947388,
+            -0.6485933303833008,
+            -0.45862761139869684,
+            -0.12363066226243957
+          ],
+          "1": [
+            -0.01522022634744644,
+            -0.003960370831191539,
+            0.017026880383491518,
+            0.03231541514396668
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_seed_shift_s0",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.34705338908094646
+        },
+        "perturbation_family": "seed_shift",
+        "perturbation_id": "seed_shift_s0",
+        "perturbation_params": {
+          "replay_seed": 0
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.4318,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.017026880383491518
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2862,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03231541514396668
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.5637,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.45862761139869684
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2862,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03231541514396668
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3665,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.12363066226243957
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3665,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.12363066226243957
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2862,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03231541514396668
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7704,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8097930192947388
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7704,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8097930192947388
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.011857707509881424,
+          "GRS_ta": 0.8739890544238369,
+          "BRA": 0.9740695652173912,
+          "TD": 0.004465127975832762
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.06818181818181819,
+          "GRS_ta": 1.0,
+          "BRA": 0.9992000000000001,
+          "TD": 0.0008676004334686942
+        }
+      },
+      "seed_shift_s1": {
+        "fidelity_heldout": {
+          "accuracy": 0.564,
+          "recall": 0.4102104256336681,
+          "f1": 0.4749665451525079
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.4996557264172596,
+              "recall": 1.0,
+              "f1": 0.6663605754514845,
+              "support": 2177,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.2306312769010043,
+              "f1": 0.37481783736519964,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.4998852421390865,
+          "macro_recall": 0.4102104256336681,
+          "macro_f1": 0.45062985179941695
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 9,
+          "n_duplicated": 2,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 323,
+          "approx_rate": 0.0646
+        },
+        "n_rules": 9,
+        "thresholds": {
+          "0": [
+            -0.8116339325904846,
+            -0.6498175978660583,
+            -0.4592238485813141,
+            -0.12461132556200004
+          ],
+          "1": [
+            -0.015393082983791828,
+            -0.0040495460852980605,
+            0.016987117007374767,
+            0.03231541514396668
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_seed_shift_s1",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.34705338908094646
+        },
+        "perturbation_family": "seed_shift",
+        "perturbation_id": "seed_shift_s1",
+        "perturbation_params": {
+          "replay_seed": 1
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.4322,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.016987117007374767
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2862,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03231541514396668
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.564,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.4592238485813141
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2862,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03231541514396668
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3671,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.12461132556200004
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3671,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.12461132556200004
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2862,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03231541514396668
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7714,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8116339325904846
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7714,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8116339325904846
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.011857707509881424,
+          "GRS_ta": 0.8739890544238369,
+          "BRA": 0.9740695652173912,
+          "TD": 0.004974776015690395
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.06818181818181819,
+          "GRS_ta": 1.0,
+          "BRA": 0.9992000000000001,
+          "TD": 0.0007572633310365445
+        }
+      },
+      "seed_shift_s2": {
+        "fidelity_heldout": {
+          "accuracy": 0.5628,
+          "recall": 0.4094930655188905,
+          "f1": 0.4740601480090551
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.49896859958743983,
+              "recall": 1.0,
+              "f1": 0.6657492354740061,
+              "support": 2177,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.22847919655667145,
+              "f1": 0.371970802919708,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.49965619986247994,
+          "macro_recall": 0.4094930655188905,
+          "macro_f1": 0.45010375474785913
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 9,
+          "n_duplicated": 2,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 315,
+          "approx_rate": 0.063
+        },
+        "n_rules": 9,
+        "thresholds": {
+          "0": [
+            -0.8117816090583801,
+            -0.6499709129333496,
+            -0.45873781442642203,
+            -0.12314385771751402
+          ],
+          "1": [
+            -0.015409276261925696,
+            -0.004067274183034896,
+            0.0171620149165392,
+            0.03249261677265168
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_seed_shift_s2",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.34705338908094646
+        },
+        "perturbation_family": "seed_shift",
+        "perturbation_id": "seed_shift_s2",
+        "perturbation_params": {
+          "replay_seed": 2
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.4305,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.0171620149165392
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2845,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03249261677265168
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.5636,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.45873781442642203
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2845,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03249261677265168
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3661,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.12314385771751402
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3661,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.12314385771751402
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2845,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03249261677265168
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7715,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8117816090583801
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7715,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8117816090583801
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.0189520624303233,
+          "GRS_ta": 0.8739890544238369,
+          "BRA": 0.9736521739130433,
+          "TD": 0.004826834680546918
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.10897435897435898,
+          "GRS_ta": 1.0,
+          "BRA": 0.9993000000000001,
+          "TD": 0.0006277308156936347
+        }
+      },
+      "seed_shift_s3": {
+        "fidelity_heldout": {
+          "accuracy": 0.5628,
+          "recall": 0.4094930655188905,
+          "f1": 0.4740601480090551
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.49896859958743983,
+              "recall": 1.0,
+              "f1": 0.6657492354740061,
+              "support": 2177,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.22847919655667145,
+              "f1": 0.371970802919708,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.49965619986247994,
+          "macro_recall": 0.4094930655188905,
+          "macro_f1": 0.45010375474785913
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 9,
+          "n_duplicated": 2,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 315,
+          "approx_rate": 0.063
+        },
+        "n_rules": 9,
+        "thresholds": {
+          "0": [
+            -0.8117688417434692,
+            -0.6500033497810364,
+            -0.458205485343933,
+            -0.1230085343122481
+          ],
+          "1": [
+            -0.01539689842611551,
+            -0.004067865852266549,
+            0.0171620149165392,
+            0.03249261677265168
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_seed_shift_s3",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.34705338908094646
+        },
+        "perturbation_family": "seed_shift",
+        "perturbation_id": "seed_shift_s3",
+        "perturbation_params": {
+          "replay_seed": 3
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.4305,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.0171620149165392
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2845,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03249261677265168
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.5633,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.458205485343933
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2845,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03249261677265168
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.366,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.1230085343122481
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.366,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.1230085343122481
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2845,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03249261677265168
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7715,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8117688417434692
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7715,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8117688417434692
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.021413096064449633,
+          "GRS_ta": 0.8739890544238369,
+          "BRA": 0.9736521739130433,
+          "TD": 0.004775835525698013
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.12312530237058539,
+          "GRS_ta": 1.0,
+          "BRA": 0.9993000000000001,
+          "TD": 0.0006265148784539019
+        }
+      },
+      "seed_shift_s4": {
+        "fidelity_heldout": {
+          "accuracy": 0.5632,
+          "recall": 0.4097321855571497,
+          "f1": 0.4743622840961753
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.49919743178170145,
+              "recall": 1.0,
+              "f1": 0.6659528907922913,
+              "support": 2177,
+              "rule_count": 3
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.22919655667144906,
+              "f1": 0.3729209220892909,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.49973247726056713,
+          "macro_recall": 0.4097321855571497,
+          "macro_f1": 0.4502791333694731
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 9,
+          "n_duplicated": 2,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 315,
+          "approx_rate": 0.063
+        },
+        "n_rules": 9,
+        "thresholds": {
+          "0": [
+            -0.8103071689605713,
+            -0.649600875377655,
+            -0.4581335365772247,
+            -0.12217946648597716
+          ],
+          "1": [
+            -0.015268269181251525,
+            -0.003976975101977579,
+            0.01728414259850981,
+            0.032382923364639285
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_seed_shift_s4",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.34705338908094646
+        },
+        "perturbation_family": "seed_shift",
+        "perturbation_id": "seed_shift_s4",
+        "perturbation_params": {
+          "replay_seed": 4
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.4293,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.01728414259850981
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2855,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.032382923364639285
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.5633,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.4581335365772247
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2855,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.032382923364639285
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3655,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.12217946648597716
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3655,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.12217946648597716
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2855,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.032382923364639285
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7706,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8103071689605713
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7706,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8103071689605713
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.020019217300042157,
+          "GRS_ta": 0.8739890544238369,
+          "BRA": 0.9738608695652178,
+          "TD": 0.004276110075249781
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.014150943396226415,
+          "GRS_ta": 1.0,
+          "BRA": 0.9994000000000001,
+          "TD": 0.000825681662525328
+        }
+      },
+      "subsample_0": {
+        "fidelity_heldout": {
+          "accuracy": 0.564,
+          "recall": 0.4102104256336681,
+          "f1": 0.4749665451525079
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.4996557264172596,
+              "recall": 1.0,
+              "f1": 0.6663605754514845,
+              "support": 2177,
+              "rule_count": 4
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.2306312769010043,
+              "f1": 0.37481783736519964,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.4998852421390865,
+          "macro_recall": 0.4102104256336681,
+          "macro_f1": 0.45062985179941695
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 10,
+          "n_duplicated": 2,
+          "n_unique_signatures": 6
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 315,
+          "approx_rate": 0.063
+        },
+        "n_rules": 10,
+        "thresholds": {
+          "0": [
+            -0.804829740524292,
+            -0.6370591640472412,
+            -0.45061510205268857,
+            -0.11371406316757174
+          ],
+          "1": [
+            -0.01530220434069633,
+            -0.0036380305420607322,
+            0.01884909048676492,
+            0.032248659431934355
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_subsample_0",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.34705338908094646
+        },
+        "perturbation_family": "subsample",
+        "perturbation_id": "subsample_0",
+        "perturbation_params": {
+          "subsample_idx": 0,
+          "fraction": 0.8
+        },
+        "n_replay": 8000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.3865,
+            "n_instances": 3092,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.361,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11371406316757174
+              },
+              {
+                "feature_idx": 1,
+                "level": -0.6286,
+                "level_label": "Very Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": -0.0036380305420607322
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.4144,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.01884909048676492
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2868,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.032248659431934355
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.5592,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.45061510205268857
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2868,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.032248659431934355
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.361,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11371406316757174
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.361,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11371406316757174
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2868,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.032248659431934355
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 1600,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7675,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.804829740524292
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 1600,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7675,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.804829740524292
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.9244349853045506,
+          "BRA": 0.9742260869565217,
+          "TD": 0.002591326070961943
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 1.0,
+          "BRA": 0.9987,
+          "TD": 0.0010669495399136604
+        }
+      },
+      "subsample_1": {
+        "fidelity_heldout": {
+          "accuracy": 0.5618,
+          "recall": 0.40889526542324245,
+          "f1": 0.47330479151892485
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.4983974358974359,
+              "recall": 1.0,
+              "f1": 0.66524064171123,
+              "support": 2177,
+              "rule_count": 4
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.2266857962697274,
+              "f1": 0.36959064327485386,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.49946581196581197,
+          "macro_recall": 0.40889526542324245,
+          "macro_f1": 0.44966525060853935
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 10,
+          "n_duplicated": 2,
+          "n_unique_signatures": 6
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 308,
+          "approx_rate": 0.0616
+        },
+        "n_rules": 10,
+        "thresholds": {
+          "0": [
+            -0.8075248599052428,
+            -0.6388274192810058,
+            -0.45108237862586975,
+            -0.11465868949890119
+          ],
+          "1": [
+            -0.01513464879244566,
+            -0.0033808449748903495,
+            0.019002265855669977,
+            0.032431373000145
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_subsample_1",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.34705338908094646
+        },
+        "perturbation_family": "subsample",
+        "perturbation_id": "subsample_1",
+        "perturbation_params": {
+          "subsample_idx": 1,
+          "fraction": 0.8
+        },
+        "n_replay": 8000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.386875,
+            "n_instances": 3095,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3615,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11465868949890119
+              },
+              {
+                "feature_idx": 1,
+                "level": -0.6273,
+                "level_label": "Very Low",
+                "lower_bound": -0.04243943467736244,
+                "upper_bound": -0.0033808449748903495
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.4138,
+                "level_label": "Low",
+                "lower_bound": -0.04243943467736244,
+                "upper_bound": 0.019002265855669977
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2856,
+                "level_label": "Low",
+                "lower_bound": -0.04243943467736244,
+                "upper_bound": 0.032431373000145
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.5594,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.45108237862586975
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2856,
+                "level_label": "Low",
+                "lower_bound": -0.04243943467736244,
+                "upper_bound": 0.032431373000145
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3615,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11465868949890119
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3615,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11465868949890119
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2856,
+                "level_label": "Low",
+                "lower_bound": -0.04243943467736244,
+                "upper_bound": 0.032431373000145
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 1600,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7691,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8075248599052428
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 1600,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7691,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8075248599052428
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.002293484830747986,
+          "GRS_ta": 0.9244349853045506,
+          "BRA": 0.9739652173913045,
+          "TD": 0.0024300452156538485
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.013187537776800921,
+          "GRS_ta": 1.0,
+          "BRA": 0.9980500000000001,
+          "TD": 0.0011715147790651748
+        }
+      },
+      "subsample_2": {
+        "fidelity_heldout": {
+          "accuracy": 0.562,
+          "recall": 0.40901482544237205,
+          "f1": 0.4734558646803179
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.4985115640027479,
+              "recall": 1.0,
+              "f1": 0.6653422982885085,
+              "support": 2177,
+              "rule_count": 4
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.22704447632711622,
+              "f1": 0.3700672318035662,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.49950385466758257,
+          "macro_recall": 0.40901482544237205,
+          "macro_f1": 0.4497529580788081
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 10,
+          "n_duplicated": 2,
+          "n_unique_signatures": 6
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 303,
+          "approx_rate": 0.0606
+        },
+        "n_rules": 10,
+        "thresholds": {
+          "0": [
+            -0.804452121257782,
+            -0.636141490936279,
+            -0.4510367631912231,
+            -0.1119400098919867
+          ],
+          "1": [
+            -0.015145962126553052,
+            -0.0035114347934722865,
+            0.018800269439816483,
+            0.0324261046946049
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_subsample_2",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.34705338908094646
+        },
+        "perturbation_family": "subsample",
+        "perturbation_id": "subsample_2",
+        "perturbation_params": {
+          "subsample_idx": 2,
+          "fraction": 0.8
+        },
+        "n_replay": 8000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.3875,
+            "n_instances": 3100,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3599,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.1119400098919867
+              },
+              {
+                "feature_idx": 1,
+                "level": -0.6274,
+                "level_label": "Very Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": -0.0035114347934722865
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.4149,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.018800269439816483
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2851,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.0324261046946049
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.5594,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.4510367631912231
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2851,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.0324261046946049
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3599,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.1119400098919867
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3599,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.1119400098919867
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2851,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.0324261046946049
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 1600,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7673,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.804452121257782
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 1600,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7673,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.804452121257782
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.010419233080117041,
+          "GRS_ta": 0.9244349853045506,
+          "BRA": 0.9740869565217393,
+          "TD": 0.002626443551676371
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.05173803893331595,
+          "GRS_ta": 1.0,
+          "BRA": 0.9982,
+          "TD": 0.0009307743410462155
+        }
+      },
+      "subsample_3": {
+        "fidelity_heldout": {
+          "accuracy": 0.5646,
+          "recall": 0.4105691056910569,
+          "f1": 0.4754197312452791
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.5,
+              "recall": 1.0,
+              "f1": 0.6666666666666666,
+              "support": 2177,
+              "rule_count": 4
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.23170731707317074,
+              "f1": 0.37623762376237624,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.5,
+          "macro_recall": 0.4105691056910569,
+          "macro_f1": 0.45089285714285715
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 10,
+          "n_duplicated": 2,
+          "n_unique_signatures": 6
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 313,
+          "approx_rate": 0.0626
+        },
+        "n_rules": 10,
+        "thresholds": {
+          "0": [
+            -0.8067577958106995,
+            -0.6389905571937561,
+            -0.44988125562667847,
+            -0.1119400098919867
+          ],
+          "1": [
+            -0.015104294009506702,
+            -0.003417537733912465,
+            0.01877274364233018,
+            0.03209924101829531
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_subsample_3",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.34705338908094646
+        },
+        "perturbation_family": "subsample",
+        "perturbation_id": "subsample_3",
+        "perturbation_params": {
+          "subsample_idx": 3,
+          "fraction": 0.8
+        },
+        "n_replay": 8000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.3885,
+            "n_instances": 3108,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3599,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.1119400098919867
+              },
+              {
+                "feature_idx": 1,
+                "level": -0.6277,
+                "level_label": "Very Low",
+                "lower_bound": -0.04243943467736244,
+                "upper_bound": -0.003417537733912465
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.4159,
+                "level_label": "Low",
+                "lower_bound": -0.04243943467736244,
+                "upper_bound": 0.01877274364233018
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2888,
+                "level_label": "Low",
+                "lower_bound": -0.04243943467736244,
+                "upper_bound": 0.03209924101829531
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.5587,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.44988125562667847
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2888,
+                "level_label": "Low",
+                "lower_bound": -0.04243943467736244,
+                "upper_bound": 0.03209924101829531
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3599,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.1119400098919867
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3599,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.1119400098919867
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2888,
+                "level_label": "Low",
+                "lower_bound": -0.04243943467736244,
+                "upper_bound": 0.03209924101829531
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 1600,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7687,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8067577958106995
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 1600,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7687,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8067577958106995
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.02139940888061798,
+          "GRS_ta": 0.9244349853045506,
+          "BRA": 0.9735478260869566,
+          "TD": 0.002618417357271587
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.05173644494044136,
+          "GRS_ta": 1.0,
+          "BRA": 0.99795,
+          "TD": 0.0010795352606065933
+        }
+      },
+      "subsample_4": {
+        "fidelity_heldout": {
+          "accuracy": 0.564,
+          "recall": 0.4102104256336681,
+          "f1": 0.4749665451525079
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.4996557264172596,
+              "recall": 1.0,
+              "f1": 0.6663605754514845,
+              "support": 2177,
+              "rule_count": 4
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.2306312769010043,
+              "f1": 0.37481783736519964,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.4998852421390865,
+          "macro_recall": 0.4102104256336681,
+          "macro_f1": 0.45062985179941695
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 10,
+          "n_duplicated": 2,
+          "n_unique_signatures": 6
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 316,
+          "approx_rate": 0.0632
+        },
+        "n_rules": 10,
+        "thresholds": {
+          "0": [
+            -0.8049601912498474,
+            -0.6353689312934876,
+            -0.45026646852493285,
+            -0.11428158581256866
+          ],
+          "1": [
+            -0.015145962126553052,
+            -0.003430441766977306,
+            0.018690223619341858,
+            0.032240960001945505
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_subsample_4",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.34705338908094646
+        },
+        "perturbation_family": "subsample",
+        "perturbation_id": "subsample_4",
+        "perturbation_params": {
+          "subsample_idx": 4,
+          "fraction": 0.8
+        },
+        "n_replay": 8000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.38725,
+            "n_instances": 3098,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3613,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11428158581256866
+              },
+              {
+                "feature_idx": 1,
+                "level": -0.6266,
+                "level_label": "Very Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": -0.003430441766977306
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.4159,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.018690223619341858
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2869,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.032240960001945505
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 4800,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.559,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.45026646852493285
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2869,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.032240960001945505
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3613,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11428158581256866
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3613,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11428158581256866
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 6400,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2869,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.032240960001945505
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 1600,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7676,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8049601912498474
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 1600,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7676,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8049601912498474
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.003714274053800813,
+          "GRS_ta": 0.9244349853045506,
+          "BRA": 0.9742260869565217,
+          "TD": 0.00249306341237556
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.013185943783926334,
+          "GRS_ta": 1.0,
+          "BRA": 0.9987,
+          "TD": 0.0009338802027880175
+        }
+      },
+      "stratified_0": {
+        "fidelity_heldout": {
+          "accuracy": 0.5658,
+          "recall": 0.41128646580583456,
+          "f1": 0.4763260785953497
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.5006899724011039,
+              "recall": 1.0,
+              "f1": 0.66727969348659,
+              "support": 2177,
+              "rule_count": 4
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.23385939741750358,
+              "f1": 0.37906976744186044,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.500229990800368,
+          "macro_recall": 0.41128646580583456,
+          "macro_f1": 0.4514187835343762
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 10,
+          "n_duplicated": 2,
+          "n_unique_signatures": 6
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 326,
+          "approx_rate": 0.0652
+        },
+        "n_rules": 10,
+        "thresholds": {
+          "0": [
+            -0.8085077643394469,
+            -0.6426319360733033,
+            -0.45366069674491843,
+            -0.1227764695882796
+          ],
+          "1": [
+            -0.015294724702835083,
+            -0.0034695719834417094,
+            0.018606143817305566,
+            0.03204036206007005
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_stratified_0",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.34705338908094646
+        },
+        "perturbation_family": "stratified",
+        "perturbation_id": "stratified_0",
+        "perturbation_params": {
+          "subsample_idx": 0,
+          "fraction": 0.8,
+          "stratified": true
+        },
+        "n_replay": 7999,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.3851731466433304,
+            "n_instances": 3081,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3663,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.1227764695882796
+              },
+              {
+                "feature_idx": 1,
+                "level": -0.627,
+                "level_label": "Very Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": -0.0034695719834417094
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.5999499937492186,
+            "n_instances": 4799,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.4167,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.018606143817305566
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2888,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03204036206007005
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.5999499937492186,
+            "n_instances": 4799,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.561,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.45366069674491843
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3663,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.1227764695882796
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2888,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03204036206007005
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3663,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.1227764695882796
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2888,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03204036206007005
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.20002500312539068,
+            "n_instances": 1600,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7697,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8085077643394469
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.20002500312539068,
+            "n_instances": 1600,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7697,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8085077643394469
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.010899228882225042,
+          "GRS_ta": 0.9244349853045506,
+          "BRA": 0.9732521739130435,
+          "TD": 0.0028928880917962673
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.9545454545454546,
+          "BRA": 0.9976,
+          "TD": 0.002175020190678714
+        }
+      },
+      "stratified_1": {
+        "fidelity_heldout": {
+          "accuracy": 0.5626,
+          "recall": 0.40937350549976087,
+          "f1": 0.47390907857255804
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.49885426214482126,
+              "recall": 1.0,
+              "f1": 0.6656474545176578,
+              "support": 2177,
+              "rule_count": 4
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 3
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.22812051649928264,
+              "f1": 0.37149532710280375,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.4996180873816071,
+          "macro_recall": 0.40937350549976087,
+          "macro_f1": 0.45001606053178866
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 11,
+          "n_duplicated": 2,
+          "n_unique_signatures": 7
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 314,
+          "approx_rate": 0.0628
+        },
+        "n_rules": 11,
+        "thresholds": {
+          "0": [
+            -0.8050731778144836,
+            -0.6345828652381897,
+            -0.45183697938919065,
+            -0.12106439024209932
+          ],
+          "1": [
+            -0.015104866959154606,
+            -0.0033914252184331414,
+            0.01887799501419069,
+            0.032390092313289646
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_stratified_1",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.34705338908094646
+        },
+        "perturbation_family": "stratified",
+        "perturbation_id": "stratified_1",
+        "perturbation_params": {
+          "subsample_idx": 1,
+          "fraction": 0.8,
+          "stratified": true
+        },
+        "n_replay": 7999,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.3861732716589574,
+            "n_instances": 3089,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3652,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.12106439024209932
+              },
+              {
+                "feature_idx": 1,
+                "level": -0.6262,
+                "level_label": "Very Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": -0.0033914252184331414
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.5999499937492186,
+            "n_instances": 4799,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.4141,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.01887799501419069
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2855,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.032390092313289646
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.5999499937492186,
+            "n_instances": 4799,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.5598,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.45183697938919065
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.6649581197649707,
+            "n_instances": 5319,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3652,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.12106439024209932
+              },
+              {
+                "feature_idx": 1,
+                "level": -0.2855,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.032390092313289646
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2855,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.032390092313289646
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3652,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.12106439024209932
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3652,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.12106439024209932
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2855,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.032390092313289646
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.20002500312539068,
+            "n_instances": 1600,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7676,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8050731778144836
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.20002500312539068,
+            "n_instances": 1600,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7676,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8050731778144836
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.012013314174096037,
+          "GRS_ta": 0.852897102897103,
+          "BRA": 0.9741565217391305,
+          "TD": 0.0025079898641620886
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.9318181818181818,
+          "BRA": 0.9976,
+          "TD": 0.001499704824939827
+        }
+      },
+      "stratified_2": {
+        "fidelity_heldout": {
+          "accuracy": 0.5644,
+          "recall": 0.4104495456719273,
+          "f1": 0.4752686701362984
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.49988518943742827,
+              "recall": 1.0,
+              "f1": 0.6665646050214329,
+              "support": 2177,
+              "rule_count": 4
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.23134863701578193,
+              "f1": 0.3757646373434314,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.4999617298124761,
+          "macro_recall": 0.4104495456719273,
+          "macro_f1": 0.45080519185287093
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 10,
+          "n_duplicated": 2,
+          "n_unique_signatures": 6
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 321,
+          "approx_rate": 0.0642
+        },
+        "n_rules": 10,
+        "thresholds": {
+          "0": [
+            -0.8068787932395934,
+            -0.6415511012077332,
+            -0.4527275383472441,
+            -0.12146723270416253
+          ],
+          "1": [
+            -0.01516079809516668,
+            -0.00346079966984689,
+            0.018893837928771983,
+            0.032226523756980915
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_stratified_2",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.34705338908094646
+        },
+        "perturbation_family": "stratified",
+        "perturbation_id": "stratified_2",
+        "perturbation_params": {
+          "subsample_idx": 2,
+          "fraction": 0.8,
+          "stratified": true
+        },
+        "n_replay": 7999,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.38629828728591076,
+            "n_instances": 3090,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3655,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.12146723270416253
+              },
+              {
+                "feature_idx": 1,
+                "level": -0.6269,
+                "level_label": "Very Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": -0.00346079966984689
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.5999499937492186,
+            "n_instances": 4799,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.414,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.018893837928771983
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.287,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.032226523756980915
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.5999499937492186,
+            "n_instances": 4799,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.5603,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.4527275383472441
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.287,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.032226523756980915
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3655,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.12146723270416253
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3655,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.12146723270416253
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.287,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.032226523756980915
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.20002500312539068,
+            "n_instances": 1600,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7687,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8068787932395934
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.20002500312539068,
+            "n_instances": 1600,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7687,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8068787932395934
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.022581144180475667,
+          "GRS_ta": 0.9244349853045506,
+          "BRA": 0.974208695652174,
+          "TD": 0.0024540917291379803
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.9545454545454546,
+          "BRA": 0.9980499999999999,
+          "TD": 0.001566004462651057
+        }
+      },
+      "stratified_3": {
+        "fidelity_heldout": {
+          "accuracy": 0.5648,
+          "recall": 0.4106886657101865,
+          "f1": 0.47557079143352493
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.500114863312658,
+              "recall": 1.0,
+              "f1": 0.6667687595712098,
+              "support": 2177,
+              "rule_count": 4
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.23206599713055953,
+              "f1": 0.37671033478893745,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.500038287770886,
+          "macro_recall": 0.4106886657101865,
+          "macro_f1": 0.45098051929545624
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 10,
+          "n_duplicated": 2,
+          "n_unique_signatures": 6
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 319,
+          "approx_rate": 0.0638
+        },
+        "n_rules": 10,
+        "thresholds": {
+          "0": [
+            -0.8052660465240479,
+            -0.6365334272384644,
+            -0.44920481443405136,
+            -0.11368651837110494
+          ],
+          "1": [
+            -0.015278740040957927,
+            -0.003260913304984565,
+            0.018835539370775246,
+            0.03205814734101296
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_stratified_3",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.34705338908094646
+        },
+        "perturbation_family": "stratified",
+        "perturbation_id": "stratified_3",
+        "perturbation_params": {
+          "subsample_idx": 3,
+          "fraction": 0.8,
+          "stratified": true
+        },
+        "n_replay": 7999,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.38704838104763095,
+            "n_instances": 3096,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3606,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11368651837110494
+              },
+              {
+                "feature_idx": 1,
+                "level": -0.625,
+                "level_label": "Very Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": -0.003260913304984565
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.5999499937492186,
+            "n_instances": 4799,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.4145,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.018835539370775246
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2886,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03205814734101296
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.5999499937492186,
+            "n_instances": 4799,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.5581,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.44920481443405136
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2886,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03205814734101296
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3606,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11368651837110494
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3606,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11368651837110494
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2886,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03205814734101296
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.20002500312539068,
+            "n_instances": 1600,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7677,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8052660465240479
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.20002500312539068,
+            "n_instances": 1600,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7677,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8052660465240479
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.9244349853045506,
+          "BRA": 0.9730956521739134,
+          "TD": 0.0027735413279433617
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.9545454545454546,
+          "BRA": 0.99735,
+          "TD": 0.0019776187516052403
+        }
+      },
+      "stratified_4": {
+        "fidelity_heldout": {
+          "accuracy": 0.5618,
+          "recall": 0.40889526542324245,
+          "f1": 0.47330479151892485
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.4983974358974359,
+              "recall": 1.0,
+              "f1": 0.66524064171123,
+              "support": 2177,
+              "rule_count": 4
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 3
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.2266857962697274,
+              "f1": 0.36959064327485386,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.49946581196581197,
+          "macro_recall": 0.40889526542324245,
+          "macro_f1": 0.44966525060853935
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 11,
+          "n_duplicated": 2,
+          "n_unique_signatures": 7
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 309,
+          "approx_rate": 0.0618
+        },
+        "n_rules": 11,
+        "thresholds": {
+          "0": [
+            -0.8043964624404907,
+            -0.6336852550506592,
+            -0.4512046456336975,
+            -0.11706216931343048
+          ],
+          "1": [
+            -0.01481036730110645,
+            -0.0033689600881189065,
+            0.018956016376614572,
+            0.03247751593589783
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_stratified_4",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.34705338908094646
+        },
+        "perturbation_family": "stratified",
+        "perturbation_id": "stratified_4",
+        "perturbation_params": {
+          "subsample_idx": 4,
+          "fraction": 0.8,
+          "stratified": true
+        },
+        "n_replay": 7999,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.3857982247780973,
+            "n_instances": 3086,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.363,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11706216931343048
+              },
+              {
+                "feature_idx": 1,
+                "level": -0.626,
+                "level_label": "Very Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": -0.0033689600881189065
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.5999499937492186,
+            "n_instances": 4799,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.4134,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.018956016376614572
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2846,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03247751593589783
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.5999499937492186,
+            "n_instances": 4799,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.5595,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.4512046456336975
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.6629578697337167,
+            "n_instances": 5303,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.363,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11706216931343048
+              },
+              {
+                "feature_idx": 1,
+                "level": -0.2846,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03247751593589783
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.363,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11706216931343048
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2846,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03247751593589783
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.363,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11706216931343048
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.7999749968746094,
+            "n_instances": 6399,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2846,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03247751593589783
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.20002500312539068,
+            "n_instances": 1600,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7673,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8043964624404907
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.20002500312539068,
+            "n_instances": 1600,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7673,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8043964624404907
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.012186241625137161,
+          "GRS_ta": 0.852897102897103,
+          "BRA": 0.9739652173913045,
+          "TD": 0.0029241491559755554
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.9318181818181819,
+          "BRA": 0.9972,
+          "TD": 0.0020796093543126127
+        }
+      },
+      "algo_max_literals_minus1": {
+        "fidelity_heldout": {
+          "accuracy": 0.5638,
+          "recall": 0.4100908656145385,
+          "f1": 0.47481548127588324
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.49954107388710417,
+              "recall": 1.0,
+              "f1": 0.6662586074980872,
+              "support": 2177,
+              "rule_count": 4
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.2302725968436155,
+              "f1": 0.3743440233236152,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.49984702462903474,
+          "macro_recall": 0.4100908656145385,
+          "macro_f1": 0.45054217700529514
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 10,
+          "n_duplicated": 2,
+          "n_unique_signatures": 6
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 316,
+          "approx_rate": 0.0632
+        },
+        "n_rules": 10,
+        "thresholds": {
+          "0": [
+            -0.8060010313987732,
+            -0.6382104873657226,
+            -0.4512406706809997,
+            -0.11670442223548881
+          ],
+          "1": [
+            -0.015050256811082362,
+            -0.0033115086145698988,
+            0.01888807862997055,
+            0.03227519765496254
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_algo_max_literals_minus1",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 1,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01
+        },
+        "perturbation_family": "algo_variation",
+        "perturbation_id": "algo_max_literals_minus1",
+        "perturbation_params": {
+          "variation": "max_literals_minus1",
+          "max_literals": 1,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.4,
+            "n_instances": 4000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.6255,
+                "level_label": "Very Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": -0.0033115086145698988
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.414,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.01888807862997055
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2866,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03227519765496254
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.5595,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.4512406706809997
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2866,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03227519765496254
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3627,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11670442223548881
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3627,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11670442223548881
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2866,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03227519765496254
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7682,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8060010313987732
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7682,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8060010313987732
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.18057965157793895,
+          "GRS_ta": 0.7980280588976241,
+          "BRA": 0.9744347826086956,
+          "TD": 0.0021898350506134915
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.810169369671932,
+          "GRS_ta": 0.7202797202797203,
+          "BRA": 0.9446,
+          "TD": 0.0
+        }
+      },
+      "algo_max_literals_plus1": {
+        "fidelity_heldout": {
+          "accuracy": 0.5638,
+          "recall": 0.4100908656145385,
+          "f1": 0.47481548127588324
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.49954107388710417,
+              "recall": 1.0,
+              "f1": 0.6662586074980872,
+              "support": 2177,
+              "rule_count": 4
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.2302725968436155,
+              "f1": 0.3743440233236152,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.49984702462903474,
+          "macro_recall": 0.4100908656145385,
+          "macro_f1": 0.45054217700529514
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 10,
+          "n_duplicated": 2,
+          "n_unique_signatures": 6
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 316,
+          "approx_rate": 0.0632
+        },
+        "n_rules": 10,
+        "thresholds": {
+          "0": [
+            -0.8060010313987732,
+            -0.6382104873657226,
+            -0.4512406706809997,
+            -0.11670442223548881
+          ],
+          "1": [
+            -0.015050256811082362,
+            -0.0033115086145698988,
+            0.01888807862997055,
+            0.03227519765496254
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_algo_max_literals_plus1",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 3,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01
+        },
+        "perturbation_family": "algo_variation",
+        "perturbation_id": "algo_max_literals_plus1",
+        "perturbation_params": {
+          "variation": "max_literals_plus1",
+          "max_literals": 3,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.3863,
+            "n_instances": 3863,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3627,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11670442223548881
+              },
+              {
+                "feature_idx": 1,
+                "level": -0.6255,
+                "level_label": "Very Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": -0.0033115086145698988
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.414,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.01888807862997055
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2866,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03227519765496254
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.5595,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.4512406706809997
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2866,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03227519765496254
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3627,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11670442223548881
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3627,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11670442223548881
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2866,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03227519765496254
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7682,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8060010313987732
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7682,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8060010313987732
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.200702683364784,
+          "GRS_ta": 0.9244349853045506,
+          "BRA": 0.9744347826086956,
+          "TD": 0.0021898350506134915
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.9027112842470559,
+          "GRS_ta": 0.8503030303030303,
+          "BRA": 0.9446,
+          "TD": 0.0
+        }
+      },
+      "algo_max_rules_minus2": {
+        "fidelity_heldout": {
+          "accuracy": 0.82,
+          "recall": 0.5620392380934807,
+          "f1": 0.6669451380735413
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.7201479986545577,
+              "recall": 0.9834634818557648,
+              "f1": 0.8314563106796116,
+              "support": 2177,
+              "rule_count": 2
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 2
+            },
+            "2": {
+              "precision": 0.9664528860384806,
+              "recall": 0.7026542324246772,
+              "f1": 0.8137071651090342,
+              "support": 2788,
+              "rule_count": 2
+            }
+          },
+          "macro_precision": 0.5622002948976794,
+          "macro_recall": 0.5620392380934807,
+          "macro_f1": 0.5621197549592065
+        },
+        "deployment": {
+          "E_CR": -193.78,
+          "E_CR_std": 11.723975434979382,
+          "E_TS": 193.78,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 6,
+          "n_duplicated": 2,
+          "n_unique_signatures": 4
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 316,
+          "approx_rate": 0.0632
+        },
+        "n_rules": 6,
+        "thresholds": {
+          "0": [
+            -0.8060010313987732,
+            -0.6382104873657226,
+            -0.4512406706809997,
+            -0.11670442223548881
+          ],
+          "1": [
+            -0.015050256811082362,
+            -0.0033115086145698988,
+            0.01888807862997055,
+            0.03227519765496254
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_algo_max_rules_minus2",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 2,
+          "min_support_frac": 0.01
+        },
+        "perturbation_family": "algo_variation",
+        "perturbation_id": "algo_max_rules_minus2",
+        "perturbation_params": {
+          "variation": "max_rules_minus2",
+          "max_literals": 2,
+          "max_rules_per_action": 2,
+          "min_support_frac": 0.01
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.3863,
+            "n_instances": 3863,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3627,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11670442223548881
+              },
+              {
+                "feature_idx": 1,
+                "level": -0.6255,
+                "level_label": "Very Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": -0.0033115086145698988
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.414,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.01888807862997055
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2866,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03227519765496254
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3627,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11670442223548881
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3627,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11670442223548881
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2866,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03227519765496254
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.1483109175276216,
+          "GRS_ta": 0.5584980237154149,
+          "BRA": 0.7176000000000002,
+          "TD": 0.0021898350506134915
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.6696953202575703,
+          "GRS_ta": 0.5509090909090909,
+          "BRA": 0.723,
+          "TD": 0.0
+        }
+      },
+      "algo_max_rules_plus2": {
+        "fidelity_heldout": {
+          "accuracy": 0.5638,
+          "recall": 0.4100908656145385,
+          "f1": 0.47481548127588324
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.49954107388710417,
+              "recall": 1.0,
+              "f1": 0.6662586074980872,
+              "support": 2177,
+              "rule_count": 4
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.2302725968436155,
+              "f1": 0.3743440233236152,
+              "support": 2788,
+              "rule_count": 6
+            }
+          },
+          "macro_precision": 0.49984702462903474,
+          "macro_recall": 0.4100908656145385,
+          "macro_f1": 0.45054217700529514
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 12,
+          "n_duplicated": 2,
+          "n_unique_signatures": 6
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 316,
+          "approx_rate": 0.0632
+        },
+        "n_rules": 12,
+        "thresholds": {
+          "0": [
+            -0.8060010313987732,
+            -0.6382104873657226,
+            -0.4512406706809997,
+            -0.11670442223548881
+          ],
+          "1": [
+            -0.015050256811082362,
+            -0.0033115086145698988,
+            0.01888807862997055,
+            0.03227519765496254
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_algo_max_rules_plus2",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 6,
+          "min_support_frac": 0.01
+        },
+        "perturbation_family": "algo_variation",
+        "perturbation_id": "algo_max_rules_plus2",
+        "perturbation_params": {
+          "variation": "max_rules_plus2",
+          "max_literals": 2,
+          "max_rules_per_action": 6,
+          "min_support_frac": 0.01
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.3863,
+            "n_instances": 3863,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3627,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11670442223548881
+              },
+              {
+                "feature_idx": 1,
+                "level": -0.6255,
+                "level_label": "Very Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": -0.0033115086145698988
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.414,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.01888807862997055
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2866,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03227519765496254
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.5595,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.4512406706809997
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2866,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03227519765496254
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3627,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11670442223548881
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3627,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11670442223548881
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2866,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03227519765496254
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7682,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8060010313987732
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7682,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8060010313987732
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7682,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8060010313987732
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7682,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8060010313987732
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.19095702338150983,
+          "GRS_ta": 0.7788740245261986,
+          "BRA": 0.9744347826086956,
+          "TD": 0.0021898350506134915
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.8585604568429073,
+          "GRS_ta": 0.7384615384615385,
+          "BRA": 0.9446,
+          "TD": 0.0
+        }
+      },
+      "algo_min_support_half": {
+        "fidelity_heldout": {
+          "accuracy": 0.5638,
+          "recall": 0.4100908656145385,
+          "f1": 0.47481548127588324
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.49954107388710417,
+              "recall": 1.0,
+              "f1": 0.6662586074980872,
+              "support": 2177,
+              "rule_count": 4
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.2302725968436155,
+              "f1": 0.3743440233236152,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.49984702462903474,
+          "macro_recall": 0.4100908656145385,
+          "macro_f1": 0.45054217700529514
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 10,
+          "n_duplicated": 2,
+          "n_unique_signatures": 6
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 316,
+          "approx_rate": 0.0632
+        },
+        "n_rules": 10,
+        "thresholds": {
+          "0": [
+            -0.8060010313987732,
+            -0.6382104873657226,
+            -0.4512406706809997,
+            -0.11670442223548881
+          ],
+          "1": [
+            -0.015050256811082362,
+            -0.0033115086145698988,
+            0.01888807862997055,
+            0.03227519765496254
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_algo_min_support_half",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.005
+        },
+        "perturbation_family": "algo_variation",
+        "perturbation_id": "algo_min_support_half",
+        "perturbation_params": {
+          "variation": "min_support_half",
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.005
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.3863,
+            "n_instances": 3863,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3627,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11670442223548881
+              },
+              {
+                "feature_idx": 1,
+                "level": -0.6255,
+                "level_label": "Very Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": -0.0033115086145698988
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.414,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.01888807862997055
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2866,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03227519765496254
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.5595,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.4512406706809997
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2866,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03227519765496254
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3627,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11670442223548881
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3627,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11670442223548881
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2866,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03227519765496254
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7682,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8060010313987732
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7682,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8060010313987732
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.200702683364784,
+          "GRS_ta": 0.9244349853045506,
+          "BRA": 0.9744347826086956,
+          "TD": 0.0021898350506134915
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.9027112842470559,
+          "GRS_ta": 0.8503030303030303,
+          "BRA": 0.9446,
+          "TD": 0.0
+        }
+      },
+      "algo_min_support_double": {
+        "fidelity_heldout": {
+          "accuracy": 0.5638,
+          "recall": 0.4100908656145385,
+          "f1": 0.47481548127588324
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.49954107388710417,
+              "recall": 1.0,
+              "f1": 0.6662586074980872,
+              "support": 2177,
+              "rule_count": 4
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.2302725968436155,
+              "f1": 0.3743440233236152,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.49984702462903474,
+          "macro_recall": 0.4100908656145385,
+          "macro_f1": 0.45054217700529514
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 10,
+          "n_duplicated": 2,
+          "n_unique_signatures": 6
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 316,
+          "approx_rate": 0.0632
+        },
+        "n_rules": 10,
+        "thresholds": {
+          "0": [
+            -0.8060010313987732,
+            -0.6382104873657226,
+            -0.4512406706809997,
+            -0.11670442223548881
+          ],
+          "1": [
+            -0.015050256811082362,
+            -0.0033115086145698988,
+            0.01888807862997055,
+            0.03227519765496254
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_algo_min_support_double",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.02
+        },
+        "perturbation_family": "algo_variation",
+        "perturbation_id": "algo_min_support_double",
+        "perturbation_params": {
+          "variation": "min_support_double",
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.02
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.3863,
+            "n_instances": 3863,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3627,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11670442223548881
+              },
+              {
+                "feature_idx": 1,
+                "level": -0.6255,
+                "level_label": "Very Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": -0.0033115086145698988
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.414,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.01888807862997055
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2866,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03227519765496254
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.5595,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.4512406706809997
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2866,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03227519765496254
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3627,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11670442223548881
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3627,
+                "level_label": "Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.11670442223548881
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.2866,
+                "level_label": "Low",
+                "lower_bound": -0.04264234006404877,
+                "upper_bound": 0.03227519765496254
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7682,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8060010313987732
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7682,
+                "level_label": "Very Low",
+                "lower_bound": -1.2000000476837158,
+                "upper_bound": -0.8060010313987732
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.200702683364784,
+          "GRS_ta": 0.9244349853045506,
+          "BRA": 0.9744347826086956,
+          "TD": 0.0021898350506134915
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.9027112842470559,
+          "GRS_ta": 0.8503030303030303,
+          "BRA": 0.9446,
+          "TD": 0.0
+        }
+      },
+      "noise_0.010": {
+        "fidelity_heldout": {
+          "accuracy": 0.5346,
+          "recall": 0.39263510282161646,
+          "f1": 0.4527497402324246
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.483348134991119,
+              "recall": 1.0,
+              "f1": 0.6516988474779224,
+              "support": 2177,
+              "rule_count": 4
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.17790530846484937,
+              "f1": 0.3020706455542022,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.494449378330373,
+          "macro_recall": 0.39263510282161646,
+          "macro_f1": 0.4376994223790676
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 10,
+          "n_duplicated": 2,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 316,
+          "approx_rate": 0.0632
+        },
+        "n_rules": 10,
+        "thresholds": {
+          "0": [
+            -0.8070075988769531,
+            -0.6378919959068297,
+            -0.4539296627044678,
+            -0.11709922850131986
+          ],
+          "1": [
+            -0.015049603208899497,
+            -0.0032265344634652125,
+            0.018522610515356072,
+            0.03227287158370019
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_noise_0.010",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.34705338908094646
+        },
+        "perturbation_family": "feature_noise",
+        "perturbation_id": "noise_0.010",
+        "perturbation_params": {
+          "noise_level": 0.01
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.3871,
+            "n_instances": 3871,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.365,
+                "level_label": "Low",
+                "lower_bound": -1.2363975048065186,
+                "upper_bound": -0.11709922850131986
+              },
+              {
+                "feature_idx": 1,
+                "level": -0.6274,
+                "level_label": "Very Low",
+                "lower_bound": -0.043682146817445755,
+                "upper_bound": -0.0032265344634652125
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.4271,
+                "level_label": "Low",
+                "lower_bound": -0.043682146817445755,
+                "upper_bound": 0.018522610515356072
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.3004,
+                "level_label": "Low",
+                "lower_bound": -0.043682146817445755,
+                "upper_bound": 0.03227287158370019
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.365,
+                "level_label": "Low",
+                "lower_bound": -1.2363975048065186,
+                "upper_bound": -0.11709922850131986
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.3004,
+                "level_label": "Low",
+                "lower_bound": -0.043682146817445755,
+                "upper_bound": 0.03227287158370019
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.365,
+                "level_label": "Low",
+                "lower_bound": -1.2363975048065186,
+                "upper_bound": -0.11709922850131986
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.365,
+                "level_label": "Low",
+                "lower_bound": -1.2363975048065186,
+                "upper_bound": -0.11709922850131986
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.3004,
+                "level_label": "Low",
+                "lower_bound": -0.043682146817445755,
+                "upper_bound": 0.03227287158370019
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7564,
+                "level_label": "Very Low",
+                "lower_bound": -1.2363975048065186,
+                "upper_bound": -0.8070075988769531
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7564,
+                "level_label": "Very Low",
+                "lower_bound": -1.2363975048065186,
+                "upper_bound": -0.8070075988769531
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.9244349853045506,
+          "BRA": 0.8967652173913045,
+          "TD": 0.002406424369584882
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.8461538461538461,
+          "BRA": 0.9859,
+          "TD": 0.0038623833750296875
+        }
+      },
+      "noise_0.030": {
+        "fidelity_heldout": {
+          "accuracy": 0.534,
+          "recall": 0.39227642276422764,
+          "f1": 0.4522961064494611
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.4830264033725316,
+              "recall": 1.0,
+              "f1": 0.6514063435068821,
+              "support": 2177,
+              "rule_count": 4
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 2
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.17682926829268292,
+              "f1": 0.3005181347150259,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.4943421344575105,
+          "macro_recall": 0.39227642276422764,
+          "macro_f1": 0.4374344808082493
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 10,
+          "n_duplicated": 2,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 310,
+          "approx_rate": 0.062
+        },
+        "n_rules": 10,
+        "thresholds": {
+          "0": [
+            -0.8135384559631347,
+            -0.6385409474372863,
+            -0.4543514251708984,
+            -0.11706183850765221
+          ],
+          "1": [
+            -0.015000827610492705,
+            -0.0029291972517967203,
+            0.017493208870291713,
+            0.032417429238557824
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_noise_0.030",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.34705338908094646
+        },
+        "perturbation_family": "feature_noise",
+        "perturbation_id": "noise_0.030",
+        "perturbation_params": {
+          "noise_level": 0.03
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.3855,
+            "n_instances": 3855,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.371,
+                "level_label": "Low",
+                "lower_bound": -1.315676212310791,
+                "upper_bound": -0.11706183850765221
+              },
+              {
+                "feature_idx": 1,
+                "level": -0.6044,
+                "level_label": "Very Low",
+                "lower_bound": -0.05063982680439949,
+                "upper_bound": -0.0029291972517967203
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.6,
+            "n_instances": 6000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.435,
+                "level_label": "Low",
+                "lower_bound": -0.05063982680439949,
+                "upper_bound": 0.017493208870291713
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.3112,
+                "level_label": "Low",
+                "lower_bound": -0.05063982680439949,
+                "upper_bound": 0.032417429238557824
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.371,
+                "level_label": "Low",
+                "lower_bound": -1.315676212310791,
+                "upper_bound": -0.11706183850765221
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.3112,
+                "level_label": "Low",
+                "lower_bound": -0.05063982680439949,
+                "upper_bound": 0.032417429238557824
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.371,
+                "level_label": "Low",
+                "lower_bound": -1.315676212310791,
+                "upper_bound": -0.11706183850765221
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.371,
+                "level_label": "Low",
+                "lower_bound": -1.315676212310791,
+                "upper_bound": -0.11706183850765221
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.3112,
+                "level_label": "Low",
+                "lower_bound": -0.05063982680439949,
+                "upper_bound": 0.032417429238557824
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7365,
+                "level_label": "Very Low",
+                "lower_bound": -1.315676212310791,
+                "upper_bound": -0.8135384559631347
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7365,
+                "level_label": "Very Low",
+                "lower_bound": -1.315676212310791,
+                "upper_bound": -0.8135384559631347
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.9244349853045506,
+          "BRA": 0.8957913043478258,
+          "TD": 0.0036252734460784745
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.8461538461538461,
+          "BRA": 0.9862,
+          "TD": 0.002813596523574193
+        }
+      },
+      "noise_0.050": {
+        "fidelity_heldout": {
+          "accuracy": 0.5102,
+          "recall": 0.37804878048780494,
+          "f1": 0.43429384208994404
+        },
+        "fidelity_per_action": {
+          "per_action": {
+            "0": {
+              "precision": 0.4706009511456982,
+              "recall": 1.0,
+              "f1": 0.6400117595178597,
+              "support": 2177,
+              "rule_count": 4
+            },
+            "1": {
+              "precision": 0.0,
+              "recall": 0.0,
+              "f1": 0.0,
+              "support": 35,
+              "rule_count": 4
+            },
+            "2": {
+              "precision": 1.0,
+              "recall": 0.13414634146341464,
+              "f1": 0.23655913978494622,
+              "support": 2788,
+              "rule_count": 4
+            }
+          },
+          "macro_precision": 0.4902003170485661,
+          "macro_recall": 0.37804878048780494,
+          "macro_f1": 0.4268812546555689
+        },
+        "deployment": {
+          "E_CR": -200.0,
+          "E_CR_std": 0.0,
+          "E_TS": 200.0,
+          "success_rate": 0.0
+        },
+        "properties": {
+          "n_conditions": 12,
+          "n_duplicated": 3,
+          "n_unique_signatures": 5
+        },
+        "coverage": {
+          "n_total": 5000,
+          "n_approximated": 304,
+          "approx_rate": 0.0608
+        },
+        "n_rules": 12,
+        "thresholds": {
+          "0": [
+            -0.8179043173789977,
+            -0.6372580289840698,
+            -0.4483337938785551,
+            -0.1157820299267763
+          ],
+          "1": [
+            -0.015143236704170704,
+            -0.0025938766077160834,
+            0.016476180031895646,
+            0.03285825997591019
+          ]
+        },
+        "run_id": "mountaincar_v0_b5_bdr_noise_0.050",
+        "group_id": "mountaincar_v0_b5_bdr",
+        "method_params": {
+          "type": "boolean_rule_summarizer",
+          "n_quantile_thresholds": 4,
+          "max_literals": 2,
+          "max_rules_per_action": 4,
+          "min_support_frac": 0.01,
+          "best_cv_f1": 0.34705338908094646
+        },
+        "perturbation_family": "feature_noise",
+        "perturbation_id": "noise_0.050",
+        "perturbation_params": {
+          "noise_level": 0.05
+        },
+        "n_replay": 10000,
+        "n_heldout": 5000,
+        "n_eval_episodes": 50,
+        "rules": [
+          {
+            "action": 0,
+            "weight": 0.5595,
+            "n_instances": 5595,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3894,
+                "level_label": "Low",
+                "lower_bound": -1.3949549198150635,
+                "upper_bound": -0.1157820299267763
+              },
+              {
+                "feature_idx": 1,
+                "level": -0.434,
+                "level_label": "Low",
+                "lower_bound": -0.05985777825117111,
+                "upper_bound": 0.016476180031895646
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.3125,
+                "level_label": "Low",
+                "lower_bound": -0.05985777825117111,
+                "upper_bound": 0.03285825997591019
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3894,
+                "level_label": "Low",
+                "lower_bound": -1.3949549198150635,
+                "upper_bound": -0.1157820299267763
+              }
+            ]
+          },
+          {
+            "action": 0,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7246,
+                "level_label": "Very Low",
+                "lower_bound": -1.3949549198150635,
+                "upper_bound": -0.8179043173789977
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.3125,
+                "level_label": "Low",
+                "lower_bound": -0.05985777825117111,
+                "upper_bound": 0.03285825997591019
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3894,
+                "level_label": "Low",
+                "lower_bound": -1.3949549198150635,
+                "upper_bound": -0.1157820299267763
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 4000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.6383,
+                "level_label": "Very Low",
+                "lower_bound": -1.3949549198150635,
+                "upper_bound": -0.6372580289840698
+              }
+            ]
+          },
+          {
+            "action": 1,
+            "weight": 0.4,
+            "n_instances": 4000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.6383,
+                "level_label": "Very Low",
+                "lower_bound": -1.3949549198150635,
+                "upper_bound": -0.6372580289840698
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.3894,
+                "level_label": "Low",
+                "lower_bound": -1.3949549198150635,
+                "upper_bound": -0.1157820299267763
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.8,
+            "n_instances": 8000,
+            "predicates": [
+              {
+                "feature_idx": 1,
+                "level": -0.3125,
+                "level_label": "Low",
+                "lower_bound": -0.05985777825117111,
+                "upper_bound": 0.03285825997591019
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7246,
+                "level_label": "Very Low",
+                "lower_bound": -1.3949549198150635,
+                "upper_bound": -0.8179043173789977
+              }
+            ]
+          },
+          {
+            "action": 2,
+            "weight": 0.2,
+            "n_instances": 2000,
+            "predicates": [
+              {
+                "feature_idx": 0,
+                "level": -0.7246,
+                "level_label": "Very Low",
+                "lower_bound": -1.3949549198150635,
+                "upper_bound": -0.8179043173789977
+              }
+            ]
+          }
+        ],
+        "stability_proxy_global": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.6536550406115622,
+          "BRA": 0.9127652173913041,
+          "TD": 0.005836032734461812
+        },
+        "stability_proxy_family": {
+          "GRS_wj": 0.0,
+          "GRS_ta": 0.6923076923076923,
+          "BRA": 0.9759,
+          "TD": 0.004304820290732419
+        }
+      }
+    },
+    "stability": {
+      "GRS_weighted_jaccard": 0.054231740129300744,
+      "GRS_plain_jaccard": 0.05328944582461205,
+      "GRS_threshold_aware": 0.870102059775972,
+      "TD": 0.003109890870990773,
+      "BRA": 0.954297101449275,
+      "n_perturbation_runs": 24
+    }
+  }
+}

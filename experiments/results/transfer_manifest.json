@@ -1,0 +1,97 @@
+{
+  "schema_version": "traceability_v1",
+  "generated": "2026-08-19T03:15:12.976552",
+  "phase": "External Validity Extension",
+  "reproduction_commands": [
+    "python reproduction/train_policy.py --env MiniGrid-Dynamic-Obstacles-8x8-v0 --algo ppo --timesteps 1000000 --seed 42",
+    "python reproduction/train_policy.py --env CartPole-v1 --algo ppo --timesteps 200000 --seed 42",
+    "python experiments/run_minigrid_experiments.py --step feasibility --algo ppo",
+    "python experiments/run_minigrid_experiments.py --step stress --algo ppo",
+    "python experiments/run_cross_algo_comparison.py",
+    "python figures/fig_minigrid.py",
+    "python figures/fig_complexity.py",
+    "python figures/fig_policy_family_cartpole.py"
+  ],
+  "artifacts": [
+    {
+      "path": "experiments/results/minigrid_dynamic_obstacles_8x8_v0/feasibility_check.json",
+      "sha256": "eb2fa4050a2e3507fa723ee4b455db8392187bdf8b04986080636b76838d08a1",
+      "size_bytes": 1775
+    },
+    {
+      "path": "experiments/results/minigrid_dynamic_obstacles_8x8_v0/stress_test_results.json",
+      "sha256": "a47964ebae338a7eca470c505a1eedf25df6f4a3bdb381d4cb94230089f32f38",
+      "size_bytes": 1505320
+    },
+    {
+      "path": "experiments/results/cross_algo_comparison/ppo_cartpole_stress.json",
+      "sha256": "a23f8d8a552805f40bd30ceabd31cbabe4111fdf888be55ab6b3e360568cf0db",
+      "size_bytes": 29615
+    },
+    {
+      "path": "experiments/results/cross_algo_comparison/ppo_vs_dqn_comparison.json",
+      "sha256": "935244d099201cc801dbb22cff72114f99323ac117325665b32ad4073e4e2fd8",
+      "size_bytes": 1017
+    },
+    {
+      "path": "experiments/results/minigrid_dynamic_obstacles_8x8_v0_training_ppo.json",
+      "sha256": "f12a71fb10f5c9eca4deaf252ff3422b04562794dec412c50c51ef1bceecdea5",
+      "size_bytes": 392
+    },
+    {
+      "path": "experiments/results/cartpole_v1_training_ppo.json",
+      "sha256": "6391063fbc07acc29eb3171988abe9250a781cf56463536143db58676c0a8b56",
+      "size_bytes": 312
+    },
+    {
+      "path": "reproduction/models/ppo_minigrid_dynamic_obstacles_8x8_v0.zip",
+      "sha256": "1cd916721bad16e99c58e6e97354d6c706bea1deb263f2fa7a1d53bd509be22d",
+      "size_bytes": 480661
+    },
+    {
+      "path": "reproduction/models/ppo_cartpole_v1.zip",
+      "sha256": "282e4ba7895c5dcccea95297be1b13a41f0af57917c6258dedcdfb2669414ae6",
+      "size_bytes": 448422
+    },
+    {
+      "path": "reproduction/data/replay_minigrid_dynamic_obstacles_8x8_v0_ppo_seed42.npz",
+      "sha256": "6538faf84d06418f689c0b9c215460246a2ac55df4d495cc98d167a148fa5de8",
+      "size_bytes": 60088
+    },
+    {
+      "path": "reproduction/data/replay_cartpole_v1_ppo_seed42.npz",
+      "sha256": "f1c45cad584a6dfd084e41a817692c672f462fbbf798b5d6baf51107f6bcd126",
+      "size_bytes": 152043
+    },
+    {
+      "path": "figures/fig_minigrid.pdf",
+      "sha256": "5b71137e977dc5e68c49d1a9d55d2926f77bfd58505f215532562c1181d1f284",
+      "size_bytes": 38131
+    },
+    {
+      "path": "figures/fig_minigrid.png",
+      "sha256": "fbd9383ef03d978759602b6e41aad9b4919c10fe0eadf058cc3fab2cc4d127ce",
+      "size_bytes": 48608
+    },
+    {
+      "path": "figures/fig_complexity.pdf",
+      "sha256": "7a162375090679654eb419ddf2edfa0d6abcae64e512bbdabff98e7b35189dbb",
+      "size_bytes": 54998
+    },
+    {
+      "path": "figures/fig_complexity.png",
+      "sha256": "add6f9b15b84ccc447cf980a39b4916a15e6c93e516f8746c10d9353ccdbdbff",
+      "size_bytes": 197981
+    },
+    {
+      "path": "figures/fig_policy_family_cartpole.pdf",
+      "sha256": "de5670201a88a284656f7b27d2aefd5c58d50a93535a679bad0b243dd483c737",
+      "size_bytes": 39904
+    },
+    {
+      "path": "figures/fig_policy_family_cartpole.png",
+      "sha256": "89df8fb0a500d5ad78dfd3755b55cf52bb468d01fafdd26fe23a222d1e9d35c6",
+      "size_bytes": 69149
+    }
+  ]
+}

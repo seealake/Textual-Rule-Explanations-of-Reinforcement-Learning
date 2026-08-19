@@ -1,0 +1,69 @@
+{
+  "env": "MiniGrid-Dynamic-Obstacles-8x8-v0",
+  "algo": "ppo",
+  "methods": {
+    "CBS": {
+      "status": "OK",
+      "F1": 0.9734788567001285,
+      "accuracy": 0.9842,
+      "n_rules": 19,
+      "deployment": {
+        "E_CR": 0.7895859375000001,
+        "E_CR_std": 0.5279390772148699,
+        "E_TS": 16.04,
+        "success_rate": 0.92
+      },
+      "coverage": {
+        "n_total": 5000,
+        "n_approximated": 21,
+        "approx_rate": 0.0042
+      },
+      "fidelity_per_action": {
+        "per_action": {
+          "0": {
+            "precision": 0.9779286926994907,
+            "recall": 0.9365853658536586,
+            "f1": 0.9568106312292359,
+            "support": 615,
+            "rule_count": 7
+          },
+          "1": {
+            "precision": 0.9673518742442564,
+            "recall": 0.9523809523809523,
+            "f1": 0.9598080383923215,
+            "support": 840,
+            "rule_count": 6
+          },
+          "2": {
+            "precision": 0.9891183035714286,
+            "recall": 1.0,
+            "f1": 0.994529387010801,
+            "support": 3545,
+            "rule_count": 6
+          }
+        },
+        "macro_precision": 0.9781329568383917,
+        "macro_recall": 0.9629887727448704,
+        "macro_f1": 0.9705017890756769
+      }
+    },
+    "B3-vote": {
+      "status": "OK",
+      "F1": 0.9703826855441194,
+      "accuracy": 0.9842,
+      "n_pipelines": 5
+    },
+    "DT Surrogate": {
+      "status": "OK",
+      "F1": 0.9972501599776665,
+      "accuracy": 0.9978,
+      "n_rules": 37,
+      "deployment": {
+        "E_CR": 0.943046875,
+        "E_CR_std": 0.018682495671918403,
+        "E_TS": 16.2,
+        "success_rate": 1.0
+      }
+    }
+  }
+}

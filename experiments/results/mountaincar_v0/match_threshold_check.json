@@ -1,0 +1,2824 @@
+{
+  "schema_version": "match_threshold_check_v1",
+  "env": "MountainCar-v0",
+  "timestamp": "2026-03-27 01:26:52",
+  "elapsed_seconds": 87.7,
+  "purpose": "Confirmatory rerun: does rho=0.9 Pareto-dominate CBS?",
+  "config": {
+    "B": 5,
+    "tau": 0.7,
+    "rho": 0.9,
+    "lambda1": 0.6,
+    "lambda2": 0.4,
+    "n_outer_repeats": 10,
+    "outer_seeds": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9
+    ],
+    "heldout_seed": 99,
+    "heldout_size": 5000,
+    "deployment_episodes": 50
+  },
+  "summary": {
+    "F1": {
+      "mean": 0.7680439105681807,
+      "std": 0.017412386452348366,
+      "ci95": [
+        0.7566678180859797,
+        0.7794200030503816
+      ]
+    },
+    "E_CR": {
+      "mean": -166.026,
+      "std": 17.35725565865756,
+      "ci95": [
+        -177.36607369698962,
+        -154.6859263030104
+      ]
+    },
+    "worst_action_recall": {
+      "mean": 0.2857142857142857,
+      "std": 0.0,
+      "ci95": [
+        0.2857142857142857,
+        0.2857142857142857
+      ]
+    },
+    "rules": {
+      "mean": 11.4,
+      "std": 0.7999999999999999
+    }
+  },
+  "stability_10_repeats": {
+    "GRS_wj": 0.8762558920145622,
+    "GRS_ta": 0.8528878528878532,
+    "BRA": 0.9448888888888887,
+    "TD": 0.00038000292442421713,
+    "n_repeats": 10,
+    "n_pairs": 45
+  },
+  "stability_first5_repeats": {
+    "GRS_wj": 0.8790516639067654,
+    "GRS_ta": 0.841025641025641,
+    "BRA": 0.93736,
+    "TD": 0.00046208913717594015,
+    "n_repeats": 5,
+    "n_pairs": 10,
+    "note": "Direct comparison with original 5-repeat ablation"
+  },
+  "per_repeat": {
+    "seed_0": {
+      "fidelity_heldout": {
+        "accuracy": 0.8946,
+        "recall": 0.6963824664051175,
+        "f1": 0.7831434570786596
+      },
+      "fidelity_per_action": {
+        "per_action": {
+          "0": {
+            "precision": 0.9002683363148479,
+            "recall": 0.9246669728984842,
+            "f1": 0.912304554724677,
+            "support": 2177,
+            "rule_count": 4
+          },
+          "1": {
+            "precision": 0.06944444444444445,
+            "recall": 0.2857142857142857,
+            "f1": 0.111731843575419,
+            "support": 35,
+            "rule_count": 2
+          },
+          "2": {
+            "precision": 0.9351145038167938,
+            "recall": 0.8787661406025825,
+            "f1": 0.9060650887573966,
+            "support": 2788,
+            "rule_count": 5
+          }
+        },
+        "macro_precision": 0.6349424281920287,
+        "macro_recall": 0.6963824664051175,
+        "macro_f1": 0.6642447323925629
+      },
+      "deployment": {
+        "E_CR": -145.58,
+        "E_CR_std": 29.679009417431704,
+        "E_TS": 145.58,
+        "success_rate": 0.26
+      },
+      "n_rules": 11,
+      "worst_action_recall": 0.2857142857142857,
+      "build_info": {
+        "n_bootstrap": 5,
+        "consensus_threshold": 0.7,
+        "similarity_cutoff": 0.9,
+        "n_input_rules": 67,
+        "n_matched_groups": 20,
+        "n_kept_groups": 11,
+        "n_filtered_groups": 9,
+        "n_consensus_rules": 11,
+        "per_action_rule_counts": {
+          "0": 4,
+          "1": 2,
+          "2": 5
+        },
+        "actions_lost": []
+      },
+      "rules": [
+        {
+          "action": 0,
+          "weight": 0.8902180539682536,
+          "n_instances": 1818,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -1.0,
+              "level_label": "Very Low",
+              "lower_bound": -1.2000000476837158,
+              "upper_bound": -0.8943328261375427
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.0385446697473526,
+              "upper_bound": -0.010946835856884718
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9831557900547494,
+          "n_instances": 6050,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8943328261375427,
+              "upper_bound": -0.5126721262931824
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.0385446697473526,
+              "upper_bound": -0.010946835856884718
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9963194577271599,
+          "n_instances": 5462,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8943328261375427,
+              "upper_bound": -0.5126721262931824
+            },
+            {
+              "feature_idx": 1,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.010946835856884718,
+              "upper_bound": 0.0013556194608099759
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9560289427160276,
+          "n_instances": 1114,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4146032780408859,
+              "upper_bound": -0.035448539070785046
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.0385446697473526,
+              "upper_bound": -0.010946835856884718
+            }
+          ]
+        },
+        {
+          "action": 1,
+          "weight": 0.034232398742757957,
+          "n_instances": 145,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4146032780408859,
+              "upper_bound": -0.0336358230561018
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018500518053770065,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 1,
+          "weight": 0.022082469660570182,
+          "n_instances": 156,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018496676348149776,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.638891984971818,
+          "n_instances": 1755,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -1.0,
+              "level_label": "Very Low",
+              "lower_bound": -1.2000000476837158,
+              "upper_bound": -0.8943468034267426
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9757331612323379,
+          "n_instances": 4746,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8943328261375427,
+              "upper_bound": -0.5126721262931824
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018500518053770065,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9138444991206104,
+          "n_instances": 4738,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4146032780408859,
+              "upper_bound": -0.0336358230561018
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018500518053770065,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9961108568625097,
+          "n_instances": 5476,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": -0.0336358230561018,
+              "upper_bound": 0.4991549551486969
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018500518053770065,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.7724580752873026,
+          "n_instances": 2719,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": 0.0013556194608099759,
+              "upper_bound": 0.018500518053770065
+            }
+          ]
+        }
+      ]
+    },
+    "seed_1": {
+      "fidelity_heldout": {
+        "accuracy": 0.8538,
+        "recall": 0.6599456581314983,
+        "f1": 0.7444600747633994
+      },
+      "fidelity_per_action": {
+        "per_action": {
+          "0": {
+            "precision": 0.9616279069767442,
+            "recall": 0.7597611391823611,
+            "f1": 0.84885809597126,
+            "support": 2177,
+            "rule_count": 3
+          },
+          "1": {
+            "precision": 0.06944444444444445,
+            "recall": 0.2857142857142857,
+            "f1": 0.111731843575419,
+            "support": 35,
+            "rule_count": 2
+          },
+          "2": {
+            "precision": 0.8306760204081632,
+            "recall": 0.9343615494978479,
+            "f1": 0.8794733288318703,
+            "support": 2788,
+            "rule_count": 6
+          }
+        },
+        "macro_precision": 0.6205827906097839,
+        "macro_recall": 0.6599456581314983,
+        "macro_f1": 0.6396592259650785
+      },
+      "deployment": {
+        "E_CR": -186.44,
+        "E_CR_std": 10.641729182797315,
+        "E_TS": 186.44,
+        "success_rate": 0.0
+      },
+      "n_rules": 11,
+      "worst_action_recall": 0.2857142857142857,
+      "build_info": {
+        "n_bootstrap": 5,
+        "consensus_threshold": 0.7,
+        "similarity_cutoff": 0.9,
+        "n_input_rules": 69,
+        "n_matched_groups": 20,
+        "n_kept_groups": 11,
+        "n_filtered_groups": 9,
+        "n_consensus_rules": 11,
+        "per_action_rule_counts": {
+          "0": 3,
+          "1": 2,
+          "2": 6
+        },
+        "actions_lost": []
+      },
+      "rules": [
+        {
+          "action": 0,
+          "weight": 0.8992896754128863,
+          "n_instances": 1897,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -1.0,
+              "level_label": "Very Low",
+              "lower_bound": -1.2000000476837158,
+              "upper_bound": -0.8941368162631989
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.0385446697473526,
+              "upper_bound": -0.010946835856884718
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9807958618204973,
+          "n_instances": 5759,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8941368162631989,
+              "upper_bound": -0.5126721262931824
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.0385446697473526,
+              "upper_bound": -0.010946835856884718
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9972477487191803,
+          "n_instances": 5485,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8941368162631989,
+              "upper_bound": -0.5126721262931824
+            },
+            {
+              "feature_idx": 1,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.010946835856884718,
+              "upper_bound": 0.0013556194608099759
+            }
+          ]
+        },
+        {
+          "action": 1,
+          "weight": 0.037264286603028204,
+          "n_instances": 158,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4146032780408859,
+              "upper_bound": -0.032633693888783455
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.01834564283490181,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 1,
+          "weight": 0.023689237206513558,
+          "n_instances": 172,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018309549894183874,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.6298059370170345,
+          "n_instances": 2391,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -1.0,
+              "level_label": "Very Low",
+              "lower_bound": -1.2000000476837158,
+              "upper_bound": -0.8941368162631989
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9691032235732976,
+          "n_instances": 4546,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8941368162631989,
+              "upper_bound": -0.5126721262931824
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.01834564283490181,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9072637628351922,
+          "n_instances": 4752,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4146032780408859,
+              "upper_bound": -0.032633693888783455
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.01834564283490181,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9966560941085273,
+          "n_instances": 5426,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": -0.032633693888783455,
+              "upper_bound": 0.4991549551486969
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.01834564283490181,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.2364157971411205,
+          "n_instances": 1149,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.010946835856884718,
+              "upper_bound": 0.0013608182780444622
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.7680429993215648,
+          "n_instances": 2400,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": 0.0013556194608099759,
+              "upper_bound": 0.01834564283490181
+            }
+          ]
+        }
+      ]
+    },
+    "seed_2": {
+      "fidelity_heldout": {
+        "accuracy": 0.8536,
+        "recall": 0.6599267657812086,
+        "f1": 0.7443720190572047
+      },
+      "fidelity_per_action": {
+        "per_action": {
+          "0": {
+            "precision": 0.9616947185142194,
+            "recall": 0.7611391823610473,
+            "f1": 0.8497435897435898,
+            "support": 2177,
+            "rule_count": 3
+          },
+          "1": {
+            "precision": 0.06756756756756757,
+            "recall": 0.2857142857142857,
+            "f1": 0.10928961748633881,
+            "support": 35,
+            "rule_count": 2
+          },
+          "2": {
+            "precision": 0.8312559923298178,
+            "recall": 0.9329268292682927,
+            "f1": 0.879161737366909,
+            "support": 2788,
+            "rule_count": 6
+          }
+        },
+        "macro_precision": 0.620172759470535,
+        "macro_recall": 0.6599267657812086,
+        "macro_f1": 0.6394324742875145
+      },
+      "deployment": {
+        "E_CR": -186.06,
+        "E_CR_std": 10.938756784936759,
+        "E_TS": 186.06,
+        "success_rate": 0.0
+      },
+      "n_rules": 11,
+      "worst_action_recall": 0.2857142857142857,
+      "build_info": {
+        "n_bootstrap": 5,
+        "consensus_threshold": 0.7,
+        "similarity_cutoff": 0.9,
+        "n_input_rules": 67,
+        "n_matched_groups": 19,
+        "n_kept_groups": 11,
+        "n_filtered_groups": 8,
+        "n_consensus_rules": 11,
+        "per_action_rule_counts": {
+          "0": 3,
+          "1": 2,
+          "2": 6
+        },
+        "actions_lost": []
+      },
+      "rules": [
+        {
+          "action": 0,
+          "weight": 0.8970813622865823,
+          "n_instances": 1898,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -1.0,
+              "level_label": "Very Low",
+              "lower_bound": -1.2000000476837158,
+              "upper_bound": -0.8921980559825897
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.0385446697473526,
+              "upper_bound": -0.010850051417946815
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9818426118898056,
+          "n_instances": 5714,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8921980559825897,
+              "upper_bound": -0.5126721262931824
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.0385446697473526,
+              "upper_bound": -0.010850051417946815
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9974563464121893,
+          "n_instances": 5553,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8921980559825897,
+              "upper_bound": -0.5126721262931824
+            },
+            {
+              "feature_idx": 1,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.010850051417946815,
+              "upper_bound": 0.0013556194608099759
+            }
+          ]
+        },
+        {
+          "action": 1,
+          "weight": 0.0328614005130039,
+          "n_instances": 138,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4105825275182724,
+              "upper_bound": -0.032633693888783455
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 1,
+          "weight": 0.021778812775607868,
+          "n_instances": 205,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.6315206311114241,
+          "n_instances": 2165,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -1.0,
+              "level_label": "Very Low",
+              "lower_bound": -1.2000000476837158,
+              "upper_bound": -0.8921980559825897
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9738144093800072,
+          "n_instances": 3897,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8921980559825897,
+              "upper_bound": -0.5127725005149841
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9104579158032345,
+          "n_instances": 4759,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4105825275182724,
+              "upper_bound": -0.032633693888783455
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9962935327204565,
+          "n_instances": 5436,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": -0.032633693888783455,
+              "upper_bound": 0.4986969530582428
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.23156831740659198,
+          "n_instances": 1134,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.010892166290432215,
+              "upper_bound": 0.0013556194608099759
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.7669477667147875,
+          "n_instances": 1798,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": 0.0013556194608099759,
+              "upper_bound": 0.018492834642529488
+            }
+          ]
+        }
+      ]
+    },
+    "seed_3": {
+      "fidelity_heldout": {
+        "accuracy": 0.894,
+        "recall": 0.6959231186788887,
+        "f1": 0.7826230850909227
+      },
+      "fidelity_per_action": {
+        "per_action": {
+          "0": {
+            "precision": 0.9001343484102104,
+            "recall": 0.9232889297197979,
+            "f1": 0.9115646258503401,
+            "support": 2177,
+            "rule_count": 5
+          },
+          "1": {
+            "precision": 0.06944444444444445,
+            "recall": 0.2857142857142857,
+            "f1": 0.111731843575419,
+            "support": 35,
+            "rule_count": 1
+          },
+          "2": {
+            "precision": 0.9340449866565002,
+            "recall": 0.8787661406025825,
+            "f1": 0.9055627425614489,
+            "support": 2788,
+            "rule_count": 5
+          }
+        },
+        "macro_precision": 0.6345412598370517,
+        "macro_recall": 0.6959231186788887,
+        "macro_f1": 0.663816242820125
+      },
+      "deployment": {
+        "E_CR": -145.56,
+        "E_CR_std": 29.670294909218548,
+        "E_TS": 145.56,
+        "success_rate": 0.26
+      },
+      "n_rules": 11,
+      "worst_action_recall": 0.2857142857142857,
+      "build_info": {
+        "n_bootstrap": 5,
+        "consensus_threshold": 0.7,
+        "similarity_cutoff": 0.9,
+        "n_input_rules": 68,
+        "n_matched_groups": 22,
+        "n_kept_groups": 11,
+        "n_filtered_groups": 11,
+        "n_consensus_rules": 11,
+        "per_action_rule_counts": {
+          "0": 5,
+          "1": 1,
+          "2": 5
+        },
+        "actions_lost": []
+      },
+      "rules": [
+        {
+          "action": 0,
+          "weight": 0.8899963131405524,
+          "n_instances": 1851,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -1.0,
+              "level_label": "Very Low",
+              "lower_bound": -1.2000000476837158,
+              "upper_bound": -0.8921980559825897
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.038676079362630844,
+              "upper_bound": -0.010946835856884718
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9785694289733945,
+          "n_instances": 6110,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8921980559825897,
+              "upper_bound": -0.5126721262931824
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.038676079362630844,
+              "upper_bound": -0.010946835856884718
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9976268450914578,
+          "n_instances": 5579,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8921980559825897,
+              "upper_bound": -0.5126721262931824
+            },
+            {
+              "feature_idx": 1,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.010946835856884718,
+              "upper_bound": 0.0013556194608099759
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.808639562264542,
+          "n_instances": 1116,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.5128166973590851,
+              "upper_bound": -0.4146087095141411
+            },
+            {
+              "feature_idx": 1,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.010946835856884718,
+              "upper_bound": 0.0013556194608099759
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9615942011509814,
+          "n_instances": 1144,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4146087095141411,
+              "upper_bound": -0.032633693888783455
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.03879297245293856,
+              "upper_bound": -0.010946835856884718
+            }
+          ]
+        },
+        {
+          "action": 1,
+          "weight": 0.03449317239375532,
+          "n_instances": 150,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4146032780408859,
+              "upper_bound": -0.032633693888783455
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.6376481893649034,
+          "n_instances": 2535,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -1.0,
+              "level_label": "Very Low",
+              "lower_bound": -1.2000000476837158,
+              "upper_bound": -0.8931674361228943
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9713076517088707,
+          "n_instances": 3385,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8931674361228943,
+              "upper_bound": -0.5128166973590851
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9101639169837681,
+          "n_instances": 4750,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4146032780408859,
+              "upper_bound": -0.032633693888783455
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9961208801578888,
+          "n_instances": 5450,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": -0.032633693888783455,
+              "upper_bound": 0.4986969530582428
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.76329277617924,
+          "n_instances": 1843,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": 0.0013556194608099759,
+              "upper_bound": 0.018492834642529488
+            }
+          ]
+        }
+      ]
+    },
+    "seed_4": {
+      "fidelity_heldout": {
+        "accuracy": 0.8538,
+        "recall": 0.6599792140211115,
+        "f1": 0.7444814246516223
+      },
+      "fidelity_per_action": {
+        "per_action": {
+          "0": {
+            "precision": 0.9616502033701336,
+            "recall": 0.7602204869085898,
+            "f1": 0.8491534120061569,
+            "support": 2177,
+            "rule_count": 3
+          },
+          "1": {
+            "precision": 0.0684931506849315,
+            "recall": 0.2857142857142857,
+            "f1": 0.11049723756906077,
+            "support": 35,
+            "rule_count": 2
+          },
+          "2": {
+            "precision": 0.8311522502393872,
+            "recall": 0.9340028694404591,
+            "f1": 0.8795811518324608,
+            "support": 2788,
+            "rule_count": 6
+          }
+        },
+        "macro_precision": 0.6204318680981508,
+        "macro_recall": 0.6599792140211115,
+        "macro_f1": 0.6395948026056334
+      },
+      "deployment": {
+        "E_CR": -186.88,
+        "E_CR_std": 10.738044514714957,
+        "E_TS": 186.88,
+        "success_rate": 0.0
+      },
+      "n_rules": 11,
+      "worst_action_recall": 0.2857142857142857,
+      "build_info": {
+        "n_bootstrap": 5,
+        "consensus_threshold": 0.7,
+        "similarity_cutoff": 0.9,
+        "n_input_rules": 68,
+        "n_matched_groups": 18,
+        "n_kept_groups": 11,
+        "n_filtered_groups": 7,
+        "n_consensus_rules": 11,
+        "per_action_rule_counts": {
+          "0": 3,
+          "1": 2,
+          "2": 6
+        },
+        "actions_lost": []
+      },
+      "rules": [
+        {
+          "action": 0,
+          "weight": 0.8954439579315322,
+          "n_instances": 1851,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -1.0,
+              "level_label": "Very Low",
+              "lower_bound": -1.2000000476837158,
+              "upper_bound": -0.8921980559825897
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.0385446697473526,
+              "upper_bound": -0.010927918832749128
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9816601772960494,
+          "n_instances": 5778,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8921980559825897,
+              "upper_bound": -0.5138936638832092
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.0385446697473526,
+              "upper_bound": -0.010927918832749128
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9979969738377765,
+          "n_instances": 5497,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8921980559825897,
+              "upper_bound": -0.5138936638832092
+            },
+            {
+              "feature_idx": 1,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.010927918832749128,
+              "upper_bound": 0.001355424232315272
+            }
+          ]
+        },
+        {
+          "action": 1,
+          "weight": 0.03258568769709679,
+          "n_instances": 138,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4146032780408859,
+              "upper_bound": -0.032633693888783455
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 1,
+          "weight": 0.02274098994535264,
+          "n_instances": 221,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.6367654292504747,
+          "n_instances": 2133,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -1.0,
+              "level_label": "Very Low",
+              "lower_bound": -1.2000000476837158,
+              "upper_bound": -0.8921980559825897
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9722014323896826,
+          "n_instances": 4799,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8921980559825897,
+              "upper_bound": -0.5138936638832092
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9116715040129304,
+          "n_instances": 4784,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4146032780408859,
+              "upper_bound": -0.032633693888783455
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9968843228434523,
+          "n_instances": 5505,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": -0.032633693888783455,
+              "upper_bound": 0.4986969530582428
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.23400982909269147,
+          "n_instances": 1429,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.010927918832749128,
+              "upper_bound": 0.001355424232315272
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.7732441997272657,
+          "n_instances": 2325,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": 0.001355424232315272,
+              "upper_bound": 0.018492834642529488
+            }
+          ]
+        }
+      ]
+    },
+    "seed_5": {
+      "fidelity_heldout": {
+        "accuracy": 0.9092,
+        "recall": 0.704204338782019,
+        "f1": 0.7936790170081663
+      },
+      "fidelity_per_action": {
+        "per_action": {
+          "0": {
+            "precision": 0.9430199430199431,
+            "recall": 0.9122645842903078,
+            "f1": 0.9273873453187019,
+            "support": 2177,
+            "rule_count": 3
+          },
+          "1": {
+            "precision": 0.0684931506849315,
+            "recall": 0.2857142857142857,
+            "f1": 0.11049723756906077,
+            "support": 35,
+            "rule_count": 2
+          },
+          "2": {
+            "precision": 0.9279475982532751,
+            "recall": 0.9146341463414634,
+            "f1": 0.921242774566474,
+            "support": 2788,
+            "rule_count": 5
+          }
+        },
+        "macro_precision": 0.6464868973193832,
+        "macro_recall": 0.704204338782019,
+        "macro_f1": 0.6741124335300819
+      },
+      "deployment": {
+        "E_CR": -150.3,
+        "E_CR_std": 30.38963639137527,
+        "E_TS": 150.3,
+        "success_rate": 0.24
+      },
+      "n_rules": 10,
+      "worst_action_recall": 0.2857142857142857,
+      "build_info": {
+        "n_bootstrap": 5,
+        "consensus_threshold": 0.7,
+        "similarity_cutoff": 0.9,
+        "n_input_rules": 66,
+        "n_matched_groups": 18,
+        "n_kept_groups": 10,
+        "n_filtered_groups": 8,
+        "n_consensus_rules": 10,
+        "per_action_rule_counts": {
+          "0": 3,
+          "1": 2,
+          "2": 5
+        },
+        "actions_lost": []
+      },
+      "rules": [
+        {
+          "action": 0,
+          "weight": 0.8965503260368102,
+          "n_instances": 1939,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -1.0,
+              "level_label": "Very Low",
+              "lower_bound": -1.2000000476837158,
+              "upper_bound": -0.8921980559825897
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.0385446697473526,
+              "upper_bound": -0.010851031634956598
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.980102408111236,
+          "n_instances": 5871,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8921980559825897,
+              "upper_bound": -0.5138936638832092
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.0385446697473526,
+              "upper_bound": -0.010851031634956598
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9984760078893276,
+          "n_instances": 5314,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8921980559825897,
+              "upper_bound": -0.5138936638832092
+            },
+            {
+              "feature_idx": 1,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.010851031634956598,
+              "upper_bound": 0.001355424232315272
+            }
+          ]
+        },
+        {
+          "action": 1,
+          "weight": 0.036798802983067494,
+          "n_instances": 157,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4146032780408859,
+              "upper_bound": -0.032633693888783455
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 1,
+          "weight": 0.02336037843401865,
+          "n_instances": 208,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.6342268716197392,
+          "n_instances": 1777,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -1.0,
+              "level_label": "Very Low",
+              "lower_bound": -1.2000000476837158,
+              "upper_bound": -0.8921980559825897
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9735086076931634,
+          "n_instances": 4778,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8921980559825897,
+              "upper_bound": -0.5138936638832092
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9100127038373053,
+          "n_instances": 4781,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4146032780408859,
+              "upper_bound": -0.032633693888783455
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9958622961318264,
+          "n_instances": 5417,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": -0.032633693888783455,
+              "upper_bound": 0.4986969530582428
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.7715797771412104,
+          "n_instances": 2604,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": 0.001355424232315272,
+              "upper_bound": 0.018492834642529488
+            }
+          ]
+        }
+      ]
+    },
+    "seed_6": {
+      "fidelity_heldout": {
+        "accuracy": 0.878,
+        "recall": 0.6788417978751378,
+        "f1": 0.7656822926360991
+      },
+      "fidelity_per_action": {
+        "per_action": {
+          "0": {
+            "precision": 0.9591836734693877,
+            "recall": 0.8203950390445567,
+            "f1": 0.8843773211190888,
+            "support": 2177,
+            "rule_count": 4
+          },
+          "1": {
+            "precision": 0.0684931506849315,
+            "recall": 0.2857142857142857,
+            "f1": 0.11049723756906077,
+            "support": 35,
+            "rule_count": 2
+          },
+          "2": {
+            "precision": 0.8669786096256684,
+            "recall": 0.930416068866571,
+            "f1": 0.8975778546712803,
+            "support": 2788,
+            "rule_count": 6
+          }
+        },
+        "macro_precision": 0.6315518112599959,
+        "macro_recall": 0.6788417978751378,
+        "macro_f1": 0.6543434949900208
+      },
+      "deployment": {
+        "E_CR": -176.76,
+        "E_CR_std": 18.99111371141777,
+        "E_TS": 176.76,
+        "success_rate": 0.0
+      },
+      "n_rules": 12,
+      "worst_action_recall": 0.2857142857142857,
+      "build_info": {
+        "n_bootstrap": 5,
+        "consensus_threshold": 0.7,
+        "similarity_cutoff": 0.9,
+        "n_input_rules": 69,
+        "n_matched_groups": 18,
+        "n_kept_groups": 12,
+        "n_filtered_groups": 6,
+        "n_consensus_rules": 12,
+        "per_action_rule_counts": {
+          "0": 4,
+          "1": 2,
+          "2": 6
+        },
+        "actions_lost": []
+      },
+      "rules": [
+        {
+          "action": 0,
+          "weight": 0.8928776533158113,
+          "n_instances": 1926,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -1.0,
+              "level_label": "Very Low",
+              "lower_bound": -1.2000000476837158,
+              "upper_bound": -0.8941368162631989
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.0385446697473526,
+              "upper_bound": -0.010946835856884718
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9832640940573143,
+          "n_instances": 5874,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8941368162631989,
+              "upper_bound": -0.5138936638832092
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.0385446697473526,
+              "upper_bound": -0.010946835856884718
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9974369510488815,
+          "n_instances": 5479,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8941368162631989,
+              "upper_bound": -0.5138936638832092
+            },
+            {
+              "feature_idx": 1,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.010946835856884718,
+              "upper_bound": 0.0013563993270508945
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9573864768744075,
+          "n_instances": 1163,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4145999178290367,
+              "upper_bound": -0.032633693888783455
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.03856282867491245,
+              "upper_bound": -0.010946835856884718
+            }
+          ]
+        },
+        {
+          "action": 1,
+          "weight": 0.03397054936277992,
+          "n_instances": 146,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4146032780408859,
+              "upper_bound": -0.032633693888783455
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 1,
+          "weight": 0.022699050959767878,
+          "n_instances": 208,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.6270605198599754,
+          "n_instances": 2173,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -1.0,
+              "level_label": "Very Low",
+              "lower_bound": -1.2000000476837158,
+              "upper_bound": -0.8941368162631989
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9709134165637255,
+          "n_instances": 4737,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8941368162631989,
+              "upper_bound": -0.5138936638832092
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.913436719141532,
+          "n_instances": 4801,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4146032780408859,
+              "upper_bound": -0.032633693888783455
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9960484723770614,
+          "n_instances": 5366,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": -0.032633693888783455,
+              "upper_bound": 0.4986969530582428
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.23531230616184695,
+          "n_instances": 1455,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.010946835856884718,
+              "upper_bound": 0.0013563993270508945
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.7734008032470606,
+          "n_instances": 2387,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": 0.0013563993270508945,
+              "upper_bound": 0.018492834642529488
+            }
+          ]
+        }
+      ]
+    },
+    "seed_7": {
+      "fidelity_heldout": {
+        "accuracy": 0.8944,
+        "recall": 0.6962629063859879,
+        "f1": 0.7829912182795504
+      },
+      "fidelity_per_action": {
+        "per_action": {
+          "0": {
+            "precision": 0.9002683363148479,
+            "recall": 0.9246669728984842,
+            "f1": 0.912304554724677,
+            "support": 2177,
+            "rule_count": 5
+          },
+          "1": {
+            "precision": 0.0684931506849315,
+            "recall": 0.2857142857142857,
+            "f1": 0.11049723756906077,
+            "support": 35,
+            "rule_count": 2
+          },
+          "2": {
+            "precision": 0.9354469060351414,
+            "recall": 0.8784074605451937,
+            "f1": 0.9060303366629671,
+            "support": 2788,
+            "rule_count": 6
+          }
+        },
+        "macro_precision": 0.6347361310116403,
+        "macro_recall": 0.6962629063859879,
+        "macro_f1": 0.6640774500189723
+      },
+      "deployment": {
+        "E_CR": -145.76,
+        "E_CR_std": 29.280409833197346,
+        "E_TS": 145.76,
+        "success_rate": 0.26
+      },
+      "n_rules": 13,
+      "worst_action_recall": 0.2857142857142857,
+      "build_info": {
+        "n_bootstrap": 5,
+        "consensus_threshold": 0.7,
+        "similarity_cutoff": 0.9,
+        "n_input_rules": 74,
+        "n_matched_groups": 21,
+        "n_kept_groups": 13,
+        "n_filtered_groups": 8,
+        "n_consensus_rules": 13,
+        "per_action_rule_counts": {
+          "0": 5,
+          "1": 2,
+          "2": 6
+        },
+        "actions_lost": []
+      },
+      "rules": [
+        {
+          "action": 0,
+          "weight": 0.8934721571402617,
+          "n_instances": 1929,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -1.0,
+              "level_label": "Very Low",
+              "lower_bound": -1.2000000476837158,
+              "upper_bound": -0.8942081928253174
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.0385446697473526,
+              "upper_bound": -0.010851031634956598
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9817883034253854,
+          "n_instances": 6199,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8942081928253174,
+              "upper_bound": -0.5138936638832092
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.0385446697473526,
+              "upper_bound": -0.010851031634956598
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9977015555390059,
+          "n_instances": 5257,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8942081928253174,
+              "upper_bound": -0.5138936638832092
+            },
+            {
+              "feature_idx": 1,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.010851031634956598,
+              "upper_bound": 0.0013563993270508945
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.8016836869264202,
+          "n_instances": 1272,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.5130605548620224,
+              "upper_bound": -0.4146032780408859
+            },
+            {
+              "feature_idx": 1,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.010898933745920658,
+              "upper_bound": 0.0013560093939304352
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.31058000121038143,
+          "n_instances": 913,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4146032780408859,
+              "upper_bound": -0.032633693888783455
+            }
+          ]
+        },
+        {
+          "action": 1,
+          "weight": 0.03491407048161799,
+          "n_instances": 119,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4146032780408859,
+              "upper_bound": -0.03309062495827675
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.01841923873871565,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 1,
+          "weight": 0.023882079597607006,
+          "n_instances": 187,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.01841923873871565,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.6326915252134049,
+          "n_instances": 2167,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -1.0,
+              "level_label": "Very Low",
+              "lower_bound": -1.2000000476837158,
+              "upper_bound": -0.8942081928253174
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9689692822516432,
+          "n_instances": 4811,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8942081928253174,
+              "upper_bound": -0.5138936638832092
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9111973110258506,
+          "n_instances": 4780,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4146032780408859,
+              "upper_bound": -0.032633693888783455
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9971419783320096,
+          "n_instances": 5331,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": -0.032633693888783455,
+              "upper_bound": 0.4986969530582428
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.2407564324994306,
+          "n_instances": 1474,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.010851031634956598,
+              "upper_bound": 0.0013563993270508945
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.7696993956794331,
+          "n_instances": 2359,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": 0.0013563993270508945,
+              "upper_bound": 0.018492834642529488
+            }
+          ]
+        }
+      ]
+    },
+    "seed_8": {
+      "fidelity_heldout": {
+        "accuracy": 0.886,
+        "recall": 0.686073778582094,
+        "f1": 0.7733242244800823
+      },
+      "fidelity_per_action": {
+        "per_action": {
+          "0": {
+            "precision": 0.9450940518556177,
+            "recall": 0.8539274230592558,
+            "f1": 0.8972007722007722,
+            "support": 2177,
+            "rule_count": 4
+          },
+          "1": {
+            "precision": 0.0684931506849315,
+            "recall": 0.2857142857142857,
+            "f1": 0.11049723756906077,
+            "support": 35,
+            "rule_count": 2
+          },
+          "2": {
+            "precision": 0.8870800138552131,
+            "recall": 0.9185796269727403,
+            "f1": 0.9025550660792953,
+            "support": 2788,
+            "rule_count": 6
+          }
+        },
+        "macro_precision": 0.6335557387985874,
+        "macro_recall": 0.686073778582094,
+        "macro_f1": 0.6587697136733965
+      },
+      "deployment": {
+        "E_CR": -160.16,
+        "E_CR_std": 35.69501926039542,
+        "E_TS": 160.16,
+        "success_rate": 0.24
+      },
+      "n_rules": 12,
+      "worst_action_recall": 0.2857142857142857,
+      "build_info": {
+        "n_bootstrap": 5,
+        "consensus_threshold": 0.7,
+        "similarity_cutoff": 0.9,
+        "n_input_rules": 66,
+        "n_matched_groups": 18,
+        "n_kept_groups": 12,
+        "n_filtered_groups": 6,
+        "n_consensus_rules": 12,
+        "per_action_rule_counts": {
+          "0": 4,
+          "1": 2,
+          "2": 6
+        },
+        "actions_lost": []
+      },
+      "rules": [
+        {
+          "action": 0,
+          "weight": 0.9003608850851371,
+          "n_instances": 1890,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -1.0,
+              "level_label": "Very Low",
+              "lower_bound": -1.2000000476837158,
+              "upper_bound": -0.8941368162631989
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.03853652998805046,
+              "upper_bound": -0.010946835856884718
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9822622492530962,
+          "n_instances": 5706,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8941368162631989,
+              "upper_bound": -0.5126721262931824
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.03853652998805046,
+              "upper_bound": -0.010946835856884718
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9973513675864805,
+          "n_instances": 5694,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8941368162631989,
+              "upper_bound": -0.5126721262931824
+            },
+            {
+              "feature_idx": 1,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.010946835856884718,
+              "upper_bound": 0.0013563993270508945
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.8227454974292654,
+          "n_instances": 1264,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.5132828950881958,
+              "upper_bound": -0.41301801800727844
+            },
+            {
+              "feature_idx": 1,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.011080255033448339,
+              "upper_bound": 0.0013563993270508945
+            }
+          ]
+        },
+        {
+          "action": 1,
+          "weight": 0.03654996645301113,
+          "n_instances": 156,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.41301801800727844,
+              "upper_bound": -0.032633693888783455
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 1,
+          "weight": 0.02452733816745243,
+          "n_instances": 231,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.6328985256703072,
+          "n_instances": 1719,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -1.0,
+              "level_label": "Very Low",
+              "lower_bound": -1.2000000476837158,
+              "upper_bound": -0.8941563218832016
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9696118369265568,
+          "n_instances": 3844,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8941368162631989,
+              "upper_bound": -0.5126721262931824
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9064673485825375,
+          "n_instances": 4934,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.41301801800727844,
+              "upper_bound": -0.032633693888783455
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9959375137315334,
+          "n_instances": 5425,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": -0.032633693888783455,
+              "upper_bound": 0.497998982667923
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018492834642529488,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.2324524258436521,
+          "n_instances": 1171,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.010936356382444501,
+              "upper_bound": 0.0013563993270508945
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.7613779623346776,
+          "n_instances": 2074,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": 0.0013563993270508945,
+              "upper_bound": 0.018492834642529488
+            }
+          ]
+        }
+      ]
+    },
+    "seed_9": {
+      "fidelity_heldout": {
+        "accuracy": 0.878,
+        "recall": 0.6788417978751378,
+        "f1": 0.7656822926360991
+      },
+      "fidelity_per_action": {
+        "per_action": {
+          "0": {
+            "precision": 0.9591836734693877,
+            "recall": 0.8203950390445567,
+            "f1": 0.8843773211190888,
+            "support": 2177,
+            "rule_count": 4
+          },
+          "1": {
+            "precision": 0.0684931506849315,
+            "recall": 0.2857142857142857,
+            "f1": 0.11049723756906077,
+            "support": 35,
+            "rule_count": 2
+          },
+          "2": {
+            "precision": 0.8669786096256684,
+            "recall": 0.930416068866571,
+            "f1": 0.8975778546712803,
+            "support": 2788,
+            "rule_count": 6
+          }
+        },
+        "macro_precision": 0.6315518112599959,
+        "macro_recall": 0.6788417978751378,
+        "macro_f1": 0.6543434949900208
+      },
+      "deployment": {
+        "E_CR": -176.76,
+        "E_CR_std": 18.99111371141777,
+        "E_TS": 176.76,
+        "success_rate": 0.0
+      },
+      "n_rules": 12,
+      "worst_action_recall": 0.2857142857142857,
+      "build_info": {
+        "n_bootstrap": 5,
+        "consensus_threshold": 0.7,
+        "similarity_cutoff": 0.9,
+        "n_input_rules": 71,
+        "n_matched_groups": 18,
+        "n_kept_groups": 12,
+        "n_filtered_groups": 6,
+        "n_consensus_rules": 12,
+        "per_action_rule_counts": {
+          "0": 4,
+          "1": 2,
+          "2": 6
+        },
+        "actions_lost": []
+      },
+      "rules": [
+        {
+          "action": 0,
+          "weight": 0.892926134500428,
+          "n_instances": 1855,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -1.0,
+              "level_label": "Very Low",
+              "lower_bound": -1.2000000476837158,
+              "upper_bound": -0.8942081928253174
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.038580987602472305,
+              "upper_bound": -0.010946835856884718
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9825706620951804,
+          "n_instances": 5861,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8942081928253174,
+              "upper_bound": -0.5138936638832092
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.038580987602472305,
+              "upper_bound": -0.010946835856884718
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9970837230180019,
+          "n_instances": 5503,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8942081928253174,
+              "upper_bound": -0.5138936638832092
+            },
+            {
+              "feature_idx": 1,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.010946835856884718,
+              "upper_bound": 0.00136660342104733
+            }
+          ]
+        },
+        {
+          "action": 0,
+          "weight": 0.9592561936344176,
+          "n_instances": 1157,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.41459448635578156,
+              "upper_bound": -0.03309062495827675
+            },
+            {
+              "feature_idx": 1,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.03856282867491245,
+              "upper_bound": -0.010946835856884718
+            }
+          ]
+        },
+        {
+          "action": 1,
+          "weight": 0.0334949185190899,
+          "n_instances": 143,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4146032780408859,
+              "upper_bound": -0.032633693888783455
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018369154073297977,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 1,
+          "weight": 0.023337519479187333,
+          "n_instances": 224,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018369154073297977,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.6400635958036962,
+          "n_instances": 2249,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -1.0,
+              "level_label": "Very Low",
+              "lower_bound": -1.2000000476837158,
+              "upper_bound": -0.8942081928253174
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9705725129036651,
+          "n_instances": 4727,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": -0.5,
+              "level_label": "Low",
+              "lower_bound": -0.8942081928253174,
+              "upper_bound": -0.5138936638832092
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018369154073297977,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.9119304902544011,
+          "n_instances": 4433,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": -0.4146032780408859,
+              "upper_bound": -0.032633693888783455
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018369154073297977,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.996239840339911,
+          "n_instances": 5338,
+          "predicates": [
+            {
+              "feature_idx": 0,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": -0.032633693888783455,
+              "upper_bound": 0.4986969530582428
+            },
+            {
+              "feature_idx": 1,
+              "level": 1.0,
+              "level_label": "Very High",
+              "lower_bound": 0.018369154073297977,
+              "upper_bound": 0.06236689165234566
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.23815672733317572,
+          "n_instances": 1465,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 0.0,
+              "level_label": "Medium",
+              "lower_bound": -0.010946835856884718,
+              "upper_bound": 0.00136660342104733
+            }
+          ]
+        },
+        {
+          "action": 2,
+          "weight": 0.7675039313937463,
+          "n_instances": 2348,
+          "predicates": [
+            {
+              "feature_idx": 1,
+              "level": 0.5,
+              "level_label": "High",
+              "lower_bound": 0.00136660342104733,
+              "upper_bound": 0.018369154073297977
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
